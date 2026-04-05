@@ -58,7 +58,9 @@
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
 <title>About Galami Gold | Dubai Gold Trading Company</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -350,7 +352,7 @@
             </div>
             <div style="display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.2rem;">
               <label style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ash);">Partnership Type</label>
-              <select name="partnership_type" style="background:var(--smoke);border:1px solid rgba(201,168,76,0.15);color:var(--ivory);padding:0.85rem 1.1rem;font-family:var(--ff-body);font-size:0.82rem;font-weight:300;outline:none;appearance:none;width:100%;">
+              <select name="partnership_type" aria-label="Partnership Type" style="background:var(--smoke);border:1px solid rgba(201,168,76,0.15);color:var(--ivory);padding:0.85rem 1.1rem;font-family:var(--ff-body);font-size:0.82rem;font-weight:300;outline:none;appearance:none;width:100%;">
                 <option value="">Select partnership type</option>
                 <option>Supply / Mining Partner</option>
                 <option>Financial Intermediary / IFA</option>

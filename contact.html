@@ -58,7 +58,9 @@
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
 <title>Contact Galami Gold | Investor Enquiries | Dubai & London</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -215,7 +217,7 @@
           </div>
           <div style="display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.5rem;">
             <label style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ash);">Investor Type</label>
-            <select name="investor_type" style="background:var(--charcoal);border:1px solid var(--smoke);color:var(--ivory);padding:0.9rem 1.2rem;font-family:var(--ff-body);font-size:0.82rem;font-weight:300;outline:none;appearance:none;">
+            <select name="investor_type" aria-label="Investor Type" style="background:var(--charcoal);border:1px solid var(--smoke);color:var(--ivory);padding:0.9rem 1.2rem;font-family:var(--ff-body);font-size:0.82rem;font-weight:300;outline:none;appearance:none;">
               <option value="">Select your profile</option>
               <option>Private Investor</option>
               <option>Family Office</option>
@@ -225,7 +227,7 @@
           </div>
           <div style="display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.5rem;">
             <label style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ash);">Program of Interest</label>
-            <select name="program" style="background:var(--charcoal);border:1px solid var(--smoke);color:var(--ivory);padding:0.9rem 1.2rem;font-family:var(--ff-body);font-size:0.82rem;font-weight:300;outline:none;appearance:none;">
+            <select name="program" aria-label="Program of Interest" style="background:var(--charcoal);border:1px solid var(--smoke);color:var(--ivory);padding:0.9rem 1.2rem;font-family:var(--ff-body);font-size:0.82rem;font-weight:300;outline:none;appearance:none;">
               <option value="">Select a program</option>
               <option>Zambia–Dubai Program (from $100K USD)</option>
               <option>Guinea–Dubai Program (from €125K EUR)</option>

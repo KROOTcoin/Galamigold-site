@@ -61,7 +61,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+<noscript><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap"></noscript></noscript>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -778,6 +779,7 @@
     style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.55;z-index:0;"
   >
     <source src="gold_wall.mp4" type="video/mp4">
+    <track kind="captions" src="" label="No captions">
   </video>
   <div class="hero-bg"></div>
   <div class="hero-line"></div>
@@ -836,7 +838,7 @@
 
 <!-- PARALLAX BANNER 1 — Gold Mining -->
 <div class="parallax-banner">
-  <div class="parallax-img" id="parallax1" style="background-image:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=900&q=75&fm=webp');"></div>
+  <div class="parallax-img" id="parallax1" style="background-image:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=70&fm=webp&auto=compress');"></div>
   <div class="parallax-overlay"></div>
   <div class="parallax-caption" style="position:relative;z-index:2;">
     <span class="parallax-label">African Source</span>
@@ -880,7 +882,7 @@
 
 <!-- PARALLAX BANNER 2 — Gold Bars -->
 <div class="parallax-banner">
-  <div class="parallax-img" id="parallax2" style="background-image:url('https://images.unsplash.com/photo-1610375461246-83df859d849d?w=900&q=75&fm=webp');"></div>
+  <div class="parallax-img" id="parallax2" style="background-image:url('https://images.unsplash.com/photo-1610375461246-83df859d849d?w=800&q=70&fm=webp&auto=compress');"></div>
   <div class="parallax-overlay" style="background:linear-gradient(to bottom, rgba(10,10,8,0.6) 0%, rgba(10,10,8,0.25) 50%, rgba(10,10,8,0.75) 100%);"></div>
   <div class="parallax-caption" style="position:relative;z-index:2;">
     <span class="parallax-label">Dubai Refined · AU 999.9 Purity</span>
@@ -922,7 +924,7 @@
 
 <!-- PARALLAX BANNER 3 — Dubai Skyline / Wealth -->
 <div class="parallax-banner" style="height:45vh;">
-  <div class="parallax-img" id="parallax3" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900&q=75&fm=webp');"></div>
+  <div class="parallax-img" id="parallax3" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=70&fm=webp&auto=compress');"></div>
   <div class="parallax-overlay" style="background:rgba(10,10,8,0.55);"></div>
   <div class="parallax-caption" style="position:relative;z-index:2;">
     <span class="parallax-label">IFZA Business Park · Dubai, UAE</span>
@@ -936,32 +938,32 @@
   <h2>Why Physical<br><em>Gold</em> Now</h2>
   <div class="why-grid">
     <div class="why-item">
-      <div class="why-icon">I.</div>
+      <div class="why-icon" style="color:var(--gold-light);">I.</div>
       <h3>Inflation Hedge</h3>
       <p>Gold has preserved purchasing power across millennia. As central banks expand money supply, physical gold remains one of the few assets that cannot be inflated away.</p>
     </div>
     <div class="why-item">
-      <div class="why-icon">II.</div>
+      <div class="why-icon" style="color:var(--gold-light);">II.</div>
       <h3>Portfolio Diversification</h3>
       <p>Gold's low correlation with equities and bonds makes it an essential diversifier. Allocating 5–15% to physical gold has historically reduced overall portfolio volatility.</p>
     </div>
     <div class="why-item">
-      <div class="why-icon">III.</div>
+      <div class="why-icon" style="color:var(--gold-light);">III.</div>
       <h3>Geopolitical Shelter</h3>
       <p>In periods of geopolitical tension, capital flows to gold as a trusted store of value — a pattern repeated through every major crisis of the modern era.</p>
     </div>
     <div class="why-item">
-      <div class="why-icon">IV.</div>
+      <div class="why-icon" style="color:var(--gold-light);">IV.</div>
       <h3>Direct Ownership</h3>
       <p>Unlike ETFs or futures, Galami investors own allocated physical gold — tangible, verifiable, and free from counterparty risk inherent in financial derivatives.</p>
     </div>
     <div class="why-item">
-      <div class="why-icon">V.</div>
+      <div class="why-icon" style="color:var(--gold-light);">V.</div>
       <h3>Dubai Advantage</h3>
       <p>Dubai is the world's leading gold trading hub. Regulatory clarity, tax efficiency, and proximity to supply chains makes it the optimal jurisdiction for bullion investment.</p>
     </div>
     <div class="why-item">
-      <div class="why-icon">VI.</div>
+      <div class="why-icon" style="color:var(--gold-light);">VI.</div>
       <h3>High ROI Potential</h3>
       <p>With direct sourcing margins and a transparent fee structure, Galami investors gain exposure to gold at competitive rates unavailable through conventional retail channels.</p>
     </div>
@@ -972,6 +974,7 @@
 <div class="parallax-banner" style="height:50vh;min-height:380px;position:relative;overflow:hidden;background:#111109;">
   <video autoplay muted loop playsinline preload="auto" id="refineryVid" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;z-index:0;">
     <source src="refinery_smelting.mp4" type="video/mp4">
+    <track kind="captions" src="" label="No captions">
   </video>
   <div class="parallax-overlay" style="position:absolute;inset:0;background:linear-gradient(135deg, rgba(10,10,8,0.75) 0%, rgba(10,10,8,0.25) 100%);z-index:1;"></div>
   <div class="parallax-caption" style="position:relative;z-index:2;">
