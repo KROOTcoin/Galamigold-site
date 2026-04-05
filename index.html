@@ -59,7 +59,9 @@
 </script>
 <title>Galami Gold — Physical Gold Supply & Bullion Trading | Dubai</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -834,9 +836,9 @@
 
 <!-- PARALLAX BANNER 1 — Gold Mining -->
 <div class="parallax-banner">
-  <div class="parallax-img" id="parallax1" style="background-image:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1800&q=80');"></div>
+  <div class="parallax-img" id="parallax1" style="background-image:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=900&q=75&fm=webp');"></div>
   <div class="parallax-overlay"></div>
-  <div class="parallax-caption">
+  <div class="parallax-caption" style="position:relative;z-index:2;">
     <span class="parallax-label">African Source</span>
     <blockquote>"Gold is the money of kings, silver is the money of gentlemen, barter is the money of peasants — but debt is the money of slaves."</blockquote>
     <cite>Norm Franz · Money and Wealth in the New Millennium</cite>
@@ -878,9 +880,9 @@
 
 <!-- PARALLAX BANNER 2 — Gold Bars -->
 <div class="parallax-banner">
-  <div class="parallax-img" id="parallax2" style="background-image:url('https://images.unsplash.com/photo-1610375461246-83df859d849d?w=1800&q=80');"></div>
+  <div class="parallax-img" id="parallax2" style="background-image:url('https://images.unsplash.com/photo-1610375461246-83df859d849d?w=900&q=75&fm=webp');"></div>
   <div class="parallax-overlay" style="background:linear-gradient(to bottom, rgba(10,10,8,0.6) 0%, rgba(10,10,8,0.25) 50%, rgba(10,10,8,0.75) 100%);"></div>
-  <div class="parallax-caption">
+  <div class="parallax-caption" style="position:relative;z-index:2;">
     <span class="parallax-label">Dubai Refined · AU 999.9 Purity</span>
     <blockquote>Every bar we deliver carries the story of an African mine and the precision of a Dubai refinery.</blockquote>
     <cite>Galami Gold · Supply Chain Integrity</cite>
@@ -920,9 +922,9 @@
 
 <!-- PARALLAX BANNER 3 — Dubai Skyline / Wealth -->
 <div class="parallax-banner" style="height:45vh;">
-  <div class="parallax-img" id="parallax3" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1800&q=80');"></div>
+  <div class="parallax-img" id="parallax3" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900&q=75&fm=webp');"></div>
   <div class="parallax-overlay" style="background:rgba(10,10,8,0.55);"></div>
-  <div class="parallax-caption">
+  <div class="parallax-caption" style="position:relative;z-index:2;">
     <span class="parallax-label">IFZA Business Park · Dubai, UAE</span>
     <blockquote>The world's most trusted gold trading hub — where your investment is stored, secured and grown.</blockquote>
   </div>
@@ -967,12 +969,12 @@
 </section>
 
 <!-- PARALLAX BANNER 4 — Wealth / Finance -->
-<div class="parallax-banner" style="height:50vh;">
-  <video autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.6;z-index:0;">
+<div class="parallax-banner" style="height:50vh;min-height:380px;position:relative;overflow:hidden;background:#111109;">
+  <video autoplay muted loop playsinline preload="auto" id="refineryVid" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;z-index:0;">
     <source src="refinery_smelting.mp4" type="video/mp4">
   </video>
-  <div class="parallax-overlay" style="background:linear-gradient(135deg, rgba(10,10,8,0.75) 0%, rgba(10,10,8,0.25) 100%);z-index:1;"></div>
-  <div class="parallax-caption">
+  <div class="parallax-overlay" style="position:absolute;inset:0;background:linear-gradient(135deg, rgba(10,10,8,0.75) 0%, rgba(10,10,8,0.25) 100%);z-index:1;"></div>
+  <div class="parallax-caption" style="position:relative;z-index:2;">
     <span class="parallax-label">Private · Family Office · Institutional</span>
     <blockquote>Wealth that is measured in ounces is never truly lost.</blockquote>
     <cite>A timeless principle of gold ownership</cite>
@@ -1241,3 +1243,12 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.step, .why-item, .inv-card, .about-cell, .
+<style>
+@media (max-width: 480px) {
+  #heroBg, #refineryVid { display: none !important; }
+}
+</style>
+
+
+</body>
+</html>
