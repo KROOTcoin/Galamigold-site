@@ -333,7 +333,7 @@
           <div class="eyebrow">Partnership Enquiry</div>
           <h3 style="font-size:1.5rem;margin-bottom:0.5rem;">Start the <em>Conversation</em></h3>
           <p style="font-size:0.8rem;margin-bottom:2rem;">Complete the form below and a member of the Galami Gold team will be in touch within two business days.</p>
-          <form name="partnership" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/">
+          <form name="partnership" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="partnershipForm">
             <input type="hidden" name="form-name" value="partnership">
             <p style="display:none;"><input name="bot-field"></p>
             <div style="display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.2rem;">
@@ -445,4 +445,64 @@
     if(a.getAttribute('href') === 'about.html') a.classList.add('active');
   });
 </script>
+
+<!-- PARTNERSHIP SUCCESS OVERLAY -->
+<div id="partnerOverlay" style="
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:rgba(10,10,8,0.92);
+  backdrop-filter:blur(8px);
+  align-items:center;
+  justify-content:center;
+">
+  <div style="
+    text-align:center;
+    max-width:480px;
+    padding:4rem 3rem;
+    background:var(--charcoal);
+    border-top:2px solid var(--gold);
+    animation:fadeInUp 0.5s ease;
+  ">
+    <div style="font-size:3rem;margin-bottom:1.5rem;">✦</div>
+    <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Enquiry Received</div>
+    <h2 style="font-family:var(--ff-display);font-size:2rem;font-weight:400;color:var(--ivory);margin-bottom:1rem;">Thank You</h2>
+    <p style="font-size:0.85rem;color:var(--ash);line-height:1.9;margin-bottom:2rem;">Your partnership enquiry has been received. A member of the Galami Gold team will be in touch within two business days.</p>
+    <div style="font-size:0.7rem;color:var(--ash);letter-spacing:0.1em;">Redirecting you to the homepage in <span id="partnerCount">4</span> seconds…</div>
+    <a href="/" style="display:inline-block;margin-top:1.5rem;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Return to Homepage →</a>
+  </div>
+</div>
+
+<script>
+document.getElementById('partnershipForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  try {
+    const res = await fetch('/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: new URLSearchParams(data).toString()
+    });
+    if(res.ok || res.status === 200) {
+      const overlay = document.getElementById('partnerOverlay');
+      overlay.style.display = 'flex';
+      let count = 4;
+      const countEl = document.getElementById('partnerCount');
+      const timer = setInterval(() => {
+        count--;
+        countEl.textContent = count;
+        if(count <= 0) {
+          clearInterval(timer);
+          window.location.href = '/';
+        }
+      }, 1000);
+    }
+  } catch(err) {
+    form.submit();
+  }
+});
+</script>
+
 </body></html>
