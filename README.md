@@ -1,6 +1,6 @@
 # Galami Gold — Website
 
-Live site: https://galamigold.com 
+Live site: https://brilliant-pony-87549a.netlify.app  
 GitHub: https://github.com/KROOTcoin/Galamigold-site  
 Built with: Pure HTML/CSS/JS — hosted on Netlify (drag & drop zip to deploy)
 
