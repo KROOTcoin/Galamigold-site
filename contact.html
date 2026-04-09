@@ -8,7 +8,7 @@
 <meta name="author" content="Galami Gold">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://galamigold.com/contact">
-<!-- Open Graph -->
+<!-- Open Graph -->h
 <meta property="og:type" content="website">
 <meta property="og:title" content="Contact Galami Gold | Investor Enquiries | Dubai & London">
 <meta property="og:description" content="Contact Galami Gold for investor enquiries about our gold trading programs. We respond within one business day. Dubai HQ and London office.">
@@ -369,7 +369,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   const data = new FormData(form);
 
   try {
-    const res = await fetch('/', {
+    const res = await fetch('/contact', {
       method: 'POST',
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       body: new URLSearchParams(data).toString()
