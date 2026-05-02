@@ -443,12 +443,12 @@
         <div class="converter" style="margin-top:2rem;">
           <div class="conv-group" style="margin-bottom:1.5rem;">
             <label>Investment Amount</label>
-            <input type="number" id="inv-amount" value="100000" step="100000" oninput="updateInvCalc()">
+            <input type="number" id="inv-amount" value="115000" step="115000" oninput="updateInvCalc()">
           </div>
           <div class="conv-group" style="margin-bottom:1.5rem;">
             <label>Program</label>
             <select id="inv-program" onchange="updateInvCalc()">
-              <option value="zambia">Zambia–Dubai (5% per trade · bi-weekly · USD)</option>
+              <option value="zambia">Zambia–Dubai (3% per trade · bi-weekly · USD)</option>
               <option value="guinea">Guinea–Dubai (2% per trade · bi-weekly · EUR)</option>
             </select>
           </div>
@@ -766,9 +766,9 @@ function updateConverter() {
 
 // ─── INVESTMENT CALCULATOR ──────────────────────────────────
 function updateInvCalc() {
-  const amount = parseFloat(document.getElementById('inv-amount').value) || 100000;
+  const amount = parseFloat(document.getElementById('inv-amount').value) || 115000;
   const prog = document.getElementById('inv-program').value;
-  const rate = prog === 'zambia' ? 0.05 : 0.02;
+  const rate = prog === 'zambia' ? 0.03 : 0.02;
   const cycles = 26; // bi-weekly × 52 weeks
   const perTrade = amount * rate;
   const annual = perTrade * cycles;
