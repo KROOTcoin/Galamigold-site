@@ -52,7 +52,6 @@ Built with: Pure HTML/CSS/JS — hosted on Netlify (drag & drop zip to deploy)
 - **Parent:** Galami FZCO Dubai — IFZA Business Park, DDP, Premises no-35133-001
 - **UK entity:** Galami UK Ltd — 71-75 Shelton Street, Covent Garden, London WC2H 9JQ
 - **Import division:** Roycroft Precious Metals Trading FZCO — DSO-IFZA, Dubai Silicon Oasis
-- **Refinery partner:** Mamba Gold FZCO (Dubai)
 - **Contact:** accounts@galamigold.com · +971 526 88 88 57
 
 ## Investment Programs
