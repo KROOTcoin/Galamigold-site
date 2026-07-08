@@ -13,7 +13,7 @@ Built with: Pure HTML/CSS/JS — hosted on Netlify (drag & drop zip to deploy)
 | `index.html` | Homepage — video hero, parallax sections, investment programs, live gold ticker |
 | `about.html` | About page — company structure, partners, partnership enquiry form |
 | `zambia.html` | Zambia–Dubai Program — full detail, $100K USD, 5% per trade |
-| `guinea.html` | Guinea–Dubai Program — full detail, €125K EUR, 2% per trade |
+| `sierra-leone.html` | Sierra Leone–Dubai Program — full detail, €125K EUR, 2% per trade |
 | `insights.html` | Market Insights — live gold prices via gold-api.com, Chart.js chart, calculators |
 | `news.html` | News & Blog — 17 static articles linking to Wix blog |
 | `contact.html` | Contact page — Netlify Forms investor enquiry |
@@ -60,7 +60,7 @@ Built with: Pure HTML/CSS/JS — hosted on Netlify (drag & drop zip to deploy)
 | Program | Min | Return | Frequency | Currency | Instrument |
 |---------|-----|--------|-----------|----------|------------|
 | Zambia–Dubai | $100,000 | 5% per trade | Bi-weekly | USD/USDT | Loan Note — Galami UK Ltd |
-| Guinea–Dubai | €125,000 | 2% per trade | Bi-weekly | EUR | Loan Note — Galami UK Ltd |
+| Sierra Leone–Dubai | €125,000 | 2% per trade | Bi-weekly | EUR | Loan Note — Galami UK Ltd |
 
 ---
 
