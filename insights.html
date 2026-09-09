@@ -439,16 +439,15 @@
       <div>
         <div class="eyebrow">Investment Value</div>
         <h2 style="font-size:clamp(1.8rem,3vw,2.8rem);margin-bottom:1rem;">Program <em>Calculator</em></h2>
-        <p>Estimate returns from our two gold trading programs based on your investment amount.</p>
+        <p>Estimate returns from the Sierra Leone–Dubai program based on your investment amount. The Zambia–Dubai program is temporarily closed to new subscriptions.</p>
         <div class="converter" style="margin-top:2rem;">
           <div class="conv-group" style="margin-bottom:1.5rem;">
             <label>Investment Amount</label>
-            <input type="number" id="inv-amount" value="115000" step="115000" oninput="updateInvCalc()">
+            <input type="number" id="inv-amount" value="125000" step="125000" oninput="updateInvCalc()">
           </div>
           <div class="conv-group" style="margin-bottom:1.5rem;">
             <label>Program</label>
             <select id="inv-program" onchange="updateInvCalc()">
-              <option value="zambia">Zambia–Dubai (2% per trade · bi-weekly · USD)</option>
               <option value="sierra-leone">Sierra Leone–Dubai (2% per trade · bi-weekly · EUR)</option>
             </select>
           </div>
@@ -520,9 +519,9 @@
   <div style="max-width:600px;margin:0 auto;">
     <div class="eyebrow" style="justify-content:center;">Ready to Invest?</div>
     <h2>Capitalise on<br><em>Gold's</em> Momentum</h2>
-    <p>Both Galami programs give investors direct access to trade-linked gold returns — without speculative price exposure. Speak to our team to receive a full investment pack.</p>
+    <p>The Sierra Leone–Dubai program gives investors direct access to trade-linked gold returns — without speculative price exposure. Speak to our team to receive a full investment pack.</p>
     <div style="display:flex;gap:1.5rem;justify-content:center;margin-top:2rem;flex-wrap:wrap;">
-      <a href="zambia.html" class="btn-primary">Zambia Program — 3% / TRADE</a>
+      <span style="display:inline-block;border:1px solid rgba(150,150,150,0.45);color:#9a9a9a;padding:0.9rem 2rem;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;cursor:not-allowed;" role="note" aria-disabled="true">Zambia Program — Closed</span>
       <a href="sierra-leone.html" class="btn-primary" style="background:transparent;border:1px solid var(--gold);color:var(--gold);">Sierra Leone Program — 2% / trade</a>
     </div>
   </div>
@@ -766,13 +765,13 @@ function updateConverter() {
 
 // ─── INVESTMENT CALCULATOR ──────────────────────────────────
 function updateInvCalc() {
-  const amount = parseFloat(document.getElementById('inv-amount').value) || 115000;
+  const amount = parseFloat(document.getElementById('inv-amount').value) || 125000;
   const prog = document.getElementById('inv-program').value;
-  const rate = prog === 'zambia' ? 0.02 : 0.02;
+  const rate = 0.02;
   const cycles = 26; // bi-weekly × 52 weeks
   const perTrade = amount * rate;
   const annual = perTrade * cycles;
-  const sym = prog === 'zambia' ? '$' : '€';
+  const sym = '€';
   document.getElementById('inv-per-trade').textContent = sym + perTrade.toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:0});
   document.getElementById('inv-annual').textContent = sym + annual.toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:0});
 }
