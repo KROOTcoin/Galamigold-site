@@ -755,6 +755,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <meta name="theme-color" content="#C9A84C">
+<script src="cert.js"></script>
 </head>
 <body>
 
@@ -1009,7 +1010,7 @@
   <div class="investment-content">
     <div class="section-eyebrow">Investment Plans</div>
     <h2>Two <em>Distinct</em> Programs</h2>
-    <div class="investment-grid" style="grid-template-columns:1fr 1fr;max-width:900px;margin:0 auto;">
+    <div class="investment-grid" style="grid-template-columns:1fr 1fr;max-width:900px;margin:0 auto;" data-cert-gate>
       <div class="inv-card featured">
         <div class="inv-tier">Zambia–Dubai Program</div>
         <div class="inv-min">$115K</div>
@@ -1088,7 +1089,7 @@
     <div class="section-eyebrow" style="justify-content:center;">Get in Touch</div>
     <h2>Begin Your<br><em>Gold</em> Journey</h2>
     <p class="contact-desc">Speak with our investor relations team. We respond to all qualified enquiries within one business day from our Dubai office.</p>
-    <form id="homeEnquiryForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form"><input type="hidden" name="form-name" value="contact"><p style="display:none"><input name="bot-field"></p>
+    <div data-cert-gate><div class="cert-badge">Investor status: <strong data-cert-name></strong>. <a href="investor-eligibility.html">View eligibility</a></div><form id="homeEnquiryForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form"><input type="hidden" name="form-name" value="contact"><input type="hidden" name="cert_status"><input type="hidden" name="cert_date"><p style="display:none"><input name="bot-field"></p>
       <div class="form-row">
         <div class="form-group">
           <label>First Name</label>
@@ -1133,7 +1134,7 @@
         <textarea name="message" placeholder="Tell us about your investment goals or any questions you may have…"></textarea>
       </div>
       <button type="submit" class="form-submit">Submit Enquiry</button>
-      </form><p class="form-disclaimer">By submitting this form you agree to our Privacy Policy. Galami Gold will never share your details with third parties without your consent.</p>
+      </form></div><p class="form-disclaimer">By submitting this form you agree to our Privacy Policy. Galami Gold will never share your details with third parties without your consent.</p>
     </div>
   </div>
 </section>
@@ -1197,6 +1198,7 @@
         <li><a href="risk.html">Risk Disclosure</a></li>
         <li><a href="risk.html">AML &amp; Compliance</a></li>
         <li><a href="risk.html">Regulatory Info</a></li>
+        <li><a href="investor-eligibility.html">Investor Eligibility</a></li>
       </ul>
     </div>
   </div>

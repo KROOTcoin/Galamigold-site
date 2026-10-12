@@ -19,6 +19,8 @@ Built with: Pure HTML/CSS/JS — hosted on Netlify (drag & drop zip to deploy)
 | `contact.html` | Contact page — Netlify Forms investor enquiry |
 | `risk.html` | Risk Disclosure — FCA/FSCS regulatory page |
 | `privacy.html` | Privacy Policy — UK GDPR compliant |
+| `investor-eligibility.html` | Investor Eligibility policy + HNW / self-certified sophisticated investor statements (Netlify form `investor-certification`) |
+| `cert.js` | Certification gate — `<body data-cert-page>` or `data-cert-gate` on a section. Loaded in `<head>` |
 | `gold-broker-roles-2026.html` | Full article page |
 | `institutional-gold-trading-benefits.html` | Full article page |
 | `gold-asset-examples-diversification.html` | Full article page |
@@ -64,6 +66,10 @@ Built with: Pure HTML/CSS/JS — hosted on Netlify (drag & drop zip to deploy)
 ---
 
 > Return figures are deliberately **not published** anywhere on the site (Oct 2026). Do not reintroduce them; they go in the private investor pack only.
+
+## Investor certification gate
+
+Program pages (`zambia.html`, `sierra-leone.html`), the homepage program cards, the insights terms panel and both enquiry forms are gated by `cert.js`. Visitors sign the statutory statement on `investor-eligibility.html` (wording from FPO 2005 Sch. 5 as substituted by SI 2024/301), which is recorded via Netlify Forms and remembered in the browser for 12 months. Enquiries carry `cert_status` / `cert_date` hidden fields. This is a soft gate, not access control. `cert.js` and `investor-eligibility.html` are shared with the `galamilp` repo; keep them in sync.
 
 ## How to Deploy
 
