@@ -12,8 +12,8 @@ Built with: Pure HTML/CSS/JS — hosted on Netlify (drag & drop zip to deploy)
 |------|-------------|
 | `index.html` | Homepage — video hero, parallax sections, investment programs, live gold ticker |
 | `about.html` | About page — company structure, partners, partnership enquiry form |
-| `zambia.html` | Zambia–Dubai Program — full detail, $100K USD, 5% per trade |
-| `sierra-leone.html` | Sierra Leone–Dubai Program — full detail, €125K EUR, 2% per trade |
+| `zambia.html` | Zambia–Dubai Program — full detail, from $115K USD, terms on request |
+| `sierra-leone.html` | Sierra Leone–Dubai Program — full detail, €125K EUR, terms on request |
 | `insights.html` | Market Insights — live gold prices via gold-api.com, Chart.js chart, calculators |
 | `news.html` | News & Blog — 17 static articles linking to Wix blog |
 | `contact.html` | Contact page — Netlify Forms investor enquiry |
@@ -56,12 +56,14 @@ Built with: Pure HTML/CSS/JS — hosted on Netlify (drag & drop zip to deploy)
 
 ## Investment Programs
 
-| Program | Min | Return | Frequency | Currency | Instrument |
+| Program | Min | Terms | Frequency | Currency | Instrument |
 |---------|-----|--------|-----------|----------|------------|
-| Zambia–Dubai | $100,000 | 5% per trade | Bi-weekly | USD/USDT | Loan Note — Galami UK Ltd |
-| Sierra Leone–Dubai | €125,000 | 2% per trade | Bi-weekly | EUR | Loan Note — Galami UK Ltd |
+| Zambia–Dubai | $115,000 | Private, on request | Bi-weekly | USD/USDT | Loan Note — Galami UK Ltd |
+| Sierra Leone–Dubai | €125,000 | Private, on request | Bi-weekly | EUR | Loan Note — Galami UK Ltd |
 
 ---
+
+> Return figures are deliberately **not published** anywhere on the site (Oct 2026). Do not reintroduce them; they go in the private investor pack only.
 
 ## How to Deploy
 

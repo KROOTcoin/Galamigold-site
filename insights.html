@@ -437,32 +437,18 @@
         </div>
       </div>
       <div>
-        <div class="eyebrow">Investment Value</div>
-        <h2 style="font-size:clamp(1.8rem,3vw,2.8rem);margin-bottom:1rem;">Program <em>Calculator</em></h2>
-        <p>Estimate returns from our two gold trading programs based on your investment amount.</p>
+        <div class="eyebrow">Investor Access</div>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.8rem);margin-bottom:1rem;">Request <em>Indicative Terms</em></h2>
+        <p>Return structures and cycle performance for our programs are not published. Qualified investors receive indicative terms privately, alongside the program information pack.</p>
         <div class="converter" style="margin-top:2rem;">
-          <div class="conv-group" style="margin-bottom:1.5rem;">
-            <label>Investment Amount</label>
-            <input type="number" id="inv-amount" value="115000" step="115000" oninput="updateInvCalc()">
-          </div>
-          <div class="conv-group" style="margin-bottom:1.5rem;">
-            <label>Program</label>
-            <select id="inv-program" onchange="updateInvCalc()">
-              <option value="zambia">Zambia–Dubai (2% per trade · bi-weekly · USD)</option>
-              <option value="sierra-leone">Sierra Leone–Dubai (2% per trade · bi-weekly · EUR)</option>
-            </select>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1rem;">
-            <div>
-              <div style="font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ash);margin-bottom:0.4rem;">Per Trade Return</div>
-              <div style="font-family:var(--ff-display);font-size:1.8rem;color:var(--gold-light);" id="inv-per-trade">—</div>
-            </div>
-            <div>
-              <div style="font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ash);margin-bottom:0.4rem;">Annual Est. Return</div>
-              <div style="font-family:var(--ff-display);font-size:1.8rem;color:var(--gold-light);" id="inv-annual">—</div>
-            </div>
-          </div>
-          <div style="font-size:0.62rem;color:var(--ash);margin-top:1rem;line-height:1.7;">Est. based on 26 bi-weekly cycles per year. Past performance does not guarantee future results. For illustration only.</div>
+          <table class="table-grid" style="margin:0 0 1.5rem;">
+            <tr><td>Zambia–Dubai</td><td>From $115,000 · USD / USDT · Bi-weekly cycles</td></tr>
+            <tr><td>Sierra Leone–Dubai</td><td>From €125,000 · EUR · Bi-weekly cycles</td></tr>
+            <tr><td>Instrument</td><td>Loan Note Agreement with Galami UK Ltd</td></tr>
+            <tr><td>Indicative Terms</td><td>Disclosed privately to qualified investors</td></tr>
+          </table>
+          <a href="contact.html" class="btn-primary" style="display:inline-block;">Request Indicative Terms</a>
+          <div style="font-size:0.62rem;color:var(--ash);margin-top:1rem;line-height:1.7;">Available to high-net-worth and sophisticated investors only. No return is guaranteed and capital is at risk.</div>
         </div>
       </div>
     </div>
@@ -520,10 +506,10 @@
   <div style="max-width:600px;margin:0 auto;">
     <div class="eyebrow" style="justify-content:center;">Ready to Invest?</div>
     <h2>Capitalise on<br><em>Gold's</em> Momentum</h2>
-    <p>Both Galami programs give investors direct access to trade-linked gold returns — without speculative price exposure. Speak to our team to receive a full investment pack.</p>
+    <p>Both Galami programs give investors direct access to trade-linked gold returns — without speculative price exposure. Speak to our team to receive indicative terms and a full investment pack.</p>
     <div style="display:flex;gap:1.5rem;justify-content:center;margin-top:2rem;flex-wrap:wrap;">
-      <a href="zambia.html" class="btn-primary">Zambia Program — 2% / TRADE</a>
-      <a href="sierra-leone.html" class="btn-primary" style="background:transparent;border:1px solid var(--gold);color:var(--gold);">Sierra Leone Program — 2% / trade</a>
+      <a href="zambia.html" class="btn-primary">Zambia–Dubai Program</a>
+      <a href="sierra-leone.html" class="btn-primary" style="background:transparent;border:1px solid var(--gold);color:var(--gold);">Sierra Leone–Dubai Program</a>
     </div>
   </div>
 </section>
@@ -768,19 +754,6 @@ function updateConverter() {
   document.getElementById('conv-rate').textContent = 'At live spot rate of ' + fmt(goldPrice) + ' / troy oz (XAU/USD)';
 }
 
-// ─── INVESTMENT CALCULATOR ──────────────────────────────────
-function updateInvCalc() {
-  const amount = parseFloat(document.getElementById('inv-amount').value) || 115000;
-  const prog = document.getElementById('inv-program').value;
-  const rate = prog === 'zambia' ? 0.02 : 0.02;
-  const cycles = 26; // bi-weekly × 52 weeks
-  const perTrade = amount * rate;
-  const annual = perTrade * cycles;
-  const sym = prog === 'zambia' ? '$' : '€';
-  document.getElementById('inv-per-trade').textContent = sym + perTrade.toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:0});
-  document.getElementById('inv-annual').textContent = sym + annual.toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:0});
-}
-updateInvCalc();
 
 // Active nav
 document.querySelectorAll('.nav-links a').forEach(a => {
