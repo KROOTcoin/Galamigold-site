@@ -12,13 +12,15 @@ Built with: Pure HTML/CSS/JS — hosted on Netlify (drag & drop zip to deploy)
 |------|-------------|
 | `index.html` | Homepage — video hero, parallax sections, investment programs, live gold ticker |
 | `about.html` | About page — company structure, partners, partnership enquiry form |
-| `zambia.html` | Zambia–Dubai Program — full detail, $100K USD, 5% per trade |
-| `sierra-leone.html` | Sierra Leone–Dubai Program — full detail, €125K EUR, 2% per trade |
+| `zambia.html` | Zambia–Dubai Program — full detail, from $115K USD, terms on request |
+| `sierra-leone.html` | Sierra Leone–Dubai Program — full detail, €125K EUR, terms on request |
 | `insights.html` | Market Insights — live gold prices via gold-api.com, Chart.js chart, calculators |
 | `news.html` | News & Blog — 17 static articles linking to Wix blog |
 | `contact.html` | Contact page — Netlify Forms investor enquiry |
 | `risk.html` | Risk Disclosure — FCA/FSCS regulatory page |
 | `privacy.html` | Privacy Policy — UK GDPR compliant |
+| `investor-eligibility.html` | Investor Eligibility policy + HNW / self-certified sophisticated investor statements (Netlify form `investor-certification`) |
+| `cert.js` | Certification gate — `<body data-cert-page>` or `data-cert-gate` on a section. Loaded in `<head>` |
 | `gold-broker-roles-2026.html` | Full article page |
 | `institutional-gold-trading-benefits.html` | Full article page |
 | `gold-asset-examples-diversification.html` | Full article page |
@@ -56,12 +58,18 @@ Built with: Pure HTML/CSS/JS — hosted on Netlify (drag & drop zip to deploy)
 
 ## Investment Programs
 
-| Program | Min | Return | Frequency | Currency | Instrument |
+| Program | Min | Terms | Frequency | Currency | Instrument |
 |---------|-----|--------|-----------|----------|------------|
-| Zambia–Dubai | $100,000 | 5% per trade | Bi-weekly | USD/USDT | Loan Note — Galami UK Ltd |
-| Sierra Leone–Dubai | €125,000 | 2% per trade | Bi-weekly | EUR | Loan Note — Galami UK Ltd |
+| Zambia–Dubai | $115,000 | Private, on request | Bi-weekly | USD/USDT | Loan Note — Galami UK Ltd |
+| Sierra Leone–Dubai | €125,000 | Private, on request | Bi-weekly | EUR | Loan Note — Galami UK Ltd |
 
 ---
+
+> Return figures are deliberately **not published** anywhere on the site (Oct 2026). Do not reintroduce them; they go in the private investor pack only.
+
+## Investor certification gate
+
+Program pages (`zambia.html`, `sierra-leone.html`), the homepage program cards, the insights terms panel and both enquiry forms are gated by `cert.js`. Visitors sign the statutory statement on `investor-eligibility.html` (wording from FPO 2005 Sch. 5 as substituted by SI 2024/301), which is recorded via Netlify Forms and remembered in the browser for 12 months. Enquiries carry `cert_status` / `cert_date` hidden fields. This is a soft gate, not access control. `cert.js` and `investor-eligibility.html` are shared with the `galamilp` repo; keep them in sync.
 
 ## How to Deploy
 

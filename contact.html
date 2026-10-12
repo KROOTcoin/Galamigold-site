@@ -160,6 +160,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <meta name="theme-color" content="#C9A84C">
+<script src="cert.js"></script>
 </head>
 <body>
 <nav>
@@ -192,8 +193,10 @@
         <div class="eyebrow">Send an Enquiry</div>
         <h2>Begin Your<br><em>Application</em></h2>
         <div class="gold-divider"></div>
+        <div data-cert-gate><div class="cert-badge">Investor status: <strong data-cert-name></strong>. <a href="investor-eligibility.html">View eligibility</a></div>
         <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="margin-top:1rem;" id="contactForm">
           <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="cert_status"><input type="hidden" name="cert_date">
           <p style="display:none;"><input name="bot-field"></p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
             <div style="display:flex;flex-direction:column;gap:0.5rem;">
@@ -242,6 +245,7 @@
           <button type="submit" style="width:100%;padding:1.2rem;background:var(--gold);color:var(--obsidian);border:none;font-family:var(--ff-body);font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;font-weight:600;cursor:pointer;transition:background 0.3s;">Submit Enquiry</button>
           <p style="font-size:0.68rem;color:var(--ash);text-align:center;margin-top:1rem;line-height:1.6;">By submitting this form you agree to our Privacy Policy. Galami Gold will never share your details with third parties without your consent.</p>
         </form>
+        </div>
       </div>
       <div>
         <div class="eyebrow">Contact Details</div>
@@ -320,6 +324,7 @@
         <li><a href="privacy.html">Privacy Policy</a></li>
         <li><a href="risk.html">Risk Disclosure</a></li>
         <li><a href="risk.html">Regulatory Info</a></li>
+        <li><a href="investor-eligibility.html">Investor Eligibility</a></li>
       </ul>
     </div>
   </div>

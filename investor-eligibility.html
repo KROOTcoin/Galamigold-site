@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investor Eligibility &amp; Certification | Galami Gold</title>
+<meta name="description" content="Galami Gold investment programs are available only to certified high net worth individuals and self-certified sophisticated investors. Read the eligibility criteria and complete your investor statement.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap">
+<script src="cert.js"></script>
+<style>
+  :root {
+    --gold: #C9A84C; --gold-light: #E8C97A; --gold-mist: rgba(201,168,76,0.07);
+    --obsidian: #0A0A08; --deep: #111109; --charcoal: #1A1A16; --smoke: #2A2A24;
+    --ash: #B0B0A4; --ivory: #F0F0F0; --white: #FFFFFF; --danger: #E08A6A;
+    --ff-display: 'Poppins', sans-serif; --ff-body: 'Montserrat', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--obsidian); color: var(--ash); font-family: var(--ff-body); font-weight: 300; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+  a { color: var(--gold); }
+  strong { color: var(--ivory); font-weight: 500; }
+
+  .top { display: flex; align-items: center; justify-content: space-between; padding: 22px 5%; border-bottom: 1px solid var(--smoke); background: var(--deep); position: sticky; top: 0; z-index: 50; }
+  .brand { font-family: var(--ff-display); font-weight: 500; letter-spacing: 0.2em; color: var(--white); text-decoration: none; font-size: 15px; }
+  .brand span { color: var(--gold); }
+  .back { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); text-decoration: none; }
+
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 16px; }
+  section { padding: 72px 0; border-bottom: 1px solid var(--smoke); scroll-margin-top: 64px; }
+  .eyebrow { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; display: flex; align-items: center; gap: 14px; }
+  .eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+  h1 { font-family: var(--ff-display); font-weight: 300; font-size: clamp(30px, 5vw, 46px); line-height: 1.1; color: var(--white); margin-bottom: 22px; }
+  h1 em, h2 em { font-style: italic; color: var(--gold-light); }
+  h2 { font-family: var(--ff-display); font-weight: 300; font-size: clamp(24px, 3.4vw, 32px); line-height: 1.2; color: var(--white); margin-bottom: 18px; }
+  h3 { font-family: var(--ff-display); font-weight: 400; font-size: 18px; color: var(--ivory); margin-bottom: 10px; }
+  p { font-size: 14px; margin-bottom: 14px; }
+  .lead { font-size: 15px; max-width: 680px; }
+
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 32px; }
+  .card { background: var(--charcoal); padding: 30px 26px; }
+  .card ul { list-style: none; margin-top: 12px; }
+  .card li { font-size: 13px; padding: 9px 0 9px 18px; border-bottom: 1px solid rgba(255,255,255,0.05); position: relative; }
+  .card li::before { content: ''; position: absolute; left: 0; top: 18px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+  .card .or { font-size: 10px; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; padding-left: 0; border: none; }
+  .card .or::before { display: none; }
+
+  .points { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 36px; margin-top: 28px; }
+  .points div { border-left: 2px solid var(--gold); padding-left: 16px; font-size: 13px; }
+  .points b { display: block; font-weight: 500; color: var(--ivory); font-size: 14px; margin-bottom: 4px; }
+
+  .warn { background: rgba(224,138,106,0.06); border: 1px solid rgba(224,138,106,0.3); padding: 22px 24px; margin-top: 30px; font-size: 13px; }
+  .warn strong { color: var(--white); }
+
+  /* Form */
+  .step-label { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin: 34px 0 14px; }
+  .choice { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .choice label { display: block; background: var(--charcoal); padding: 22px; cursor: pointer; border: 1px solid transparent; transition: border-color 0.2s, background 0.2s; }
+  .choice label:hover { background: var(--smoke); }
+  .choice input { position: absolute; opacity: 0; pointer-events: none; }
+  .choice input:checked + label { border-color: var(--gold); background: var(--smoke); }
+  .choice input:focus-visible + label { outline: 2px solid var(--gold-light); outline-offset: 2px; }
+  .choice b { display: block; color: var(--white); font-weight: 500; font-size: 14px; margin-bottom: 4px; }
+  .choice span { font-size: 12px; }
+
+  .statement { display: none; background: var(--deep); border: 1px solid var(--smoke); margin-top: 22px; }
+  .statement.show { display: block; }
+  .st-head { background: var(--charcoal); padding: 14px 22px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ivory); font-weight: 500; text-align: center; }
+  .st-body { padding: 24px 22px; font-size: 13px; }
+  .st-body p { font-size: 13px; }
+  .q { padding: 16px 0; border-top: 1px solid var(--smoke); }
+  .q:first-of-type { border-top: none; }
+  .q-text { color: var(--ivory); margin-bottom: 10px; }
+  .yn { display: flex; gap: 10px; flex-wrap: wrap; }
+  .yn label { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--smoke); padding: 8px 16px; font-size: 12px; cursor: pointer; }
+  .yn input { accent-color: var(--gold); }
+  .detail { display: none; margin-top: 12px; }
+  .detail.show { display: block; }
+  .conj { font-size: 11px; letter-spacing: 0.2em; color: var(--gold); padding: 6px 0; }
+  .none-row { display: flex; align-items: center; gap: 10px; padding: 14px 0 0; border-top: 1px solid var(--smoke); }
+  .none-row input { accent-color: var(--gold); width: 16px; height: 16px; }
+
+  .fld { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+  .fld label { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ash); }
+  .fld input, .detail input { width: 100%; background: var(--charcoal); border: 1px solid var(--smoke); color: var(--ivory); padding: 12px 14px; font-family: var(--ff-body); font-size: 14px; outline: none; }
+  .fld input:focus, .detail input:focus { border-color: var(--gold); }
+  .fld input[readonly] { color: var(--ash); }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+  .sig input { font-family: var(--ff-display); font-style: italic; font-size: 18px; }
+
+  .decl { background: var(--deep); border: 1px solid var(--smoke); padding: 22px; margin: 6px 0 20px; font-size: 13px; }
+  .decl ol { list-style: none; margin: 8px 0 12px 8px; }
+  .decl li { padding: 3px 0; }
+  .decl .loss { color: var(--white); font-weight: 500; margin-top: 8px; }
+  .confirm { display: flex; gap: 12px; align-items: flex-start; font-size: 13px; color: var(--ivory); cursor: pointer; margin-top: 14px; }
+  .confirm input { accent-color: var(--gold); width: 18px; height: 18px; margin-top: 3px; flex-shrink: 0; }
+
+  .err { display: none; color: var(--danger); font-size: 13px; margin: 14px 0; }
+  .err.show { display: block; }
+  .btn { display: inline-block; width: 100%; background: var(--gold); color: var(--obsidian); border: none; padding: 17px; font-family: var(--ff-body); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; cursor: pointer; text-decoration: none; text-align: center; }
+  .btn:hover { background: var(--gold-light); }
+  .btn[disabled] { opacity: 0.5; cursor: wait; }
+  .btn-ghost { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+  .btn-ghost:hover { background: var(--gold-mist); }
+
+  .panel { display: none; text-align: center; background: var(--charcoal); border-top: 2px solid var(--gold); padding: 40px 28px; margin-top: 26px; }
+  .panel.show { display: block; }
+  .panel .mark { font-size: 30px; color: var(--gold); margin-bottom: 10px; }
+  .panel .actions { display: flex; flex-direction: column; gap: 10px; max-width: 360px; margin: 22px auto 0; }
+  .panel.ineligible { border-top-color: var(--danger); }
+
+  .already { display: none; background: var(--charcoal); border-left: 2px solid var(--gold); padding: 18px 22px; margin-top: 26px; font-size: 13px; }
+  html.cert-ok .already { display: block; }
+
+  footer { padding: 40px 0 56px; font-size: 11px; line-height: 1.9; }
+  footer .links { display: flex; gap: 22px; flex-wrap: wrap; margin-bottom: 14px; }
+  footer .links a { color: var(--ash); text-decoration: none; letter-spacing: 0.08em; }
+  footer .links a:hover { color: var(--gold); }
+
+  @media (max-width: 700px) {
+    section { padding: 52px 0; }
+    .cards, .points, .choice, .grid2 { grid-template-columns: 1fr; }
+    .top { padding: 16px; }
+    .back { font-size: 10px; }
+  }
+  @media print {
+    .top, .back, .no-print, footer, main > section:not(#certify) { display: none !important; }
+    body { background: #fff; color: #000; }
+  }
+</style>
+</head>
+<body data-default-next="index.html#invest">
+
+<header class="top">
+  <a class="brand" href="index.html">GALAMI <span>GOLD</span></a>
+  <a class="back" href="index.html" id="backLink">&larr; Back to site</a>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Investor Eligibility Policy</div>
+    <h1>Who our programs<br>are <em>available to</em></h1>
+    <p class="lead">Galami Gold's Zambia–Dubai and Sierra Leone–Dubai programs are private investment opportunities. Under UK financial promotion rules, we can share program details only with investors who have signed a statement confirming they are a <strong>high net worth individual</strong> or a <strong>self-certified sophisticated investor</strong>.</p>
+    <p class="lead">This page explains what those categories mean and lets you complete your statement online. Once certified, you can view program details and request indicative terms.</p>
+    <div class="already">
+      <strong>You are already certified on this device.</strong> <span data-cert-name></span>.
+      Your certification is valid for 12 months from the date you signed. <a href="#" id="continueLink">Continue to programs &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section id="who-can-invest">
+  <div class="wrap">
+    <div class="eyebrow">Who Can Invest</div>
+    <h2>Two ways to <em>qualify</em></h2>
+    <p>You need to meet the conditions in at least one of the two categories below. These are set by the Financial Services and Markets Act 2000 (Financial Promotion) Order 2005.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>High Net Worth Individual</h3>
+        <p style="font-size:13px;margin:0;">In the last financial year, you had:</p>
+        <ul>
+          <li>An annual income of <strong>£100,000 or more</strong> (not counting one-off pension withdrawals)</li>
+          <li class="or">and / or</li>
+          <li>Net assets of <strong>£250,000 or more</strong>, not counting your main home, any loan secured on it or equity released from it, your pension, or rights under insurance contracts</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Self-Certified Sophisticated Investor</h3>
+        <p style="font-size:13px;margin:0;">At least one of these applies to you:</p>
+        <ul>
+          <li>You have worked in a professional capacity in private equity, or in providing finance to small and medium enterprises, in the last two years</li>
+          <li>You have been a director of a company with an annual turnover of at least <strong>£1 million</strong> in the last two years</li>
+          <li>You have made <strong>two or more investments</strong> in an unlisted company in the last two years</li>
+          <li>You have been a member of a business angel network or syndicate for more than six months, and still are</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">What Certification Means</div>
+    <h2>Before you <em>sign</em></h2>
+    <div class="points">
+      <div><b>No regulatory protection</b>Our programs are not regulated by the Financial Conduct Authority. You can expect no protection from the FCA, the Financial Ombudsman Service or the Financial Services Compensation Scheme.</div>
+      <div><b>Promotions outside FCA rules</b>By certifying, you agree to receive financial promotions whose contents may not comply with rules made by the FCA.</div>
+      <div><b>Valid for 12 months</b>Your statement covers communications made within 12 months of the date you sign it. After that, you will be asked to certify again.</div>
+      <div><b>We keep a record</b>Your signed statement is stored securely as part of our compliance records. During onboarding we may ask you to evidence your eligibility as part of KYC/AML checks.</div>
+      <div><b>No obligation</b>Certifying does not commit you to invest. Program information is provided for discussion and does not constitute an offer.</div>
+      <div><b>Independent advice</b>You are free to seek advice from someone who specialises in advising on investments before making any decision.</div>
+    </div>
+    <div class="warn">
+      <strong>Your capital is at risk. You could lose all of the money you invest.</strong> Investments of this kind are illiquid, and returns are not guaranteed. Only certify if the statement is true. Giving a false statement means you may receive information intended for investors able to bear these risks.
+    </div>
+  </div>
+</section>
+
+<section id="certify">
+  <div class="wrap">
+    <div class="eyebrow">Investor Statement</div>
+    <h2>Complete your <em>certification</em></h2>
+    <p>Choose the category that applies to you, answer the questions, then sign and date the statement.</p>
+
+    <form name="investor-certification" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="certForm" novalidate>
+      <input type="hidden" name="form-name" value="investor-certification">
+      <p style="display:none"><label>Leave blank <input name="bot-field"></label></p>
+      <input type="hidden" name="source_page" id="sourcePage">
+
+      <div class="step-label">Step 1 · Choose your statement</div>
+      <div class="choice" role="radiogroup" aria-label="Investor category">
+        <div>
+          <input type="radio" name="category" value="hnw" id="catHnw">
+          <label for="catHnw"><b>High Net Worth Individual</b><span>Income of £100,000+ or net assets of £250,000+</span></label>
+        </div>
+        <div>
+          <input type="radio" name="category" value="sophisticated" id="catSs">
+          <label for="catSs"><b>Self-Certified Sophisticated Investor</b><span>Relevant professional, director or investing experience</span></label>
+        </div>
+      </div>
+
+      <!-- Statement wording below follows Schedule 5 to the FPO 2005, as substituted by SI 2024/301 -->
+      <div class="statement" id="stHnw">
+        <div class="st-head">High Net Worth Individual Investor Statement</div>
+        <div class="st-body">
+          <p>If you meet <strong>condition A or B below</strong>, you may choose to be classified as a high net worth individual for the purposes of the Financial Services and Markets Act 2000 (Financial Promotion) Order 2005.</p>
+          <p>In the last financial year, did you have:</p>
+          <div class="q">
+            <div class="q-text">A) An annual <strong>income of £100,000 or more</strong>? Income does <u>NOT</u> include any one-off pension withdrawals.</div>
+            <div class="yn"><label><input type="radio" name="hnw_a" value="No"> No</label><label><input type="radio" name="hnw_a" value="Yes" data-detail="hnwAIncome"> Yes</label></div>
+            <div class="detail" id="hnwAIncome"><div class="fld"><label for="hnwIncome">If yes, please specify your income (as defined above) to the nearest £10,000 in the last financial year</label><input type="text" inputmode="numeric" name="hnw_income" id="hnwIncome" placeholder="£"></div></div>
+          </div>
+          <div class="conj">AND/OR</div>
+          <div class="q">
+            <div class="q-text">B) <strong>Net assets of £250,000 or more</strong>? Net assets do <u>NOT</u> include: your home (primary residence), any loan secured on it or any equity released from it; your pension (or any pension withdrawals) or any rights under insurance contracts. Net assets are total assets minus any debts you owe.</div>
+            <div class="yn"><label><input type="radio" name="hnw_b" value="No"> No</label><label><input type="radio" name="hnw_b" value="Yes" data-detail="hnwBAssets"> Yes</label></div>
+            <div class="detail" id="hnwBAssets"><div class="fld"><label for="hnwAssets">If yes, please specify your net assets (as defined above) to the nearest £100,000 in the last financial year</label><input type="text" inputmode="numeric" name="hnw_assets" id="hnwAssets" placeholder="£"></div></div>
+          </div>
+          <div class="conj">OR</div>
+          <label class="none-row"><input type="checkbox" name="hnw_none" value="Yes" class="none-box"> C) None of these apply to me.</label>
+        </div>
+      </div>
+
+      <div class="statement" id="stSs">
+        <div class="st-head">Self-Certified Sophisticated Investor Statement</div>
+        <div class="st-body">
+          <p>If you meet <strong>condition A, B, C or D below</strong>, you may choose to be classified as a self-certified sophisticated investor for the purposes of the Financial Services and Markets Act 2000 (Financial Promotion) Order 2005.</p>
+          <p>Have you:</p>
+          <div class="q">
+            <div class="q-text">A) Worked in a professional capacity in the private equity sector, or in the provision of finance for small and medium enterprises, in the last two years?</div>
+            <div class="yn"><label><input type="radio" name="ss_a" value="No"> No</label><label><input type="radio" name="ss_a" value="Yes" data-detail="ssADet"> Yes</label></div>
+            <div class="detail" id="ssADet"><div class="fld"><label for="ssAOrg">If yes, what is/was the name of the business/organisation?</label><input type="text" name="ss_a_organisation" id="ssAOrg"></div></div>
+          </div>
+          <div class="q">
+            <div class="q-text">B) Been the director of a company with an annual turnover of at least £1 million, in the last two years?</div>
+            <div class="yn"><label><input type="radio" name="ss_b" value="No"> No</label><label><input type="radio" name="ss_b" value="Yes" data-detail="ssBDet"> Yes</label></div>
+            <div class="detail" id="ssBDet"><div class="fld"><label for="ssBCo">If yes, what is/was the name of the company, and its Companies House number (or international equivalent)?</label><input type="text" name="ss_b_company" id="ssBCo"></div></div>
+          </div>
+          <div class="q">
+            <div class="q-text">C) Made two or more investments in an unlisted company, in the last two years?</div>
+            <div class="yn"><label><input type="radio" name="ss_c" value="No"> No</label><label><input type="radio" name="ss_c" value="Yes" data-detail="ssCDet"> Yes</label></div>
+            <div class="detail" id="ssCDet"><div class="fld"><label for="ssCCount">If yes, how many investments in unlisted companies have you made in the last two years?</label><input type="text" inputmode="numeric" name="ss_c_count" id="ssCCount"></div></div>
+          </div>
+          <div class="q">
+            <div class="q-text">D) Been a member of a network or syndicate of business angels for more than six months, and are still a member?</div>
+            <div class="yn"><label><input type="radio" name="ss_d" value="No"> No</label><label><input type="radio" name="ss_d" value="Yes" data-detail="ssDDet"> Yes</label></div>
+            <div class="detail" id="ssDDet"><div class="fld"><label for="ssDNet">If yes, what is the name of the network or syndicate?</label><input type="text" name="ss_d_network" id="ssDNet"></div></div>
+          </div>
+          <div class="conj">OR</div>
+          <label class="none-row"><input type="checkbox" name="ss_none" value="Yes" class="none-box"> E) None of these apply to me.</label>
+        </div>
+      </div>
+
+      <div id="signBlock" style="display:none;">
+        <div class="step-label">Step 2 · Your details</div>
+        <div class="grid2">
+          <div class="fld"><label for="fullName">Full legal name</label><input type="text" name="full_name" id="fullName" autocomplete="name"></div>
+          <div class="fld"><label for="email">Email address</label><input type="email" name="email" id="email" autocomplete="email"></div>
+        </div>
+        <div class="fld"><label for="country">Country of residence</label><input type="text" name="country" id="country" autocomplete="country-name"></div>
+
+        <div class="step-label">Step 3 · Declaration</div>
+        <div class="decl">
+          <p id="declText" style="color:var(--ivory)"></p>
+          <p style="margin:0">I understand that this means:</p>
+          <ol>
+            <li>a) I can receive financial promotions where the contents may not comply with rules made by the Financial Conduct Authority (FCA);</li>
+            <li>b) I can expect <strong>no protection</strong> from the FCA, the Financial Ombudsman Service or the Financial Services Compensation Scheme.</li>
+          </ol>
+          <p style="margin:0">I am aware that it is open to me to seek advice from someone who specialises in advising on investments.</p>
+          <p class="loss">I accept that I could lose all of the money I invest.</p>
+          <label class="confirm"><input type="checkbox" name="declaration_accepted" value="Yes" id="declBox"> I have read and agree with the declaration above, and the answers I have given are true.</label>
+        </div>
+        <div class="grid2">
+          <div class="fld sig"><label for="signature">Signature (type your full name)</label><input type="text" name="signature" id="signature" autocomplete="off"></div>
+          <div class="fld"><label for="signedDate">Date</label><input type="text" name="signed_date" id="signedDate" readonly></div>
+        </div>
+
+        <div class="err" id="formErr" role="alert"></div>
+        <button type="submit" class="btn" id="submitBtn">Sign and Submit Statement</button>
+        <p style="font-size:11px;margin-top:12px;">Your statement is stored as part of our compliance records, in line with our <a href="privacy.html">Privacy Policy</a>.</p>
+      </div>
+
+      <div class="panel ineligible" id="inelPanel" role="status">
+        <div class="mark">&#9888;</div>
+        <h3>We're unable to share program details</h3>
+        <p>Based on your answers, you do not currently meet the conditions for this statement. Our programs are only available to certified high net worth individuals and self-certified sophisticated investors, so we can't share program information with you. If you think another category applies, choose it above.</p>
+        <div class="actions"><a class="btn btn-ghost" href="index.html">Return to homepage</a></div>
+      </div>
+    </form>
+
+    <div class="panel" id="donePanel" role="status">
+      <div class="mark">&#10022;</div>
+      <h3>Certification complete</h3>
+      <p>Thank you. Your signed statement has been recorded. You can now view our program details and request indicative terms. Your certification is valid for 12 months.</p>
+      <div class="actions">
+        <a class="btn" href="index.html" id="doneContinue">Continue to programs</a>
+        <button type="button" class="btn btn-ghost no-print" onclick="window.print()">Print a copy for your records</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="investor-eligibility.html">Investor Eligibility</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="risk.html">Risk Disclosure</a>
+    </div>
+    <p style="font-size:11px;">The content of this website has not been approved by an authorised person within the meaning of the Financial Services and Markets Act 2000. Galami Gold investment programs are not regulated by the Financial Conduct Authority and are not covered by the Financial Services Compensation Scheme. Capital is at risk.</p>
+    <p style="font-size:11px;margin:0;">© 2026 Galami FZCO Dubai · Galami UK Ltd · Roycroft Precious Metals Trading FZCO · Galami Trading Limited (Lusaka, Zambia)</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var form = document.getElementById('certForm');
+  var params = new URLSearchParams(location.search);
+  var next = GalamiCert.safeNext(params.get('next'), document.body.getAttribute('data-default-next'));
+  document.getElementById('continueLink').href = next;
+  document.getElementById('doneContinue').href = next;
+  document.getElementById('sourcePage').value = params.get('next') || '';
+
+  var DECL = {
+    hnw: 'I declare that I have answered yes to A and/or B, and wish to be treated as a high net worth individual.',
+    sophisticated: 'I declare that I have answered yes to A and/or B and/or C and/or D, and wish to be treated as a self-certified sophisticated investor.'
+  };
+
+  var today = new Date();
+  var dateStr = ('0' + today.getDate()).slice(-2) + '/' + ('0' + (today.getMonth() + 1)).slice(-2) + '/' + today.getFullYear();
+  document.getElementById('signedDate').value = dateStr;
+
+  function category() {
+    var c = form.querySelector('input[name="category"]:checked');
+    return c ? c.value : null;
+  }
+  function activeStatement() {
+    return category() === 'hnw' ? document.getElementById('stHnw') : document.getElementById('stSs');
+  }
+
+  function refresh() {
+    var cat = category();
+    document.getElementById('stHnw').classList.toggle('show', cat === 'hnw');
+    document.getElementById('stSs').classList.toggle('show', cat === 'sophisticated');
+    if (!cat) return;
+    var st = activeStatement();
+    var none = st.querySelector('.none-box').checked;
+    // "None of these apply" is mutually exclusive with any Yes answer
+    st.querySelectorAll('.yn input').forEach(function (r) { r.disabled = none; });
+    document.getElementById('inelPanel').classList.toggle('show', none);
+    document.getElementById('signBlock').style.display = none ? 'none' : 'block';
+    document.getElementById('declText').textContent = DECL[cat];
+  }
+
+  form.addEventListener('change', function (e) {
+    var t = e.target;
+    if (t.matches('.yn input')) {
+      var group = form.querySelectorAll('input[name="' + t.name + '"]');
+      group.forEach(function (r) {
+        if (r.dataset.detail) document.getElementById(r.dataset.detail).classList.toggle('show', r.checked);
+      });
+    }
+    if (t.name === 'category') document.getElementById('formErr').classList.remove('show');
+    refresh();
+  });
+
+  function fail(msg) {
+    var e = document.getElementById('formErr');
+    e.textContent = msg;
+    e.classList.add('show');
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var cat = category();
+    if (!cat) return fail('Please choose the statement that applies to you.');
+    var st = activeStatement();
+
+    var yesCount = 0, missingDetail = false, unanswered = false;
+    var names = {};
+    st.querySelectorAll('.yn input').forEach(function (r) { names[r.name] = true; });
+    Object.keys(names).forEach(function (n) {
+      var chosen = st.querySelector('input[name="' + n + '"]:checked');
+      if (!chosen) { unanswered = true; return; }
+      if (chosen.value === 'Yes') {
+        yesCount++;
+        var d = document.getElementById(chosen.dataset.detail).querySelector('input');
+        if (!d.value.trim()) missingDetail = true;
+      }
+    });
+    if (unanswered) return fail('Please answer Yes or No to every question in the statement.');
+    if (!yesCount) return fail('You need to answer Yes to at least one condition, or tick "None of these apply to me".');
+    if (missingDetail) return fail('Please fill in the details requested for each question you answered Yes to.');
+
+    var name = document.getElementById('fullName').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var sig = document.getElementById('signature').value.trim();
+    if (!name) return fail('Please enter your full legal name.');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return fail('Please enter a valid email address.');
+    if (!document.getElementById('country').value.trim()) return fail('Please enter your country of residence.');
+    if (!document.getElementById('declBox').checked) return fail('Please confirm you have read and agree with the declaration.');
+    if (sig.toLowerCase().replace(/\s+/g, ' ') !== name.toLowerCase().replace(/\s+/g, ' ')) return fail('Please type your full legal name exactly as above to sign.');
+
+    // Submit only the active statement's answers
+    var other = cat === 'hnw' ? document.getElementById('stSs') : document.getElementById('stHnw');
+    var data = new FormData(form);
+    other.querySelectorAll('input').forEach(function (i) { data.delete(i.name); });
+
+    var btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Submitting…';
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString()
+    }).then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      GalamiCert.set({ category: cat, date: dateStr, name: name });
+      // Keep the signed answers on screen (locked) so the printed copy shows them
+      form.querySelectorAll('input').forEach(function (i) { i.disabled = true; });
+      btn.style.display = 'none';
+      document.getElementById('donePanel').classList.add('show');
+      document.getElementById('donePanel').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }).catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'Sign and Submit Statement';
+      fail('We could not record your statement just now. Please try again, or email accounts@galamigold.com.');
+    });
+  });
+
+  refresh();
+})();
+</script>
+</body>
+</html>
