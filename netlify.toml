@@ -1,12 +1,46 @@
 [build]
   publish = "/"
 
+[functions]
+  node_bundler = "esbuild"
+
 [[headers]]
   for = "/*.mp4"
   [headers.values]
     Content-Type = "video/mp4"
     Accept-Ranges = "bytes"
     Cache-Control = "public, max-age=31536000"
+
+# The site publishes the repo root, so keep source and dependencies off the web.
+[[redirects]]
+  from = "/netlify/*"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/node_modules/*"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/scripts/*"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/package.json"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/package-lock.json"
+  to = "/index.html"
+  status = 404
+  force = true
 
 [[redirects]]
   from = "/*"

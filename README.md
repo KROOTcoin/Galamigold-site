@@ -109,3 +109,23 @@ zip -j galamigold-deploy.zip *.html *.toml *.mp4
 - [ ] Build remaining 12 article pages locally
 - [ ] Submit sitemap to Google Search Console once domain connected
 - [ ] GitHub Actions for auto blog updates
+
+---
+
+## Site Assistant (AI chat)
+
+An "Ask Galami" chat button on every page, answering visitor questions with Claude.
+
+| File | Purpose |
+|------|---------|
+| `assistant.js` | Chat widget. Loaded on every page with `<script src="/assistant.js" defer></script>` before `</body>` — add it to new pages too |
+| `netlify/functions/assistant.mjs` | Netlify function the widget calls (`/.netlify/functions/assistant`); streams the reply |
+| `netlify/assistant/prompt.js` | Everything the assistant knows and its rules. **Edit this when site facts change** |
+| `netlify/assistant/articles.json` | Index of article pages so it can link them. Rebuild with `npm run assistant:index` |
+
+**Setup (Netlify > Site configuration > Environment variables):**
+- `ANTHROPIC_API_KEY` — required. Set a monthly spend limit on the key in the Anthropic Console.
+- `ASSISTANT_MODEL` — optional, default `claude-opus-5-5`
+- `ASSISTANT_EFFORT` — optional, default `low`
+
+**Guardrails built into the prompt:** never states or confirms any return/yield/% figure; program details (minimums, currency, term, structure) only for visitors certified via `cert.js`; no financial advice; no collecting personal details in chat; routes complaints and terms requests to investor relations. Conversations are sent to Anthropic to generate replies and are not stored by the site.
