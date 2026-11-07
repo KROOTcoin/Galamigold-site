@@ -1,0 +1,11 @@
+{
+  "name": "galamigold-site",
+  "private": true,
+  "description": "Galami Gold static site and Netlify functions",
+  "scripts": {
+    "assistant:index": "node scripts/build-assistant-index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.6.0"
+  }
+}
