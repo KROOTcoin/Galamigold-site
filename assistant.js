@@ -17,12 +17,12 @@
   var STORE = 'galami_assistant_chat';
   var CERT_KEY = 'galami_investor_cert';
   var CERT_MS = 365 * 24 * 60 * 60 * 1000;
-  var GREETING = 'Hello. I can answer questions about Galami Gold, our supply chain from Africa to Dubai, and how investor eligibility works. How can I help?';
+  var GREETING = 'Hello, and welcome to Galami Gold. Whether you are looking to invest, buy or sell gold, or raise finance for a mining project, I can help and put you in touch with our team. What brings you here today?';
   var STARTERS = [
-    'How does the supply chain work?',
-    'Who can invest in your programs?',
-    'Which companies are in the group?',
-    'What are the main risks?'
+    'I am interested in investing',
+    'I want to buy gold',
+    'I have gold to sell',
+    'We are a mine seeking investment'
   ];
 
   function certified() {
@@ -272,9 +272,9 @@
             '<button type="button" class="ga-icon ga-close" aria-label="Close assistant" title="Close">' + ICON_CLOSE + '</button>' +
           '</div></div>' +
         '<div class="ga-log" aria-live="polite"></div>' +
-        '<form class="ga-form"><textarea class="ga-input" rows="1" maxlength="1500" placeholder="Ask a question…" aria-label="Your question"></textarea>' +
+        '<form class="ga-form"><textarea class="ga-input" rows="1" maxlength="1500" placeholder="Type your message…" aria-label="Your question"></textarea>' +
           '<button type="submit" class="ga-send" aria-label="Send">' + ICON_SEND + '</button></form>' +
-        '<div class="ga-note">AI assistant. Answers may be incomplete and are not financial advice. Please do not share personal details here. Capital at risk; see our <a href="/risk.html">Risk Disclosure</a>.</div>' +
+        '<div class="ga-note">AI assistant. Answers may be incomplete and are not financial advice. Contact details you share are passed to our team (see our <a href="/privacy.html">Privacy Policy</a>). Capital at risk; see our <a href="/risk.html">Risk Disclosure</a>.</div>' +
       '</div>';
     document.body.appendChild(root);
 
