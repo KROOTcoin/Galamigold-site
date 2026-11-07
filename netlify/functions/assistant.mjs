@@ -38,6 +38,25 @@ const ALLOWED_ORIGINS = [
   /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/,
 ];
 
+// When Anthropic is rate limited or overloaded, wait and retry (only before
+// any text of that reply has been sent), for up to this long per reply.
+const RETRY_BUDGET_MS = 20000;
+const BUSY_TEXT =
+  "Sorry, we're very busy right now. Please try again in a minute, or contact our team directly at accounts@galamigold.com or on +971 526 88 88 57 (WhatsApp).";
+const SAVED_TEXT =
+  "Thank you, your details have been passed to our senior team, who will be in touch, usually within one business day.";
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+function isRetryable(err) {
+  const st = err?.status;
+  return st === undefined || st === 408 || st === 409 || st === 429 || st >= 500;
+}
+function retryDelay(err, attempt) {
+  const ra = Number(err?.headers?.get?.('retry-after'));
+  const ms = ra > 0 ? ra * 1000 : 1500 * 2 ** attempt;
+  return Math.min(ms, 8000);
+}
+
 const FALLBACK_TEXT =
   "Sorry, I can't help with that here. For anything about Galami Gold, please contact our investor relations team at accounts@galamigold.com or +971 526 88 88 57.";
 
@@ -62,6 +81,8 @@ const TOOLS = [{
 }];
 
 function str(v, max) { return typeof v === 'string' ? v.trim().slice(0, max) : ''; }
+
+const LEAD_OK = 'Lead passed to the senior team.';
 
 async function submitLead(input, { messages, certified, base }) {
   if (!input || typeof input !== 'object') return 'Invalid input. Ask the visitor to confirm their name and contact details.';
@@ -96,7 +117,7 @@ async function submitLead(input, { messages, certified, base }) {
     });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     console.log('lead submitted', lead.lead_type);
-    return 'Lead passed to the senior team.';
+    return LEAD_OK;
   } catch (err) {
     // Keep the lead recoverable from the function logs.
     console.error('LEAD NOT SAVED', err?.message || err, JSON.stringify(lead));
@@ -157,35 +178,50 @@ export default async (req, context) => {
   const certified = body.certified === true;
   const system = certified ? SYSTEM.certified : SYSTEM.uncertified;
   const base = process.env.URL || new URL(req.url).origin;
-  const client = new Anthropic();
+  const client = new Anthropic({ maxRetries: 0 });   // retries handled below
 
   const encoder = new TextEncoder();
   const stream = new ReadableStream({
     async start(controller) {
       let sent = false;
+      let leadSaved = false;
+      const startedAt = Date.now();
       try {
         const convo = [...messages];
         let final;
         for (let round = 0; round < 3; round++) {
           let gap = sent;   // separate text from a previous round
-          const s = client.beta.messages.stream({
-            model: MODEL,
-            max_tokens: 4000,
-            betas: ['server-side-fallback-2026-07-01'],
-            fallbacks: 'default',
-            output_config: { effort: EFFORT },
-            system: [{ type: 'text', text: system, cache_control: { type: 'ephemeral' } }],
-            tools: TOOLS,
-            messages: convo,
-          });
-          for await (const event of s) {
-            if (event.type === 'content_block_delta' && event.delta.type === 'text_delta') {
-              if (gap) { controller.enqueue(encoder.encode('\n\n')); gap = false; }
-              controller.enqueue(encoder.encode(event.delta.text));
-              sent = true;
+          for (let attempt = 0; ; attempt++) {
+            const sentBefore = sent;
+            try {
+              const s = client.beta.messages.stream({
+                model: MODEL,
+                max_tokens: 4000,
+                betas: ['server-side-fallback-2026-07-01'],
+                fallbacks: 'default',
+                output_config: { effort: EFFORT },
+                system: [{ type: 'text', text: system, cache_control: { type: 'ephemeral' } }],
+                tools: TOOLS,
+                messages: convo,
+              });
+              for await (const event of s) {
+                if (event.type === 'content_block_delta' && event.delta.type === 'text_delta') {
+                  if (gap) { controller.enqueue(encoder.encode('\n\n')); gap = false; }
+                  controller.enqueue(encoder.encode(event.delta.text));
+                  sent = true;
+                }
+              }
+              final = await s.finalMessage();
+              break;
+            } catch (err) {
+              // Retry only if nothing of this reply reached the visitor yet.
+              const wait = retryDelay(err, attempt);
+              if (sent !== sentBefore || !isRetryable(err) ||
+                  Date.now() - startedAt + wait > RETRY_BUDGET_MS) throw err;
+              console.warn('assistant retry', err?.status || '', 'in', wait, 'ms');
+              await sleep(wait);
             }
           }
-          final = await s.finalMessage();
           if (final.stop_reason !== 'tool_use') break;
           const results = [];
           for (const block of final.content) {
@@ -193,6 +229,7 @@ export default async (req, context) => {
             const out = block.name === 'submit_lead'
               ? await submitLead(block.input, { messages, certified, base })
               : 'Unknown tool.';
+            if (out === LEAD_OK) leadSaved = true;
             results.push({ type: 'tool_result', tool_use_id: block.id, content: out });
           }
           convo.push({ role: 'assistant', content: final.content });
@@ -205,8 +242,7 @@ export default async (req, context) => {
         }
       } catch (err) {
         console.error('assistant error', err?.status || '', err?.message || err);
-        controller.enqueue(encoder.encode((sent ? '\n\n' : '') +
-          "Sorry, the assistant is unavailable right now. You can reach investor relations at accounts@galamigold.com or +971 526 88 88 57."));
+        controller.enqueue(encoder.encode((sent ? '\n\n' : '') + (leadSaved ? SAVED_TEXT : BUSY_TEXT)));
       } finally {
         controller.close();
       }
