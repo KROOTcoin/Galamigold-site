@@ -245,6 +245,8 @@
           <button type="submit" style="width:100%;padding:1.2rem;background:var(--gold);color:var(--obsidian);border:none;font-family:var(--ff-body);font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;font-weight:600;cursor:pointer;transition:background 0.3s;">Submit Enquiry</button>
           <p style="font-size:0.68rem;color:var(--ash);text-align:center;margin-top:1rem;line-height:1.6;">By submitting this form you agree to our Privacy Policy. Galami Gold will never share your details with third parties without your consent.</p>
         </form>
+        <!-- Leads from the Ask Galami assistant are posted to this form by netlify/functions/assistant.mjs. -->
+        <form name="assistant-lead" data-netlify="true" netlify-honeypot="bot-field" hidden><input name="bot-field"><input name="lead_type"><input name="name"><input name="company"><input name="email"><input name="phone"><input name="country"><input name="certified"><textarea name="summary"></textarea><textarea name="transcript"></textarea></form>
         </div>
       </div>
       <div>
