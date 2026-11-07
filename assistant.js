@@ -274,7 +274,7 @@
         '<div class="ga-log" aria-live="polite"></div>' +
         '<form class="ga-form"><textarea class="ga-input" rows="1" maxlength="1500" placeholder="Type your message…" aria-label="Your question"></textarea>' +
           '<button type="submit" class="ga-send" aria-label="Send">' + ICON_SEND + '</button></form>' +
-        '<div class="ga-note">AI assistant. Answers may be incomplete and are not financial advice. Contact details you share are passed to our team (see our <a href="/privacy.html">Privacy Policy</a>). Capital at risk; see our <a href="/risk.html">Risk Disclosure</a>.</div>' +
+        '<div class="ga-note">AI assistant. Answers may be incomplete and are not financial advice. Contact details you share are passed to our team (see our <a href="/privacy.html#assistant">Privacy Policy</a>). Capital at risk; see our <a href="/risk.html">Risk Disclosure</a>.</div>' +
       '</div>';
     document.body.appendChild(root);
 
