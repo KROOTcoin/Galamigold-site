@@ -114,7 +114,7 @@ zip -j galamigold-deploy.zip *.html *.toml *.mp4
 
 ## Site Assistant (AI chat)
 
-An "Ask Galami" chat button on every page, answering visitor questions with Claude.
+An "Ask Galami" chat button on every page, powered by Claude. Its main job is lead nurturing: it welcomes investors, gold buyers, gold sellers and mining companies seeking finance, finds out what they want, and passes their details to the senior team.
 
 | File | Purpose |
 |------|---------|
@@ -127,5 +127,8 @@ An "Ask Galami" chat button on every page, answering visitor questions with Clau
 - `ANTHROPIC_API_KEY` — required. Set a monthly spend limit on the key in the Anthropic Console.
 - `ASSISTANT_MODEL` — optional, default `claude-opus-5-5`
 - `ASSISTANT_EFFORT` — optional, default `low`
+- `LEAD_POST_URL` — optional, override where leads are posted (default: this site, picked up by Netlify Forms)
 
-**Guardrails built into the prompt:** never states or confirms any return/yield/% figure; program details (minimums, currency, term, structure) only for visitors certified via `cert.js`; no financial advice; no collecting personal details in chat; routes complaints and terms requests to investor relations. Conversations are sent to Anthropic to generate replies and are not stored by the site.
+**Leads:** when a visitor gives a name and an email or phone number, the assistant calls its `submit_lead` tool. The function posts the lead (type, contact details, summary, full chat transcript) to the Netlify form `assistant-lead`, defined as a hidden form in `contact.html`. Leads appear under Netlify > Forms > assistant-lead; add an email notification there to get each one in your inbox. If posting fails, the lead is written to the function log (`LEAD NOT SAVED`).
+
+**Guardrails built into the prompt:** never states or confirms any return/yield/% figure; never promises prices, deals, funding or prepayment; never invents facts; program details (minimums, currency, term, structure) only for visitors certified via `cert.js`; one short capital-at-risk line when investing comes up; no financial advice; routes complaints to accounts@. Conversations are sent to Anthropic to generate replies; contact details visitors choose to share are stored in Netlify Forms, so the Privacy Policy should mention this.
