@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="gold-trading-compliance-process-a-2026-guide-for-professionals" tabindex="-1">Gold Trading Compliance Process: A 2026 Guide for Professionals</h1>
+  <div class="article-title" id="gold-trading-compliance-process-a-2026-guide-for-professionals" tabindex="-1">Gold Trading Compliance Process: A 2026 Guide for Professionals</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1778947654254_Compliance-officer-reviews-gold-trading-paperwork.jpeg" alt="Compliance officer reviews gold trading paperwork"></p>
 <hr>
 <blockquote>
@@ -197,7 +197,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p><strong>OFAC and sanctions screening.</strong> Screen the customer and any associated parties against OFAC’s SDN list, UN sanctions lists, and relevant national lists before any trading relationship begins. This screening should be repeated at each transaction for high-risk counterparties.</p>
 </li>
 <li>
-<p><strong>Transaction pre-approval review.</strong> Before execution, review the transaction against your firm’s risk appetite, check for structuring patterns, and confirm that the gold’s proposed provenance is documented and credible. For <a href="https://galamigold.net/post/optimize-gold-transactions-institutional-investors" target="_blank" rel="noopener">institutional investors optimizing gold transactions</a>, this checkpoint often includes counterparty credit review alongside compliance screening.</p>
+<p><strong>Transaction pre-approval review.</strong> Before execution, review the transaction against your firm’s risk appetite, check for structuring patterns, and confirm that the gold’s proposed provenance is documented and credible. For <a href="/gold-trade-settlement-explained-for-investors-and-traders">institutional investors optimizing gold transactions</a>, this checkpoint often includes counterparty credit review alongside compliance screening.</p>
 </li>
 <li>
 <p><strong>Large transaction reporting.</strong> File the required reports before or at the time of transaction execution. In the US, that means IRS Form 8300 for cash over $10,000. In the UAE, it means a Designated Non-Financial Business and Profession (DNFBP) report to the Financial Intelligence Unit.</p>
@@ -272,13 +272,13 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <h3 id="working-with-independent-auditors" tabindex="-1">Working with independent auditors</h3>
 <p>External auditors should be engaged with a clearly defined scope that includes testing your firm’s screening procedures, reviewing a sample of high-risk customer files, and evaluating the effectiveness of your transaction monitoring logic. Do not hand auditors only your best files. A valid audit needs access to the full population.</p>
 <p><strong>Pro Tip:</strong> <em>Before a regulatory examination, run a mock exam with your internal team using the same document request list that your primary regulator publishes. Most regulators post their examination procedures online. Walk through the exercise as if you had 24 hours to respond, because you might.</em></p>
-<p>Leveraging data analytics for the gold trading audit process has moved from advanced practice to baseline expectation. Auditors now routinely analyze full transaction datasets for velocity anomalies, geographic clustering, and counterparty network patterns. If your compliance team cannot perform those analyses internally, your external auditor should be contracted to do so annually. Reviewing the <a href="https://galamigold.net/post/gold-trading-regulations-2026-aml-penalties-highlight-risks" target="_blank" rel="noopener">2026 AML penalty trends</a> affecting gold dealers makes clear why this level of scrutiny has become non-negotiable.</p>
+<p>Leveraging data analytics for the gold trading audit process has moved from advanced practice to baseline expectation. Auditors now routinely analyze full transaction datasets for velocity anomalies, geographic clustering, and counterparty network patterns. If your compliance team cannot perform those analyses internally, your external auditor should be contracted to do so annually. Reviewing the <a href="/role-of-aml-in-gold-trade">2026 AML penalty trends</a> affecting gold dealers makes clear why this level of scrutiny has become non-negotiable.</p>
 <p>Continuous training rounds out the audit cycle. Every change in regulation, every enforcement action against a peer firm, and every internal SAR filing is a training opportunity. Staff who understand <em>why</em> a control exists are significantly more likely to apply it correctly than those who only know the procedural steps.</p>
 <h2 id="my-perspective-on-where-gold-compliance-is-really-headed" tabindex="-1">My perspective on where gold compliance is really headed</h2>
 <p>I’ve spent considerable time working through the realities of physical gold trading across multiple jurisdictions, and my honest view is that the industry is about five years behind where financial services compliance already sits. Most firms are still running compliance as a documentation exercise rather than a real-time risk function.</p>
 <p>What I’ve seen is this: the firms that get into trouble are almost never the ones who ignored the rules entirely. They are the ones who followed the rules on paper but never stress-tested whether the controls actually worked. They accepted certificates, filed reports on schedule, and retained records dutifully. Then they discovered that a counterparty three steps upstream was the source of the problem, and their paper trail did not go back far enough.</p>
 <p>The regulated liquidity routing approach, where transactions are gated in real time before execution rather than reviewed after the fact, is where the industry needs to go. Manual periodic reviews made sense when transaction volumes were lower. They no longer do.</p>
-<p>My take on <a href="https://galamigold.net/post/how-to-build-trust-in-gold-trading-institutions" target="_blank" rel="noopener">building institutional trust</a> in gold trading is that compliance culture has to be set at the top and enforced in the middle. A compliance officer who writes excellent policies but has no authority to block a transaction is decorative, not functional. The firms I respect most have compliance embedded in the deal approval process, not appended to it after the fact.</p>
+<p>My take on <a href="/trust-matters-gold-trading">building institutional trust</a> in gold trading is that compliance culture has to be set at the top and enforced in the middle. A compliance officer who writes excellent policies but has no authority to block a transaction is decorative, not functional. The firms I respect most have compliance embedded in the deal approval process, not appended to it after the fact.</p>
 <blockquote>
 <p><em>— Galami</em></p>
 </blockquote>
@@ -298,10 +298,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Best practice calls for semi-annual internal transaction reviews, an annual program-level review, and an independent external audit at least every two years. High-risk operations should conduct external audits annually.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/gold-trading-regulations-2026-aml-penalties-highlight-risks" target="_blank" rel="noopener">Gold trading regulations 2026: 75% AML penalties highlight risks</a></li>
-<li><a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026" target="_blank" rel="noopener">Essential tips for evaluating gold traders in 2026</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026" target="_blank" rel="noopener">Gold trading step by step: institutional guide 2026</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-standards-institutional-investors-2026" target="_blank" rel="noopener">Gold trading standards for institutional investors 2026</a></li>
+<li><a href="/role-of-aml-in-gold-trade">The Role of AML in Gold Trade for Institutional Investors</a></li>
+<li><a href="/gold-broker-checklist">Institutional Gold Broker Checklist: 2026 Vetting Guide</a></li>
+<li><a href="/step-by-step-gold-transaction-process-2026-guide">Step by Step Gold Transaction Process: 2026 Guide</a></li>
+<li><a href="/role-of-global-standards-in-gold-trade">Global Standards in Gold Trade: A Guide for Institutional Investors</a></li>
 </ul>
 
   <div class="article-cta">

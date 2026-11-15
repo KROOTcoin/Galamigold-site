@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="understand-ethical-gold-trading-standards-risks-and-impact" tabindex="-1">Understand ethical gold trading: standards, risks, and impact</h1>
+  <div class="article-title" id="understand-ethical-gold-trading-standards-risks-and-impact" tabindex="-1">Understand ethical gold trading: standards, risks, and impact</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775881647664_Compliance-officer-reviewing-gold-trade-documents.jpeg" alt="Compliance officer reviewing gold trade documents"></p>
 <hr>
 <blockquote>
@@ -186,7 +186,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li><strong>Certified recycled gold</strong> reduces new mining demand but introduces its own laundering risks if chain-of-custody controls are weak</li>
 <li><strong>LBMA-certified refiners</strong> operate at an industrial scale and are subject to the most rigorous annual audits in the sector</li>
 </ul>
-<p>Understanding <a href="https://galamigold.net/post/gold-trading-standards-institutional-investors-2026">gold trading standards</a> at this level is not optional for institutional investors. It is the foundation of a defensible ESG position. The framework you choose to prioritize should reflect both your risk tolerance and your stakeholder reporting obligations. <a href="https://galamigold.net/post/how-to-build-trust-in-gold-trading-institutions">Building trust in gold trading</a> starts with knowing which standards carry real weight.</p>
+<p>Understanding <a href="/role-of-global-standards-in-gold-trade">gold trading standards</a> at this level is not optional for institutional investors. It is the foundation of a defensible ESG position. The framework you choose to prioritize should reflect both your risk tolerance and your stakeholder reporting obligations. <a href="/trust-matters-gold-trading">Building trust in gold trading</a> starts with knowing which standards carry real weight.</p>
 <h2 id="audit-certification-and-transparency-requirements" tabindex="-1">Audit, certification, and transparency requirements</h2>
 <p>Now that you know the gold-standard frameworks, let’s examine what actually happens behind the scenes and what transparency really looks like.</p>
 <p>An annual third-party audit under LBMA Responsible Gold Guidance v9 is not a checkbox exercise. Auditors review management policies, trace specific gold shipments, interview staff, and assess whether the refiner has adequate controls for identifying high-risk supply sources. Starting in 2026, the LBMA’s <a href="https://lbma.org.uk/articles/lbma-fast-tracks-refiner-transparency" rel="nofollow noopener noreferrer" target="_blank">transparency roadmap mandates disclosure</a> of high-risk suppliers, a significant step toward public accountability that investors should actively track.</p>
@@ -230,7 +230,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <blockquote>
 <p>“Transparency in gold trading is not just about what a refiner discloses today. It is about whether their systems can withstand scrutiny tomorrow when regulations tighten further.”</p>
 </blockquote>
-<p>For investors <a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026">evaluating gold traders</a>, a practical due diligence checklist should include: confirmation of current LBMA Good Delivery status, access to the most recent third-party audit summary, evidence of corrective actions taken on prior findings, and disclosure of any suppliers flagged as high-risk.</p>
+<p>For investors <a href="/gold-broker-checklist">evaluating gold traders</a>, a practical due diligence checklist should include: confirmation of current LBMA Good Delivery status, access to the most recent third-party audit summary, evidence of corrective actions taken on prior findings, and disclosure of any suppliers flagged as high-risk.</p>
 <p><strong>Pro Tip:</strong> Do not accept a certification date older than 14 months. Audit cycles are annual, and a lapsed certificate is a meaningful red flag in a sector where supply chains shift quickly.</p>
 <p>The mandatory disclosure trend is accelerating. Regulators in the EU and increasingly in the US are pushing for standardized public reporting on conflict mineral sourcing. Investors who demand this information now are positioning themselves ahead of requirements that will likely become compulsory within the next two to three years.</p>
 <h2 id="sourcing-models-mined-recycled-and-fairmined-gold" tabindex="-1">Sourcing models: Mined, recycled, and Fairmined gold</h2>
@@ -247,7 +247,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>The recycled gold challenge deserves specific attention. Because secondary gold can originate from jewelry, electronics, or industrial sources, it is harder to trace back to a single origin point. Bad actors have exploited this ambiguity to blend illicit gold into recycled streams. This is not a theoretical risk. It is a documented pattern that regulators and compliance teams are actively working to close.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775881690546_image.jpeg" alt="Gold trader analyzing recycled gold spreadsheet"></p>
 <p>For institutions with both ESG reporting obligations and AML compliance requirements, a blended sourcing strategy often makes the most sense. You might prioritize LBMA-certified mined gold for volume and traceability, supplement with certified recycled gold from processors with strong chain-of-custody systems, and allocate a smaller portion to Fairmined gold to support social impact goals.</p>
-<p>The <a href="https://galamigold.net/post/gold-trading-regulations-2026-aml-penalties-highlight-risks">2026 gold trading regulations</a> now place greater scrutiny on recycled gold processors, making it even more important to verify the specific certifier and audit history before committing capital.</p>
+<p>The <a href="/role-of-aml-in-gold-trade">2026 gold trading regulations</a> now place greater scrutiny on recycled gold processors, making it even more important to verify the specific certifier and audit history before committing capital.</p>
 <h2 id="risk-management-and-red-flags-in-ethical-gold-trading" tabindex="-1">Risk management and red flags in ethical gold trading</h2>
 <p>Understanding sources isn’t enough. Risk exposure in ethical gold trading is a moving target that every serious investor must actively manage.</p>
 <p>A structured approach to risk management in ethical gold trading involves three ongoing steps: establishing clear internal policies that define acceptable sourcing standards, conducting geographic and supplier screening to identify elevated-risk counterparties, and maintaining a schedule of ongoing audit reviews rather than relying on point-in-time assessments.</p>
@@ -261,7 +261,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </ol>
 <p>Edge cases are where the real complexity lives. <a href="https://www.emilychelsea.com/operation-fairmined/" rel="nofollow noopener noreferrer" target="_blank">ASM gold mixing with conflict material</a> is a persistent problem in certain West African and Latin American corridors. Recycled gold laundering loopholes remain partially open even under current frameworks. The LBMA’s 89% EU CMR alignment means auditor oversight standards are still not fully harmonized, creating gaps that sophisticated bad actors can exploit.</p>
 <p><strong>Pro Tip:</strong> Blockchain-based traceability platforms now allow institutional buyers to verify gold provenance at the batch level. Requiring your trading counterparty to provide on-chain provenance data is no longer an unreasonable ask. It is becoming an industry expectation.</p>
-<p>Certification premiums are not just a cost. They function as insurance. An institution holding gold from a fully audited, LBMA-certified source is far better positioned to absorb a future regulatory change or reputational event than one holding gold with a thinner paper trail. Explore <a href="https://galamigold.net/post/risk-management-gold-trading">risk management for gold trading</a> and <a href="https://galamigold.net/post/partner-gold-traders-risk-management-transparency">partner risk management techniques</a> to build a more resilient framework. For portfolio-level thinking, <a href="https://galamigold.net/post/gold-trading-strategies-optimize-risk-returns-2026">optimizing gold trading risk</a> and <a href="https://galamigold.net/post/manage-risk-gold-investment">risk in gold investment strategies</a> offer practical guidance on structuring positions.</p>
+<p>Certification premiums are not just a cost. They function as insurance. An institution holding gold from a fully audited, LBMA-certified source is far better positioned to absorb a future regulatory change or reputational event than one holding gold with a thinner paper trail. Explore <a href="/gold-trading-risk-management-strategies-institutions">risk management for gold trading</a> and <a href="/how-to-select-gold-partners-institutional-guide-2026">partner risk management techniques</a> to build a more resilient framework. For portfolio-level thinking, <a href="/gold-trading-risk-management-strategies-institutions">optimizing gold trading risk</a> and <a href="/gold-trading-risk-management-strategies-institutions">risk in gold investment strategies</a> offer practical guidance on structuring positions.</p>
 <h2 id="our-perspective-why-transparency-still-falls-short-and-what-forward-looking-investors-do-differently" tabindex="-1">Our perspective: Why transparency still falls short and what forward-looking investors do differently</h2>
 <p>Having dissected the rules and realities, here is what most guides won’t tell you.</p>
 <p>LBMA and OECD standards are genuinely important. But treating them as a finish line rather than a starting point is where many institutions go wrong. An 89% alignment score with the EU CMR is progress. It is also a public admission that 11% of the framework remains unresolved. For recycled and ASM gold, the integrity challenges are not hypothetical edge cases. They are structural features of supply chains that were not designed with full traceability in mind.</p>
@@ -271,7 +271,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>If you’re ready to implement robust ethical trading into your portfolio, here’s how Galami Gold can help.</p>
 <p>Galami Gold sources exclusively from <a href="https://galamigold.com" rel="nofollow noopener noreferrer" target="_blank">LBMA Good Delivery</a> and certified Fairmined channels, giving institutional and high-net-worth clients a fully audited, transparent entry point into physical gold. Every position is backed by documented chain-of-custody records, current third-party audit reports, and clear <a href="https://galamigold.com/risk" rel="nofollow noopener noreferrer" target="_blank">risk disclosure for gold investment</a>.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775463411351_galamigold.jpg" alt="https://galamigold.com"></p>
-<p>Our team works directly with sophisticated investors who need more than a certificate. They need a counterparty that understands the nuances of sourcing models, audit quality, and regulatory exposure. Explore our <a href="https://galamigold.net">audited gold trading solutions</a> and connect with our team to discuss how ethical gold fits your capital deployment strategy.</p>
+<p>Our team works directly with sophisticated investors who need more than a certificate. They need a counterparty that understands the nuances of sourcing models, audit quality, and regulatory exposure. Explore our <a href="/">audited gold trading solutions</a> and connect with our team to discuss how ethical gold fits your capital deployment strategy.</p>
 <h2 id="frequently-asked-questions" tabindex="-1">Frequently asked questions</h2>
 <h3 id="what-makes-gold-trading-ethical-in-2026" tabindex="-1">What makes gold trading ‘ethical’ in 2026?</h3>
 <p>Ethical gold trading is defined by certified, transparent sourcing that upholds rigorous environmental, social, and governance standards, audited by LBMA and aligned with OECD due diligence frameworks. It goes well beyond a single label or certification.</p>
@@ -283,10 +283,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Blockchain provides end-to-end digital traceability for gold supply chains, allowing buyers to verify the origin and movement of specific gold batches in a way that paper-based audit trails cannot match. It is becoming a practical requirement for serious institutional sourcing programs.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/how-trust-shapes-gold-trading-strategies-investors">How trust shapes gold trading strategies for investors</a></li>
-<li><a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026">Essential tips for evaluating gold traders in 2026</a></li>
-<li><a href="https://galamigold.net/post/partner-gold-traders-risk-management-transparency">Partner with gold traders: risk management &amp; transparency</a></li>
-<li><a href="https://galamigold.net/post/trust-in-gold-investment">Role of Trust in Gold Investment Strategies</a></li>
+<li><a href="/trust-matters-gold-trading">Why trust matters in gold trading: Safeguarding institutional investments</a></li>
+<li><a href="/gold-broker-checklist">Institutional Gold Broker Checklist: 2026 Vetting Guide</a></li>
+<li><a href="/how-to-select-gold-partners-institutional-guide-2026">How to Select Gold Partners: Institutional Guide 2026</a></li>
+<li><a href="/how-to-ensure-transparency">How to Ensure Transparency in Institutional Gold Trading</a></li>
 </ul>
 
   <div class="article-cta">

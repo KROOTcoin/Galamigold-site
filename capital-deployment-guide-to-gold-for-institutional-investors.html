@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="capital-deployment-guide-to-gold-for-institutional-investors" tabindex="-1">Capital Deployment Guide to Gold for Institutional Investors</h1>
+  <div class="article-title" id="capital-deployment-guide-to-gold-for-institutional-investors" tabindex="-1">Capital Deployment Guide to Gold for Institutional Investors</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1779629740184_Portfolio-manager-reviewing-gold-strategy-documents.jpeg" alt="Portfolio manager reviewing gold strategy documents"></p>
 <hr>
 <blockquote>
@@ -187,7 +187,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </tr>
 </tbody>
 </table>
-<p><strong>Pro Tip:</strong> <em>Before selecting a custodian or dealer, request a full fee schedule in writing. Verify that storage is segregated, insured, and subject to independent audit. Opaque cost structures in gold custody erode net returns silently. For detailed screening criteria, see Galamigold’s guidance on <a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026" target="_blank" rel="noopener">evaluating gold traders</a>.</em></p>
+<p><strong>Pro Tip:</strong> <em>Before selecting a custodian or dealer, request a full fee schedule in writing. Verify that storage is segregated, insured, and subject to independent audit. Opaque cost structures in gold custody erode net returns silently. For detailed screening criteria, see Galamigold’s guidance on <a href="/gold-broker-checklist">evaluating gold traders</a>.</em></p>
 <h2 id="execution-strategies-for-institutional-gold-deployment" tabindex="-1">Execution strategies for institutional gold deployment</h2>
 <p>Getting the allocation right means nothing if execution is careless. Gold’s daily volatility creates real friction for large capital deployments, and the wrong entry methodology can cost significant basis points before the position even has a chance to work.</p>
 <h3 id="the-case-for-staggered-deployment" tabindex="-1">The case for staggered deployment</h3>
@@ -266,8 +266,8 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </tbody>
 </table>
 <p>For core long-term allocations within institutional portfolios, gold asset management tips consistently point to a staggered physical or ETF approach with allocations in the 5-15% range. This band delivers meaningful diversification benefits without concentrating the portfolio into a single non-yield-bearing asset.</p>
-<p>The impact on portfolio performance is well documented. Gold’s low correlation to equities and bonds means that <a href="https://galamigold.net/post/capital-deployment-gold-trading-beat-benchmarks-2026" target="_blank" rel="noopener">gold allocations can improve</a> risk-adjusted returns even during periods of flat or slightly negative gold price performance. The diversification benefit shows up most clearly in drawdown reduction during equity bear markets.</p>
-<p>For a deeper view on why this asset class warrants dedicated attention in modern institutional portfolios, Galamigold’s analysis of <a href="https://galamigold.net/post/why-gold-matters-institutional-investors-2026" target="_blank" rel="noopener">gold’s role for institutions</a> covers the structural case in detail.</p>
+<p>The impact on portfolio performance is well documented. Gold’s low correlation to equities and bonds means that <a href="/capital-management-guide">gold allocations can improve</a> risk-adjusted returns even during periods of flat or slightly negative gold price performance. The diversification benefit shows up most clearly in drawdown reduction during equity bear markets.</p>
+<p>For a deeper view on why this asset class warrants dedicated attention in modern institutional portfolios, Galamigold’s analysis of <a href="/benefits-physical-gold-institutional-investors">gold’s role for institutions</a> covers the structural case in detail.</p>
 <h2 id="what-ive-learned-deploying-capital-in-gold-at-scale" tabindex="-1">What I’ve learned deploying capital in gold at scale</h2>
 <p>I’ve seen institutional investors make two recurring mistakes with gold, and both are avoidable.</p>
 <p>The first is treating gold like a slow equity. They apply the same position sizing logic, the same entry triggers based on technical breakouts, and the same liquidity assumptions. Gold’s daily noise band is simply wider than most equities, and applying equity-style sizing to gold positions produces stops that trigger before the macro thesis has time to play out. The fix is simple once you accept that gold operates on different mechanics.</p>
@@ -280,7 +280,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <h2 id="deploy-capital-in-gold-with-galamigold" tabindex="-1">Deploy capital in gold with Galamigold</h2>
 <p>If the frameworks in this article reflect how you think about gold, Galamigold is built for exactly this type of investor.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775463411351_galamigold.jpg" alt="https://galamigold.com"></p>
-<p>Galamigold operates as a physical gold trading platform with a direct focus on transparency, audited supply chains, and disciplined execution. Every position facilitated through Galamigold is backed by independently verified physical gold, with clear fee structures and custody documentation available to institutional clients. Whether you are establishing a new gold allocation, scaling an existing position, or evaluating custodial options, Galamigold provides the operational and verification framework that institutional capital deployment demands. Explore the platform and connect with the Galamigold team at <a href="https://galamigold.net" target="_blank" rel="noopener">galamigold.net</a>.</p>
+<p>Galamigold operates as a physical gold trading platform with a direct focus on transparency, audited supply chains, and disciplined execution. Every position facilitated through Galamigold is backed by independently verified physical gold, with clear fee structures and custody documentation available to institutional clients. Whether you are establishing a new gold allocation, scaling an existing position, or evaluating custodial options, Galamigold provides the operational and verification framework that institutional capital deployment demands. Explore the platform and connect with the Galamigold team at <a href="/contact">galamigold.com</a>.</p>
 <h2 id="faq" tabindex="-1">FAQ</h2>
 <h3 id="what-is-the-recommended-gold-allocation-for-institutional-portfolios" tabindex="-1">What is the recommended gold allocation for institutional portfolios?</h3>
 <p>Institutional gold allocations typically range from 5% to 15%, with conservative mandates targeting 10-15% and balanced portfolios holding 5-10%.</p>
@@ -294,10 +294,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Gold ETFs offer institutional-scale liquidity and fees under 0.55%, while physical gold ownership structures serve long-term preservation with direct ownership and no counterparty exposure at the asset level.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/institutional-gold-investing-considerations" target="_blank" rel="noopener">Institutional Gold Investing: Key Risks and Best Practices</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026" target="_blank" rel="noopener">Gold trading step by step: institutional guide 2026</a></li>
-<li><a href="https://galamigold.net/post/why-gold-matters-institutional-investors-2026" target="_blank" rel="noopener">Why gold matters for institutional investors in 2026</a></li>
-<li><a href="https://galamigold.net/post/what-is-institutional-gold-trading-complete-guide" target="_blank" rel="noopener">What is institutional gold trading: a complete guide</a></li>
+<li><a href="/capital-management-guide">Physical Gold Capital Management Guide for Institutions</a></li>
+<li><a href="/step-by-step-gold-transaction-process-2026-guide">Step by Step Gold Transaction Process: 2026 Guide</a></li>
+<li><a href="/benefits-physical-gold-institutional-investors">Top benefits of physical gold for institutional investors</a></li>
+<li><a href="/institutional-gold-trading-benefits">Top institutional gold trading benefits for portfolio growth</a></li>
 </ul>
 
   <div class="article-cta">

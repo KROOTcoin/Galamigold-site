@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="operational-risk-in-gold-trading-what-you-must-know" tabindex="-1">Operational Risk in Gold Trading: What You Must Know</h1>
+  <div class="article-title" id="operational-risk-in-gold-trading-what-you-must-know" tabindex="-1">Operational Risk in Gold Trading: What You Must Know</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1779210521026_Financial-analyst-reviewing-gold-risk-charts-in-office.jpeg" alt="Financial analyst reviewing gold risk charts in office"></p>
 <hr>
 <blockquote>
@@ -204,7 +204,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p><strong>Run disruption simulations regularly.</strong> T+1 compression has made operational resilience through continuous simulation a practical necessity. Simulate what happens when your primary data feed goes down during a volatile gold price move. Simulate a failed settlement on a physical delivery. The goal is building muscle memory, not just documentation.</p>
 </li>
 <li>
-<p><strong>Control position sizing with discipline.</strong> <a href="https://www.stockgro.club/blogs/trading/position-sizing-in-trading/" rel="nofollow noopener noreferrer" target="_blank">91% of individual equity derivatives traders</a> lost money due to poor operational discipline rather than incorrect market views. Oversized positions amplify the impact of every operational error. A proper position sizing framework limits how much any single failure can cost you. You can explore specific approaches in Galamigold’s <a href="https://galamigold.net/post/risk-management-gold-trading" target="_blank" rel="noopener">gold trading risk strategies</a> guide.</p>
+<p><strong>Control position sizing with discipline.</strong> <a href="https://www.stockgro.club/blogs/trading/position-sizing-in-trading/" rel="nofollow noopener noreferrer" target="_blank">91% of individual equity derivatives traders</a> lost money due to poor operational discipline rather than incorrect market views. Oversized positions amplify the impact of every operational error. A proper position sizing framework limits how much any single failure can cost you. You can explore specific approaches in Galamigold’s <a href="/gold-trading-risk-management-strategies-institutions">gold trading risk strategies</a> guide.</p>
 </li>
 <li>
 <p><strong>Vet your broker’s operational infrastructure specifically for gold.</strong> Ask about weekend gap procedures, settlement failure protocols, physical delivery chains, and cyber incident response plans. A broker optimized for forex is not automatically equipped for gold trading risks.</p>
@@ -251,7 +251,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </table>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1779211716694_Infographic-comparing-operational-and-market-risks-in-gold.jpeg" alt="Infographic comparing operational and market risks in gold"></p>
 <p>The interaction effects are where real damage occurs. A technology failure during a gold price spike does not just create an operational cost. It leaves your position unhedged precisely when price movement is most dangerous. That converts a contained operational issue into a compounded market loss. Similarly, a settlement failure caused by a documentation error can trigger a default scenario with a counterparty, combining operational and credit risk into a single event.</p>
-<p>Galamigold covers the <a href="https://galamigold.net/post/understanding-the-operational-mechanics-of-physical-gold-trading-and-its-key-components" target="_blank" rel="noopener">interplay of physical gold risks</a> in depth, including how custody and settlement mechanics connect to broader portfolio exposure. Understanding these connections is what separates reactive risk management from genuinely proactive control.</p>
+<p>Galamigold covers the <a href="/step-by-step-gold-transaction-process-2026-guide">interplay of physical gold risks</a> in depth, including how custody and settlement mechanics connect to broader portfolio exposure. Understanding these connections is what separates reactive risk management from genuinely proactive control.</p>
 <h2 id="my-perspective-on-the-risks-most-investors-underestimate" tabindex="-1">My perspective on the risks most investors underestimate</h2>
 <p>I have watched sophisticated investors spend weeks stress-testing their gold market thesis and then deploy capital through platforms with no documented weekend gap procedure. The market analysis was excellent. The operational foundation was not. The losses that followed had nothing to do with where gold prices went.</p>
 <p>In my experience, operational risk gets underweighted because it is harder to quantify than price volatility. You can pull up a gold price chart and see volatility. You cannot easily see the probability that your custodian’s system will fail during settlement. That invisibility creates a dangerous blind spot, particularly in a market where automation and behavioral monitoring need to be embedded in daily operations, not reviewed quarterly.</p>
@@ -262,7 +262,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </blockquote>
 <h2 id="trade-gold-with-operational-discipline-built-in" tabindex="-1">Trade gold with operational discipline built in</h2>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775463411351_galamigold.jpg" alt="https://galamigold.com"></p>
-<p>Galamigold is built around the principle that disciplined execution and transparent processes are not optional features. They are the foundation. Our <a href="https://galamigold.net" target="_blank" rel="noopener">audited physical gold trading</a> operations are structured with documented risk controls, supply chain integrity checks, and settlement procedures that account for the operational realities covered in this article, including weekend exposure management and custody oversight. If you are a sophisticated investor or institutional partner looking for a gold trading program where operational risk is managed at the infrastructure level, explore what Galamigold offers and see how our processes align with your standards for capital protection.</p>
+<p>Galamigold is built around the principle that disciplined execution and transparent processes are not optional features. They are the foundation. Our <a href="/">audited physical gold trading</a> operations are structured with documented risk controls, supply chain integrity checks, and settlement procedures that account for the operational realities covered in this article, including weekend exposure management and custody oversight. If you are a sophisticated investor or institutional partner looking for a gold trading program where operational risk is managed at the infrastructure level, explore what Galamigold offers and see how our processes align with your standards for capital protection.</p>
 <h2 id="faq" tabindex="-1">FAQ</h2>
 <h3 id="what-is-operational-risk-in-gold-trading-1" tabindex="-1">What is operational risk in gold trading?</h3>
 <p>Operational risk in gold trading refers to potential losses from failed internal processes, human errors, technology outages, or external disruptions rather than from gold price movements. It includes settlement failures, custody errors, cyber incidents, and weekend gap exposure unique to gold markets.</p>
@@ -276,10 +276,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Multi-layered controls including kill switches, oversized order blocks, daily loss limits, real-time monitoring systems, and regular disruption simulations form the practical baseline. Position sizing discipline and thorough broker vetting for gold-specific procedures add further protection.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/risk-management-gold-trading" target="_blank" rel="noopener">Risk Management in Gold Trading: Smart Strategies for 2026</a></li>
-<li><a href="https://galamigold.net/post/understanding-the-operational-mechanics-of-physical-gold-trading-and-its-key-components" target="_blank" rel="noopener">Understanding the Operational Mechanics of Physical Gold Trading and Its Key Components</a></li>
-<li><a href="https://galamigold.net/post/manage-risk-gold-investment" target="_blank" rel="noopener">Why Manage Risk in Gold Investment Strategies</a></li>
-<li><a href="https://galamigold.net/post/understanding-the-key-differences-between-buying-physical-gold-and-gold-trading-operations" target="_blank" rel="noopener">Understanding the Key Differences Between Buying Physical Gold and Gold Trading Operations</a></li>
+<li><a href="/gold-trading-risk-management-strategies-institutions">Gold trading risk management: strategies for institutions</a></li>
+<li><a href="/step-by-step-gold-transaction-process-2026-guide">Step by Step Gold Transaction Process: 2026 Guide</a></li>
+<li><a href="/red-flags-in-gold-trading-investor-warning-guide">Red Flags in Gold Trading: Investor Warning Guide</a></li>
+<li><a href="/advantages-of-wholesale-gold-trading-for-investors">Advantages of Wholesale Gold Trading for Investors</a></li>
 </ul>
 
   <div class="article-cta">

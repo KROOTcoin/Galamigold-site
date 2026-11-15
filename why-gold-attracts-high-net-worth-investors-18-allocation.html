@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="why-gold-attracts-high-net-worth-investors-18-allocation" tabindex="-1">Why gold attracts high-net-worth investors: 18% allocation</h1>
+  <div class="article-title" id="why-gold-attracts-high-net-worth-investors-18-allocation" tabindex="-1">Why gold attracts high-net-worth investors: 18% allocation</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775550497947_Portfolio-manager-and-client-reviewing-gold-allocation.jpeg" alt="Portfolio manager and client reviewing gold allocation"></p>
 <hr>
 <blockquote>
@@ -142,7 +142,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Gold’s correlation with stocks and bonds is consistently low across market regimes, and historical backtests from 1973 to 2025 suggest an optimal gold allocation of around 18% for balanced risk-adjusted returns. That is not a guess. It is the output of rigorous modeling across five decades of market data, covering multiple recessions, bull markets, and geopolitical shocks.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775550461769_Infographic-on-gold-allocation-and-portfolio-benefits.jpeg" alt="Infographic on gold allocation and portfolio benefits"></p>
 <p>What does low correlation actually mean in practice? When equity markets drop sharply, gold tends to hold its value or rise. This is not a coincidence. Gold does not generate earnings, so it is not subject to the same earnings risk that drives stock prices. It is not a liability on anyone’s balance sheet. Its price is driven by entirely different forces: monetary policy expectations, real interest rates, and global demand for safety.</p>
-<p>Portfolios that include a meaningful gold allocation have historically shown <a href="https://galamigold.net/post/gold-portfolio-diversification-reduces-risk">gold diversification and reduced risk</a> across multiple asset combinations. The math is compelling: adding gold to a traditional 60/40 stock and bond portfolio has improved risk-adjusted returns without sacrificing meaningful upside.</p>
+<p>Portfolios that include a meaningful gold allocation have historically shown <a href="/gold-portfolio-diversification">gold diversification and reduced risk</a> across multiple asset combinations. The math is compelling: adding gold to a traditional 60/40 stock and bond portfolio has improved risk-adjusted returns without sacrificing meaningful upside.</p>
 <p><strong>Key reasons gold earns its place in elite portfolios:</strong></p>
 <ul>
 <li>Low or negative correlation with equities during stress periods</li>
@@ -197,7 +197,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>For investors serious about <a href="https://galamigold.com/gold-portfolio-diversification" rel="nofollow noopener noreferrer" target="_blank">portfolio diversification strategies</a>, gold is not a satellite position. It is a structural allocation backed by data.</p>
 <h2 id="gold-as-a-proven-hedge-inflation-currency-risk-and-beyond" tabindex="-1">Gold as a proven hedge: Inflation, currency risk, and beyond</h2>
 <p>Inflation destroys purchasing power quietly. You do not feel it in a single quarter, but over five or ten years, a 4% annual inflation rate cuts the real value of cash holdings nearly in half. Gold has historically preserved purchasing power across generations, which is why central banks and private investors alike have increased their gold holdings significantly in recent years.</p>
-<p>The 2025 data is striking. <a href="https://guides.tatler.co.uk/article/investing-in-gold-uhnws" rel="nofollow noopener noreferrer" target="_blank">Central banks bought 863 tonnes</a> of gold that year, gold averaged $3,431 per ounce representing a 44% year-over-year increase, and HNWI gold ownership rose from 20% to 38%. That kind of institutional behavior does not happen by accident. It reflects a deliberate strategic shift toward <a href="https://galamigold.net/post/gold-as-a-safe-haven-asset-class">gold as a safe haven</a> in an era of elevated debt levels and currency uncertainty.</p>
+<p>The 2025 data is striking. <a href="https://guides.tatler.co.uk/article/investing-in-gold-uhnws" rel="nofollow noopener noreferrer" target="_blank">Central banks bought 863 tonnes</a> of gold that year, gold averaged $3,431 per ounce representing a 44% year-over-year increase, and HNWI gold ownership rose from 20% to 38%. That kind of institutional behavior does not happen by accident. It reflects a deliberate strategic shift toward <a href="/why-gold-is-a-safe-haven-asset-the-investors-guide">gold as a safe haven</a> in an era of elevated debt levels and currency uncertainty.</p>
 <blockquote>
 <p>Gold averaged $3,431/oz in 2025, a 44% year-over-year increase, while HNWI ownership nearly doubled from 20% to 38%.</p>
 </blockquote>
@@ -210,7 +210,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li>Use physical gold for the core position and review it annually against inflation benchmarks</li>
 <li>Avoid overtrading based on short-term price moves; gold’s value is in its long-term role</li>
 </ol>
-<p>Pro Tip: Do not wait for inflation headlines to act. By the time inflation is front-page news, gold has often already moved. Build your position during calm periods and treat it as <a href="https://galamigold.net/post/gold-portfolio-risk-management-2026">portfolio risk management</a> infrastructure, not a reactive trade.</p>
+<p>Pro Tip: Do not wait for inflation headlines to act. By the time inflation is front-page news, gold has often already moved. Build your position during calm periods and treat it as <a href="/gold-hedging-strategies-institutional-portfolio-stability">portfolio risk management</a> infrastructure, not a reactive trade.</p>
 <p>For a deeper look at UHNWI gold trends and how the wealthiest investors are structuring their positions, the data from 2025 offers a clear signal about where sophisticated capital is moving.</p>
 <h2 id="resilience-in-volatility-golds-edge-in-modern-uncertain-markets" tabindex="-1">Resilience in volatility: Gold’s edge in modern uncertain markets</h2>
 <p>Market volatility is not just about stock prices falling. It is about the entire framework of assumptions investors rely on being called into question at once. During these moments, the assets that hold value are the ones that were never dependent on those assumptions in the first place. Gold qualifies on every count.</p>
@@ -226,7 +226,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li>De-dollarization: when global trade shifts away from USD settlement</li>
 </ul>
 <p>Pro Tip: To evaluate gold’s resilience factor in your own portfolio, run a simple stress test. Look at how your portfolio performed during 2008, 2020, and 2022. If gold was absent or underweighted during those periods, the gap in performance tells you exactly what you were missing.</p>
-<p>For investors looking to <a href="https://galamigold.net/post/how-to-invest-in-gold-for-portfolio-diversification-2026">invest in gold for diversification</a> in 2026, the evidence from <a href="https://galamigold.net/post/top-gold-asset-examples-portfolio-diversification">gold asset examples</a> across multiple market cycles makes a strong case for a meaningful, sustained allocation rather than a token position.</p>
+<p>For investors looking to <a href="/gold-as-an-asset-class-risk-diversification-and-strategy">invest in gold for diversification</a> in 2026, the evidence from <a href="/gold-asset-examples-diversification">gold asset examples</a> across multiple market cycles makes a strong case for a meaningful, sustained allocation rather than a token position.</p>
 <h2 id="physical-gold-trading-trusted-routes-for-capital-protection" tabindex="-1">Physical gold trading: Trusted routes for capital protection</h2>
 <p>Knowing why to own gold is one thing. Knowing how to own it properly is another. For high-net-worth and institutional investors, physical gold offers something that ETFs and derivatives cannot: direct ownership with no counterparty exposure. You own the metal. It is not a promise, a contract, or a fund unit.</p>
 <p>Physical gold trading has empirical support from over 50 years of cross-regime data, and its appeal for trusted diversification is well-documented. The process of sourcing, authenticating, and settling physical gold requires discipline and the right partners, but the transparency it creates is unmatched.</p>
@@ -238,7 +238,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li>Arrange secure storage through an insured, audited vault provider</li>
 <li>Document chain of custody and review storage arrangements annually</li>
 </ol>
-<p>Understanding the <a href="https://galamigold.net/post/understanding-the-operational-mechanics-of-physical-gold-trading-and-its-key-components">operational mechanics of gold trading</a> is essential before committing capital. Mistakes at the sourcing or authentication stage are difficult and expensive to reverse.</p>
+<p>Understanding the <a href="/step-by-step-gold-transaction-process-2026-guide">operational mechanics of gold trading</a> is essential before committing capital. Mistakes at the sourcing or authentication stage are difficult and expensive to reverse.</p>
 <p><strong>Common pitfalls and how experienced investors avoid them:</strong></p>
 <ul>
 <li>Skipping independent assay verification (always require third-party certification)</li>
@@ -247,7 +247,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li>Failing to account for storage and insurance costs in return calculations</li>
 <li>Treating physical gold as a short-term trade rather than a long-term capital protection tool</li>
 </ul>
-<p>Pro Tip: When selecting a trading partner, prioritize transparency of supply chain over price. A marginally better price from an unknown counterparty is not worth the authentication risk. Review the <a href="https://galamigold.net/post/physical-gold-trading-guide-institutional-investors">physical gold trading guide</a> for institutional-grade best practices before executing any significant transaction.</p>
+<p>Pro Tip: When selecting a trading partner, prioritize transparency of supply chain over price. A marginally better price from an unknown counterparty is not worth the authentication risk. Review the <a href="/what-is-bulk-gold-trading-investors-2026-guide">physical gold trading guide</a> for institutional-grade best practices before executing any significant transaction.</p>
 <h2 id="expert-perspective-what-most-investors-get-wrong-about-gold-allocations" tabindex="-1">Expert perspective: What most investors get wrong about gold allocations</h2>
 <p>Here is the uncomfortable truth: most high-net-worth portfolios are significantly underweight gold, not because the data is unclear, but because the data conflicts with how most wealth managers are trained to think. Conventional allocation models still treat gold as a 5% or less satellite position, even though decades of backtesting point to 18% as optimal.</p>
 <p>The reason is psychological as much as analytical. Gold does not pay dividends. It does not generate quarterly earnings reports. In a bull market, it feels like dead weight. But wealth preservation is not a bull market game. It is a multi-decade discipline, and gold’s role is to protect what you have built when everything else is under pressure.</p>
@@ -256,7 +256,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <h2 id="secure-your-legacy-with-trusted-gold-trading-solutions" tabindex="-1">Secure your legacy with trusted gold trading solutions</h2>
 <p>The evidence is clear, the mechanics are established, and the case for a meaningful gold allocation in 2026 is backed by five decades of data. What separates investors who benefit from gold from those who do not is execution quality and the partners they choose.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775463411351_galamigold.jpg" alt="https://galamigold.com"></p>
-<p>At <a href="https://galamigold.com" rel="nofollow noopener noreferrer" target="_blank">Galami Gold</a>, we operate at the intersection of disciplined execution and transparent physical gold supply and trading across well-established supply chains. Whether you are building a new allocation or refining an existing one, our team works with high-net-worth individuals and institutional investors who demand integrity at every step. Before committing capital, we encourage you to review our <a href="https://galamigold.com/risk" rel="nofollow noopener noreferrer" target="_blank">gold investment risk disclosure</a> and explore how to <a href="https://galamigold.net">invest in gold trading</a> through a platform built for serious capital.</p>
+<p>At <a href="https://galamigold.com" rel="nofollow noopener noreferrer" target="_blank">Galami Gold</a>, we operate at the intersection of disciplined execution and transparent physical gold supply and trading across well-established supply chains. Whether you are building a new allocation or refining an existing one, our team works with high-net-worth individuals and institutional investors who demand integrity at every step. Before committing capital, we encourage you to review our <a href="https://galamigold.com/risk" rel="nofollow noopener noreferrer" target="_blank">gold investment risk disclosure</a> and explore how to <a href="/">invest in gold trading</a> through a platform built for serious capital.</p>
 <h2 id="frequently-asked-questions" tabindex="-1">Frequently asked questions</h2>
 <h3 id="what-percentage-of-a-portfolio-should-hnwis-allocate-to-gold" tabindex="-1">What percentage of a portfolio should HNWIs allocate to gold?</h3>
 <p>Historical backtests from 1973 to 2025 suggest an optimal gold allocation of around 18%, balancing risk reduction with meaningful return contribution across multiple market cycles.</p>
@@ -268,9 +268,9 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Gold’s low correlation with equities and bonds means it tends to hold or gain value when other assets fall, boosting Sharpe ratios and improving overall portfolio resilience during stress events.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/why-gold-matters-institutional-investors-2026">Why gold matters for institutional investors in 2026</a></li>
-<li><a href="https://galamigold.net/post/top-gold-asset-examples-portfolio-diversification">Top Gold Asset Examples for Portfolio Diversification</a></li>
-<li><a href="https://galamigold.net/post/gold-portfolio-diversification-reduces-risk">Why gold secures portfolio diversification and reduces risk</a></li>
+<li><a href="/benefits-physical-gold-institutional-investors">Top benefits of physical gold for institutional investors</a></li>
+<li><a href="/gold-asset-examples-diversification">Top Gold Asset Examples for Portfolio Diversification</a></li>
+<li><a href="/gold-as-an-asset-class-risk-diversification-and-strategy">Gold as an asset class: Risk, diversification, and strategy</a></li>
 <li><a href="https://galamigold.com/gold-portfolio-diversification" rel="nofollow noopener noreferrer" target="_blank">Why Gold Secures Portfolio Diversification | Galami Gold</a></li>
 </ul>
 

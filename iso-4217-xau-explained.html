@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="iso-4217-xau-explained-what-the-gold-code-means" tabindex="-1">ISO 4217 XAU Explained: What the Gold Code Means</h1>
+  <div class="article-title" id="iso-4217-xau-explained-what-the-gold-code-means" tabindex="-1">ISO 4217 XAU Explained: What the Gold Code Means</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1786498355751_Hand-weighing-a-troy-ounce-gold-bar-in-vault.jpeg" alt="Hand weighing a troy ounce gold bar in vault"></p>
 <p><strong>XAU is the <a href="https://www.iso.org/iso-4217-currency-codes.html" rel="nofollow noopener noreferrer" target="_blank">ISO 4217</a> three-letter alphabetic code representing one troy ounce of gold.</strong> It sits alongside national currency codes like USD and EUR, but unlike those, XAU is not tied to any country. ISO 3166 reserves the letter “X” for exactly this purpose: non-sovereign assets. The IMF’s Special Drawing Right (XDR) follows the same logic. Both XAU and XDR exist because the standard needed a clean way to handle assets that don’t belong to any single nation’s monetary system.</p>
 <p>Two things to know immediately:</p>
@@ -169,7 +169,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </tbody>
 </table>
 <p>The letter breakdown matters. “X” signals a non-country asset per ISO 3166 conventions. “AU” is the chemical symbol for gold, derived from the Latin <em>Aurum</em>. Put them together and you get a code that is both chemically precise and internationally unambiguous.</p>
-<p>Related <a href="https://galamigold.net/post/trading-gold-vs-other-metals-institutional-insights" target="_blank" rel="noopener">X-currency codes</a> follow the same pattern:</p>
+<p>Related <a href="/gold-market-dynamics-explained">X-currency codes</a> follow the same pattern:</p>
 <ul>
 <li><strong>XAG</strong> (numeric 961): silver, one troy ounce</li>
 <li><strong>XPT</strong> (numeric 962): platinum, one troy ounce</li>
@@ -241,12 +241,12 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>The reporting implications differ sharply. Allocated gold appears on the balance sheet as a tangible asset. Unallocated positions carry credit exposure to the custodian and may require additional disclosure under IFRS 9 or U.S. GAAP depending on the entity’s reporting framework.</p>
 <p>On the execution side, institutional gold trades typically clear through OTC matching rather than exchange order books. The LBMA (London Bullion Market Association) publishes twice-daily benchmark fixes — the LBMA Gold Price AM and PM — which serve as reference rates for contract settlement, fund valuations, and central bank transactions. Institutional desks often benchmark their fills against these fixes to demonstrate best execution.</p>
 <p>Risk management for XAU positions requires measuring exposure in troy ounces first, then converting to currency value using the live XAU/USD rate. Hedging typically involves futures on COMEX or OTC forward contracts. Reconciliation should run daily: compare the troy-ounce position in the custody record against the trading system’s position, flag any discrepancy before converting to dollar value. Catching a unit mismatch at the ounce level is far simpler than unwinding a dollar-denominated error after month-end close.</p>
-<p><strong>Pro Tip:</strong> <em>Automate unit normalization at the point of data ingestion. Flag any record where the unit field is missing, blank, or set to anything other than “troy ounce” before it reaches the ledger. A <a href="https://galamigold.net/post/gold-trading-standards-institutional-investors-2026" target="_blank" rel="noopener">gold trading standards</a> framework that enforces this at the API gateway level catches errors before they compound.</em></p>
+<p><strong>Pro Tip:</strong> <em>Automate unit normalization at the point of data ingestion. Flag any record where the unit field is missing, blank, or set to anything other than “troy ounce” before it reaches the ledger. A <a href="/role-of-global-standards-in-gold-trade">gold trading standards</a> framework that enforces this at the API gateway level catches errors before they compound.</em></p>
 <hr>
 <h2 id="why-precise-xau-knowledge-shapes-portfolio-decisions" tabindex="-1">Why precise XAU knowledge shapes portfolio decisions</h2>
 <p>From Galami’s perspective, the gap between knowing that XAU means gold and knowing what XAU means operationally is where institutional incidents happen. A desk that treats XAU as just another ticker will eventually hit a unit mismatch, a minor-unit assumption error, or a custody classification problem that takes weeks to unwind.</p>
 <p>Precision about the code, the unit, and the feed format is not pedantry. It directly affects auditability, regulatory reporting accuracy, and the quality of execution benchmarking. When a portfolio manager asks “what is our gold exposure?”, the answer is only as reliable as the data pipeline behind it. If that pipeline conflates troy and avoirdupois ounces, or applies a two-decimal minor-unit assumption to XAU positions, the exposure figure is wrong before anyone looks at the market price.</p>
-<p>Galami’s approach to <a href="https://galamigold.net/post/key-factors-gold-trading-institutional-investors-2026" target="_blank" rel="noopener">institutional gold execution</a> starts from this foundation: disciplined handling of the unit, the code, and the custody structure, so that the numbers clients see reflect reality.</p>
+<p>Galami’s approach to <a href="/2026-gold-trading-trends-institutional-investors">institutional gold execution</a> starts from this foundation: disciplined handling of the unit, the code, and the custody structure, so that the numbers clients see reflect reality.</p>
 <hr>
 <h2 id="galami-golds-institutional-execution-and-custody-services" tabindex="-1">Galami Gold’s institutional execution and custody services</h2>
 <p>Institutional clients who need more than a data explainer — firms that are actively allocating to physical gold, integrating XAU into portfolio systems, or seeking transparent execution against LBMA benchmarks — can engage Galamigold directly.</p>
@@ -261,10 +261,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </ul>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/gold-trading-terminology-institutional-guide-2026" target="_blank" rel="noopener">Gold trading terminology: institutional guide 2026</a></li>
-<li><a href="https://galamigold.net/post/gold-investment-terminology-explained-for-institutional-investors" target="_blank" rel="noopener">Gold investment terminology explained for institutional investors</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026" target="_blank" rel="noopener">Gold trading step by step: institutional guide 2026</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-regulations-2026-aml-penalties-highlight-risks" target="_blank" rel="noopener">Gold trading regulations 2026: 75% AML penalties highlight risks</a></li>
+<li><a href="/what-is-bullion">Bullion Explained: A Practical Guide for U.S. Investors</a></li>
+<li><a href="/what-is-unallocated-gold">Unallocated Gold Explained: Ownership, Risks, and When to Use It</a></li>
+<li><a href="/step-by-step-gold-transaction-process-2026-guide">Step by Step Gold Transaction Process: 2026 Guide</a></li>
+<li><a href="/role-of-aml-in-gold-trade">The Role of AML in Gold Trade for Institutional Investors</a></li>
 </ul>
 
   <div class="article-cta">
