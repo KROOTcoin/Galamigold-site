@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="unallocated-gold-explained-ownership-risks-and-when-to-use-it" tabindex="-1">Unallocated Gold Explained: Ownership, Risks, and When to Use It</h1>
+  <div class="article-title" id="unallocated-gold-explained-ownership-risks-and-when-to-use-it" tabindex="-1">Unallocated Gold Explained: Ownership, Risks, and When to Use It</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1786412627766_Professional-handling-pooled-gold-bars-in-vault.jpeg" alt="Professional handling pooled gold bars in vault"></p>
 <p>Unallocated gold is a contractual claim on a specified quantity of metal held by an intermediary, not legal title to any specific, identifiable bar. You are a creditor, not an owner. The <a href="https://www.lbma.org.uk/publications/the-otc-guide/precious-metal-accounts" rel="nofollow noopener noreferrer" target="_blank">LBMA</a> confirms that the vast majority of wholesale precious-metal trades clear over unallocated accounts precisely because of their speed and low friction. The <a href="https://www.imf.org/external/np/sta/bop/pdf/fu111.pdf" rel="nofollow noopener noreferrer" target="_blank">IMF</a> classifies unallocated balances as deposit-like financial assets, not monetary gold, which has direct implications for insolvency treatment and reserve accounting.</p>
 <p>The practical recommendation: use unallocated accounts for short-term trading, liquidity management, or wholesale settlement where transaction speed matters. Choose allocated gold when physical ownership, long-term capital preservation, or delivery certainty is the priority. Galamigold works with institutional clients across both structures, with audited custody and clear delivery pathways for each.</p>
@@ -248,7 +248,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </ul>
 <p>The IMF’s analysis treats unallocated balances as deposit-like financial assets in many statistical frameworks, which is precisely the point: they behave more like a bank deposit than a property right. A bank deposit is insured up to FDIC limits in the U.S. An unallocated gold account typically is not. That gap in protection is the risk most retail-oriented marketing materials understate.</p>
 <p>The CoinMarketCap Academy entry on allocated gold notes that pooled inventory enables fractional quantities and faster settlement but does not guarantee assignment of specific bars unless the position is converted to allocated metal. That is not a minor caveat. It is the defining structural limitation of the unallocated model.</p>
-<p>For a deeper look at <a href="https://galamigold.net/post/gold-investment-terminology-explained-for-institutional-investors" target="_blank" rel="noopener">gold investment terminology</a> including bailment, custodial ownership, and creditor classification, Galamigold’s institutional glossary covers these concepts in detail.</p>
+<p>For a deeper look at <a href="/what-is-bullion">gold investment terminology</a> including bailment, custodial ownership, and creditor classification, Galamigold’s institutional glossary covers these concepts in detail.</p>
 <hr>
 <h2 id="what-do-unallocated-and-allocated-gold-cost-to-hold-in-the-us" tabindex="-1">What do unallocated and allocated gold cost to hold in the U.S.?</h2>
 <p>Cost structures differ significantly between the two models, and the gap widens with holding period.</p>
@@ -304,7 +304,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </ul>
 <p><strong>Who should prefer unallocated:</strong> Active traders, wholesale market participants, institutions managing short-term liquidity, and anyone using gold as collateral in swap or lending arrangements.</p>
 <p><strong>Who should prefer allocated:</strong> Long-term investors, family offices, pension funds with physical-delivery mandates, and anyone for whom the counterparty risk of an unsecured creditor position is unacceptable.</p>
-<p>For a structured approach to <a href="https://galamigold.net/post/how-to-trade-gold-strategic-portfolio-growth-2026" target="_blank" rel="noopener">gold trading strategy</a> that integrates both account types into a portfolio, Galamigold’s institutional resources cover the execution mechanics in detail.</p>
+<p>For a structured approach to <a href="/capital-deployment-guide-to-gold-for-institutional-investors">gold trading strategy</a> that integrates both account types into a portfolio, Galamigold’s institutional resources cover the execution mechanics in detail.</p>
 <hr>
 <h2 id="how-do-you-convert-unallocated-gold-to-allocated-or-take-physical-delivery" tabindex="-1">How do you convert unallocated gold to allocated or take physical delivery?</h2>
 <p>Converting an unallocated position to allocated metal, or requesting physical delivery, follows a predictable sequence. The timeline and costs vary by provider and position size, but the steps are consistent.</p>
@@ -330,7 +330,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li>Sales tax: in most U.S. states, physical delivery of gold bullion is exempt from sales tax, but rules vary by state and transaction structure. Verify with a tax advisor before taking delivery.</li>
 </ul>
 <p><strong>Practical tip:</strong> Before any transfer, request the full weight list with bar serial numbers and verify them against an independent audit if the position exceeds a few hundred ounces. Discrepancies are rare but not impossible, and they are far easier to resolve before custody changes hands.</p>
-<p>For a detailed walkthrough of the <a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026" target="_blank" rel="noopener">institutional gold trading process</a>, including settlement mechanics and custody transfer documentation, Galamigold’s step-by-step guide covers each stage.</p>
+<p>For a detailed walkthrough of the <a href="/step-by-step-gold-transaction-process-2026-guide">institutional gold trading process</a>, including settlement mechanics and custody transfer documentation, Galamigold’s step-by-step guide covers each stage.</p>
 <hr>
 <h2 id="what-do-the-lbma-and-imf-say-about-unallocated-gold" tabindex="-1">What do the LBMA and IMF say about unallocated gold?</h2>
 <p>Two institutions define the authoritative framework for understanding unallocated gold: the London Bullion Market Association and the International Monetary Fund. Their classifications are not academic. They shape how banks, central banks, and regulators treat these positions in practice.</p>
@@ -370,10 +370,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>This article is general information, not a substitute for advice from a qualified financial advisor. Consult a qualified financial professional about your own circumstances before acting on anything here.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/gold-investment-terminology-explained-for-institutional-investors" target="_blank" rel="noopener">Gold investment terminology explained for institutional investors</a></li>
-<li><a href="https://galamigold.net/post/gold-portfolio-risk-management-2026" target="_blank" rel="noopener">Gold’s role in portfolio risk management 2026</a></li>
-<li><a href="https://galamigold.net/post/gold-as-a-safe-haven-asset-class" target="_blank" rel="noopener">Gold as a safe-haven asset class</a></li>
-<li><a href="https://galamigold.net/post/manage-risk-gold-investment" target="_blank" rel="noopener">Why Manage Risk in Gold Investment Strategies</a></li>
+<li><a href="/what-is-bullion">Bullion Explained: A Practical Guide for U.S. Investors</a></li>
+<li><a href="/gold-hedging-strategies-institutional-portfolio-stability">Gold hedging explained: strategies for institutional portfolio stability</a></li>
+<li><a href="/why-gold-is-a-safe-haven-asset-the-investors-guide">Why gold is a safe haven asset: the investor's guide</a></li>
+<li><a href="/gold-trading-risk-management-strategies-institutions">Gold trading risk management: strategies for institutions</a></li>
 </ul>
 
   <div class="article-cta">

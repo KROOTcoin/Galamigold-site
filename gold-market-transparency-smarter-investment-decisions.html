@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="gold-market-transparency-smarter-investment-decisions" tabindex="-1">Gold market transparency: Smarter investment decisions</h1>
+  <div class="article-title" id="gold-market-transparency-smarter-investment-decisions" tabindex="-1">Gold market transparency: Smarter investment decisions</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1778132154925_Investor-reviewing-gold-market-data-at-kitchen-counter.jpeg" alt="Investor reviewing gold market data at kitchen counter"></p>
 <hr>
 <blockquote>
@@ -150,7 +150,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <blockquote>
 <p>“For institutional and HNW investors, LBMA/ICE provides auditable pricing, but paper gold dominance creates counterparty risks. Prefer allocated physical or verified ETFs and monitor <a href="https://www.gold.org/goldhub/data/gold-trading-volumes" rel="nofollow noopener noreferrer" target="_blank">LBMA volumes and WGC data</a> for benchmarks.”</p>
 </blockquote>
-<p>There is also a critical distinction between physical gold and what the industry calls “paper gold.” Physical gold is an allocated, tangible asset. Paper gold represents a financial claim on gold, often unallocated and pooled, without direct legal ownership of specific bars. Understanding this difference is foundational to evaluating your true exposure. For a complete breakdown of key terms, reviewing <a href="https://galamigold.net/post/gold-investment-terminology-explained-for-institutional-investors">gold investment terminology</a> is an essential first step for any serious investor.</p>
+<p>There is also a critical distinction between physical gold and what the industry calls “paper gold.” Physical gold is an allocated, tangible asset. Paper gold represents a financial claim on gold, often unallocated and pooled, without direct legal ownership of specific bars. Understanding this difference is foundational to evaluating your true exposure. For a complete breakdown of key terms, reviewing <a href="/what-is-bullion">gold investment terminology</a> is an essential first step for any serious investor.</p>
 <h2 id="how-the-lbma-sets-gold-prices-architecture-and-reforms-toward-transparency" tabindex="-1">How the LBMA sets gold prices: Architecture and reforms toward transparency</h2>
 <p>The London Bullion Market Association Gold Price is the global benchmark used by miners, central banks, refiners, and institutional investors worldwide. Understanding how it is set, and where its transparency has improved, is non-negotiable for sophisticated market participants.</p>
 <p>The current process works like this:</p>
@@ -204,7 +204,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </table>
 <p>However, gaps remain. The <a href="https://lbma.org.uk/prices-and-data" rel="nofollow noopener noreferrer" target="_blank">LBMA Prices and Data portal</a> reveals OTC trading volumes that help institutional investors gauge market depth, but reserve audits for major gold holdings, including central bank vaults, are infrequent and inconsistent. Fort Knox, for example, has not received a full independent audit since 1953. That is a striking gap in what most investors would consider a transparent system.</p>
 <p>Pro Tip: Set up alerts for LBMA Trade Data releases each month. These reports show OTC clearing volumes and give you a real sense of institutional activity levels that public gold futures data alone cannot provide.</p>
-<p>For a full breakdown of where current <a href="https://galamigold.net/post/gold-trading-standards-institutional-investors-2026">LBMA gold trading standards</a> sit in 2026, and why they matter to your compliance posture, that context is indispensable. Equally important is understanding how <a href="https://galamigold.net/post/how-to-build-trust-in-gold-trading-institutions">trust in gold trading institutions</a> is built and stress-tested over time.</p>
+<p>For a full breakdown of where current <a href="/role-of-global-standards-in-gold-trade">LBMA gold trading standards</a> sit in 2026, and why they matter to your compliance posture, that context is indispensable. Equally important is understanding how <a href="/trust-matters-gold-trading">trust in gold trading institutions</a> is built and stress-tested over time.</p>
 <h2 id="trading-volumes-and-market-data-the-gold-transparency-data-landscape" tabindex="-1">Trading volumes and market data: The gold transparency data landscape</h2>
 <p>Knowing where to find reliable gold market data is as important as understanding the benchmark mechanics. Two organizations anchor this data landscape: the LBMA and the World Gold Council.</p>
 <p>The LBMA publishes trade data, historical pricing, vault holdings reports, and OTC clearing statistics. These are critical inputs for any institutional trading desk modeling liquidity scenarios or stress testing a gold allocation.</p>
@@ -257,7 +257,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </tr>
 </tbody>
 </table>
-<p>Pro Tip: Cross-reference <a href="https://galamigold.net/gold-market-insights">market insights on trading statistics</a> with WGC quarterly demand reports before any significant position change. Divergences between ETF inflows and physical demand often signal short-term mispricings worth exploiting or avoiding.</p>
+<p>Pro Tip: Cross-reference <a href="/insights">market insights on trading statistics</a> with WGC quarterly demand reports before any significant position change. Divergences between ETF inflows and physical demand often signal short-term mispricings worth exploiting or avoiding.</p>
 <p>The critical takeaway is that transparency is improving at the data publication level. However, granularity still lags behind what institutional investors have access to in equity or fixed income markets. Gold’s OTC structure means much trading occurs bilaterally, with limited post-trade reporting requirements compared to regulated exchanges.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1778132820238_Infographic-comparing-physical-gold-and-paper-gold-transparency.jpeg" alt="Infographic comparing physical gold and paper gold transparency"></p>
 <h2 id="paper-vs-physical-gold-transparency-and-the-risks-of-unallocated-positions" tabindex="-1">Paper vs. physical gold: Transparency and the risks of unallocated positions</h2>
@@ -274,7 +274,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </ul>
 <p>The Basel III regulatory framework is beginning to apply pressure here. Under Basel III rules, unallocated gold held by banks carries a higher risk weighting than allocated physical gold, incentivizing a structural shift toward physical backing. This is a long-term trend worth monitoring carefully.</p>
 <p>Pro Tip: When evaluating any gold product, ask for the specific allocation documentation before committing capital. Verified allocated positions with named bar lists are fundamentally different from pooled unallocated accounts, regardless of how a product is marketed.</p>
-<p>For deeper context on the specific risk scenarios that unallocated positions create, reviewing <a href="https://galamigold.net/post/examples-gold-investment-risks-institutions-2026">gold investment risk examples</a> and <a href="https://galamigold.net/post/manage-risk-gold-investment">risk management frameworks for gold strategies</a> will sharpen your due diligence process considerably.</p>
+<p>For deeper context on the specific risk scenarios that unallocated positions create, reviewing <a href="/operational-risk-in-gold-trading-what-you-must-know">gold investment risk examples</a> and <a href="/gold-trading-risk-management-strategies-institutions">risk management frameworks for gold strategies</a> will sharpen your due diligence process considerably.</p>
 <h2 id="applying-transparency-how-informed-investors-use-transparency-data" tabindex="-1">Applying transparency: How informed investors use transparency data</h2>
 <p>Understanding transparency tools is only valuable if you translate them into concrete investment practice. Here is a disciplined process for doing exactly that.</p>
 <ol>
@@ -286,7 +286,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li><strong>Benchmark against WGC demand data.</strong> Quarter over quarter, compare your price paid against published demand trend reports to ensure you are operating within rational market parameters.</li>
 </ol>
 <p>Using these steps consistently builds a defensible due diligence record, which is increasingly important as regulators in the US and UK increase scrutiny of gold investment products.</p>
-<p>If OTC gold exposure is part of your strategy, a thorough review of the <a href="https://galamigold.com/otc-gold-trading-guide" rel="nofollow noopener noreferrer" target="_blank">OTC gold trading guide</a> provides a practical operational framework. Pairing that with reviewed <a href="https://galamigold.net/post/gold-trading-strategies-optimize-risk-returns-2026">gold trading strategies</a> helps align transparency practices with actual portfolio objectives.</p>
+<p>If OTC gold exposure is part of your strategy, a thorough review of the <a href="https://galamigold.com/otc-gold-trading-guide" rel="nofollow noopener noreferrer" target="_blank">OTC gold trading guide</a> provides a practical operational framework. Pairing that with reviewed <a href="/gold-trading-risk-management-strategies-institutions">gold trading strategies</a> helps align transparency practices with actual portfolio objectives.</p>
 <h2 id="the-uncomfortable-truth-about-gold-market-transparency" tabindex="-1">The uncomfortable truth about gold market transparency</h2>
 <p>Here is what most guides on this topic will not tell you directly: genuine gold market transparency is still more aspiration than reality for the average institutional investor in 2026.</p>
 <p>The post-2015 LBMA reforms were real and meaningful. Electronic auctions, audit trails, and published trade data represent genuine progress. But price transparency and operational transparency are two different things. You can know the exact benchmark price and still have no reliable way to verify whether the physical gold backing your unallocated position actually exists in the quantity claimed.</p>
@@ -296,7 +296,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <h2 id="work-with-gold-partners-who-value-transparency" tabindex="-1">Work with gold partners who value transparency</h2>
 <p>If you have read this far, you understand that transparency in gold investing is not just about checking a price on a screen. It is about counterparty integrity, physical verification, audit trails, and systemic risk management. Choosing the right partner is as important as analyzing the market itself.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775463411351_galamigold.jpg" alt="https://galamigold.com"></p>
-<p>Galami Gold is built specifically for investors who take these standards seriously. Our operations are centered on documented, allocated physical gold supply chains, with disciplined risk management embedded at every stage. Whether you are evaluating physical gold supply, structured trading programs, or need a counterparty aligned with institutional-grade transparency expectations, we want to hear from you. Visit our <a href="https://galamigold.com" rel="nofollow noopener noreferrer" target="_blank">physical gold supply partner</a> page to explore current offerings, review our <a href="https://galamigold.net">audited gold investment solutions</a> for program details, or check our <a href="https://galamigold.com/risk" rel="nofollow noopener noreferrer" target="_blank">risk policies for gold programs</a> to see how we manage and disclose risk at the operational level.</p>
+<p>Galami Gold is built specifically for investors who take these standards seriously. Our operations are centered on documented, allocated physical gold supply chains, with disciplined risk management embedded at every stage. Whether you are evaluating physical gold supply, structured trading programs, or need a counterparty aligned with institutional-grade transparency expectations, we want to hear from you. Visit our <a href="https://galamigold.com" rel="nofollow noopener noreferrer" target="_blank">physical gold supply partner</a> page to explore current offerings, review our <a href="/">audited gold investment solutions</a> for program details, or check our <a href="https://galamigold.com/risk" rel="nofollow noopener noreferrer" target="_blank">risk policies for gold programs</a> to see how we manage and disclose risk at the operational level.</p>
 <h2 id="frequently-asked-questions" tabindex="-1">Frequently asked questions</h2>
 <h3 id="how-are-lbma-gold-prices-actually-determined" tabindex="-1">How are LBMA gold prices actually determined?</h3>
 <p>LBMA gold prices are set through twice-daily electronic auctions on the ICE platform, using real-time order management and full audit trails, with price rounds repeating every 30 seconds until supply and demand fall within the published imbalance threshold.</p>
@@ -308,10 +308,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Some major gold reserves have not received a full independent audit in decades. Fort Knox’s last complete audit occurred in 1953, illustrating a significant and persistent gap in what many assume to be a fully transparent system.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/trading-gold-vs-other-metals-institutional-insights">Trading gold vs. other metals: insights for investors</a></li>
-<li><a href="https://galamigold.net/post/partner-gold-traders-risk-management-transparency">Partner with gold traders: risk management &amp; transparency</a></li>
-<li><a href="https://galamigold.net/post/trust-in-gold-investment">Role of Trust in Gold Investment Strategies</a></li>
-<li><a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026">Essential tips for evaluating gold traders in 2026</a></li>
+<li><a href="/gold-market-dynamics-explained">Gold Market Dynamics Explained: What Investors Need to Know</a></li>
+<li><a href="/how-to-select-gold-partners-institutional-guide-2026">How to Select Gold Partners: Institutional Guide 2026</a></li>
+<li><a href="/trust-matters-gold-trading">Why trust matters in gold trading: Safeguarding institutional investments</a></li>
+<li><a href="/gold-broker-checklist">Institutional Gold Broker Checklist: 2026 Vetting Guide</a></li>
 </ul>
 
   <div class="article-cta">

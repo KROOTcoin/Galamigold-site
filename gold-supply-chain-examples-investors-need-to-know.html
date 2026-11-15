@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="gold-supply-chain-examples-investors-need-to-know" tabindex="-1">Gold supply chain examples investors need to know</h1>
+  <div class="article-title" id="gold-supply-chain-examples-investors-need-to-know" tabindex="-1">Gold supply chain examples investors need to know</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1776921859868_Managers-reviewing-gold-supply-chain-map.jpeg" alt="Managers reviewing gold supply chain map"></p>
 <hr>
 <blockquote>
@@ -138,9 +138,9 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Here are the core evaluation criteria institutional investors should apply:</p>
 <ul>
 <li><strong>Traceability:</strong> Can you document the chain of custody from mine to vault? This is foundational for both internal reporting and external audits.</li>
-<li><strong>Bar specifications and brand approvals:</strong> Only bars meeting <a href="https://galamigold.net/post/gold-trading-standards-institutional-investors-2026">gold trading standards</a> qualify for delivery on major exchanges. LBMA Good Delivery and COMEX-approved brands are the benchmarks.</li>
+<li><strong>Bar specifications and brand approvals:</strong> Only bars meeting <a href="/role-of-global-standards-in-gold-trade">gold trading standards</a> qualify for delivery on major exchanges. LBMA Good Delivery and COMEX-approved brands are the benchmarks.</li>
 <li><strong>Regulatory compliance:</strong> AML (anti-money laundering) and KYC (know your customer) protocols must be airtight at every stage. Responsible sourcing certifications, such as those aligned with the OECD Due Diligence Guidance, add another layer of institutional protection.</li>
-<li><strong>Physical versus paper movement:</strong> This distinction is often underappreciated. <a href="https://galamigold.net/post/key-factors-gold-trading-institutional-investors-2026">Key factors in gold trading</a> include recognizing that roughly <a href="https://mintedmoves.com/global-gold-flows-where-the-worlds-gold-really-moves/" rel="nofollow noopener noreferrer" target="_blank">20 million ounces clear daily</a> via paper transfers, with minimal actual physical movement between vaults. Conflating these two creates a distorted view of real supply constraints.</li>
+<li><strong>Physical versus paper movement:</strong> This distinction is often underappreciated. <a href="/2026-gold-trading-trends-institutional-investors">Key factors in gold trading</a> include recognizing that roughly <a href="https://mintedmoves.com/global-gold-flows-where-the-worlds-gold-really-moves/" rel="nofollow noopener noreferrer" target="_blank">20 million ounces clear daily</a> via paper transfers, with minimal actual physical movement between vaults. Conflating these two creates a distorted view of real supply constraints.</li>
 <li><strong>Secure logistics and storage:</strong> Vault location, insurance coverage, and transport protocols all affect settlement risk and cost.</li>
 <li><strong>Documentation at every step:</strong> Incomplete paperwork at any node can delay settlement or trigger compliance flags.</li>
 </ul>
@@ -160,8 +160,8 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <blockquote>
 <p><em>“Switzerland refines approximately 70% of global mined gold, producing LBMA Good Delivery bars for trading hubs like London (LBMA), New York (COMEX), and Shanghai.”</em></p>
 </blockquote>
-<p>For institutions, this pathway offers strong market credibility. LBMA-approved bars trade at tighter spreads and face fewer questions during settlement. The compliance burden is real but well-documented, and <a href="https://galamigold.net/post/gold-trading-regulations-2026-aml-penalties-highlight-risks">gold trading regulations</a> governing this route are mature and widely understood.</p>
-<p>The risk lies in transit and sourcing opacity. If a mining counterpart cannot provide responsible sourcing documentation, an institution absorbs reputational risk regardless of the refinery’s own standards. Monitoring <a href="https://galamigold.net/gold-market-insights">market insights</a> on regional mining compliance is essential for managing that exposure upstream.</p>
+<p>For institutions, this pathway offers strong market credibility. LBMA-approved bars trade at tighter spreads and face fewer questions during settlement. The compliance burden is real but well-documented, and <a href="/role-of-aml-in-gold-trade">gold trading regulations</a> governing this route are mature and widely understood.</p>
+<p>The risk lies in transit and sourcing opacity. If a mining counterpart cannot provide responsible sourcing documentation, an institution absorbs reputational risk regardless of the refinery’s own standards. Monitoring <a href="/insights">market insights</a> on regional mining compliance is essential for managing that exposure upstream.</p>
 <h2 id="example-2-domestic-recycling-and-short-haul-supply-chains" tabindex="-1">Example 2: Domestic recycling and short-haul supply chains</h2>
 <p>Beyond large-scale global flows, institutional investors should also consider domestic, recycling-based supply chains. These operate within a single country or region and draw from secondary sources rather than primary mining.</p>
 <p>Common sources in domestic recycling chains include:</p>
@@ -170,7 +170,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li><strong>Electronics recycling:</strong> Circuit boards, connectors, and components with recoverable gold content</li>
 <li><strong>Domestic buybacks:</strong> Structured programs where institutions or dealers repurchase gold directly from the public or from corporate holders</li>
 </ul>
-<p>The flow is simpler. Recovered gold moves to a local refiner, is upgraded to bar or grain specifications, and then enters secure domestic vaulting for settlement. Because the material stays within one regulatory jurisdiction, <a href="https://galamigold.net/post/gold-investment-terminology-explained-for-institutional-investors">gold investment terminology</a> around AML and KYC is more straightforward. You are dealing with a known regulatory environment at every step.</p>
+<p>The flow is simpler. Recovered gold moves to a local refiner, is upgraded to bar or grain specifications, and then enters secure domestic vaulting for settlement. Because the material stays within one regulatory jurisdiction, <a href="/what-is-bullion">gold investment terminology</a> around AML and KYC is more straightforward. You are dealing with a known regulatory environment at every step.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1776921994013_image.jpeg" alt="Technician weighing gold at refinery workbench"></p>
 <p>Reduced cross-border movement also lowers transit insurance costs and removes customs complexity. Settlement can happen faster, which matters for institutions managing tight liquidity windows.</p>
 <p>The trade-off is market access. Domestic recycling chains rarely produce LBMA-approved bars in sufficient volume to compete with primary mine supply at global scale. As physical flows remain small relative to paper clearing volumes, domestic chains can still serve large institutional positions, but they lack the pricing depth and brand recognition of the global route.</p>
@@ -238,12 +238,12 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li>Those managing <strong>regional funds or domestic mandates</strong> may find the recycling model more efficient.</li>
 <li>Paper gold clearing suits institutions focused on <strong>price exposure</strong> without physical settlement requirements.</li>
 </ul>
-<p><a href="https://galamigold.net/post/how-to-build-trust-in-gold-trading-institutions">Building trust in gold trading</a> with counterparties and regulators often comes down to which model you operate in and how well you document it. Choosing the right model for your mandate is not just an operational decision. It is a risk management decision.</p>
+<p><a href="/trust-matters-gold-trading">Building trust in gold trading</a> with counterparties and regulators often comes down to which model you operate in and how well you document it. Choosing the right model for your mandate is not just an operational decision. It is a risk management decision.</p>
 <h2 id="why-supply-chain-clarity-matters-more-than-ever-for-gold-investors" tabindex="-1">Why supply chain clarity matters more than ever for gold investors</h2>
 <p>Having compared different examples and approaches, here is a candid perspective on what really matters.</p>
 <p>Most institutions underestimate how supply chain opacity compounds risk. A compliance gap at the refining stage does not stay there. It travels with the bar through every subsequent transaction, creating latent liability that surfaces at the worst possible moment, usually during a regulatory review or a high-profile counterparty dispute.</p>
 <p>Supply chain clarity also improves your negotiating position in ways that rarely get discussed. When you can show a trading counterpart a clean, documented chain of custody, you reduce their credit risk assessment of you. That translates to tighter spreads and faster settlement terms.</p>
-<p>The ~20 million ounces clearing daily in paper markets creates an illusion of frictionless liquidity. The physical layer beneath it is far more constrained and far more exposed to sourcing risk. Institutions that treat <a href="https://galamigold.net/post/partner-gold-traders-risk-management-transparency">risk management and transparency</a> as baseline operations, not optional best practices, are the ones positioned to move quickly when physical market dislocations occur.</p>
+<p>The ~20 million ounces clearing daily in paper markets creates an illusion of frictionless liquidity. The physical layer beneath it is far more constrained and far more exposed to sourcing risk. Institutions that treat <a href="/how-to-select-gold-partners-institutional-guide-2026">risk management and transparency</a> as baseline operations, not optional best practices, are the ones positioned to move quickly when physical market dislocations occur.</p>
 <p>Proactive supply chain documentation is also a client reporting asset. Wealth management firms that can show end clients where their gold comes from, and that it meets responsible sourcing standards, are building a durable competitive advantage.</p>
 <h2 id="connect-with-leading-physical-gold-supply-partners" tabindex="-1">Connect with leading physical gold supply partners</h2>
 <p>For institutions ready to move beyond theoretical frameworks, Galami Gold offers a structured approach to <a href="https://galamigold.com" rel="nofollow noopener noreferrer" target="_blank">physical gold supply</a> built on clear sourcing documentation, LBMA compliance, and physical-vaulted settlement options. Our team works directly with institutional buyers navigating both global and domestic supply chain models.</p>
@@ -262,8 +262,8 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <ul>
 <li><a href="https://galamigold.com/" rel="nofollow noopener noreferrer" target="_blank">Galami Gold — Physical Gold Supply &amp; Bullion Trading | Dubai</a></li>
 <li><a href="https://galamigold.com/gold-asset-examples-diversification" rel="nofollow noopener noreferrer" target="_blank">Top Gold Asset Examples for Portfolio Diversification | Galami Gold</a></li>
-<li><a href="https://galamigold.net/post/trading-gold-vs-other-metals-institutional-insights">Trading gold vs. other metals: insights for investors</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026">Gold trading step by step: institutional guide 2026</a></li>
+<li><a href="/gold-market-dynamics-explained">Gold Market Dynamics Explained: What Investors Need to Know</a></li>
+<li><a href="/step-by-step-gold-transaction-process-2026-guide">Step by Step Gold Transaction Process: 2026 Guide</a></li>
 </ul>
 
   <div class="article-cta">

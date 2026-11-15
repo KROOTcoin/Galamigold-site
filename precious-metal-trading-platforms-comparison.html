@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="precious-metal-trading-platforms-comparison-for-institutions" tabindex="-1">Precious Metal Trading Platforms Comparison for Institutions</h1>
+  <div class="article-title" id="precious-metal-trading-platforms-comparison-for-institutions" tabindex="-1">Precious Metal Trading Platforms Comparison for Institutions</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1785607683327_Investor-reviewing-gold-trading-platforms-in-office.jpeg" alt="Investor reviewing gold trading platforms in office"></p>
 <hr>
 <blockquote>
@@ -120,7 +120,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Once allocation is confirmed, work through these criteria in order:</p>
 <p><strong>Reporting and portfolio integration.</strong> Ask whether the platform assigns bar-level or CUSIP-style identifiers, delivers nightly reconciliation files, and produces execution blotters your operations team can import. <a href="https://iongroup.com/products/commodities/precious-metals/" rel="nofollow noopener noreferrer" target="_blank">Integration with legacy wealth management systems</a> is often the primary barrier to institutional gold programs.</p>
 <p><strong>Counterparty and custody separation.</strong> Verify that the vault is a named third-party commercial depository, not the trading firm’s own facility. Request the vault contract, insurance certificate, and the most recent independent audit or proof-of-reserves report.</p>
-<p><strong>U.S. regulatory controls.</strong> Confirm OFAC screening, AML/KYC workflows, and tax reporting readiness (Form 1099-B or equivalent). Review the <a href="https://galamigold.net/post/gold-trading-regulations-2026-aml-penalties-highlight-risks" target="_blank" rel="noopener">AML compliance framework</a> before signing any mandate.</p>
+<p><strong>U.S. regulatory controls.</strong> Confirm OFAC screening, AML/KYC workflows, and tax reporting readiness (Form 1099-B or equivalent). Review the <a href="/role-of-aml-in-gold-trade">AML compliance framework</a> before signing any mandate.</p>
 <p><strong>Operational specifics.</strong> Ask for settlement timelines for physical delivery, dispute resolution SLAs, and cybersecurity protocols covering the trading portal and data feeds.</p>
 <blockquote>
 <p><strong>Red flags that should end an evaluation quickly:</strong> default unallocated bookkeeping, a fee schedule that lists only a spread with no storage or custody line items, no named third-party vault, and no independent audit within the past 12 months. Any one of these is disqualifying.</p>
@@ -146,7 +146,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <h2 id="what-does-institutional-execution-and-settlement-actually-look-like" tabindex="-1">What does institutional execution and settlement actually look like?</h2>
 <p>Physical gold execution for institutions differs from spot commodity trading. Pricing is typically quoted against the LBMA Gold Price or a live spot reference, with a premium layered on top. Market makers quote two-way prices at set minimum sizes, which is why institutions receive different price mechanics than retail buyers and why execution blotters matter for post-trade verification.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1785607671941_Hands-exchanging-gold-bar-during-institutional-settlement.jpeg" alt="Hands exchanging gold bar during institutional settlement"></p>
-<p>The settlement lifecycle for a physical trade runs through five stages: trade confirmation, payment settlement, physical allocation, vault receipt issuance, and title transfer documentation. Institutions should also review <a href="https://galamigold.net/post/trading-gold-vs-other-metals-institutional-insights" target="_blank" rel="noopener">trading gold versus other metals</a> to understand how liquidity and settlement mechanics differ across the precious metals complex.</p>
+<p>The settlement lifecycle for a physical trade runs through five stages: trade confirmation, payment settlement, physical allocation, vault receipt issuance, and title transfer documentation. Institutions should also review <a href="/gold-market-dynamics-explained">trading gold versus other metals</a> to understand how liquidity and settlement mechanics differ across the precious metals complex.</p>
 <p>For reporting, portfolio managers need nightly position files, execution blotters with timestamps and price references, and bar-level identifiers that map to their accounting system. Platforms that expose an API or SFTP feed compatible with systems like Advent Geneva, BlackRock Aladdin, or SS&amp;C Eze eliminate manual reconciliation. <a href="https://key-trade.net/blogs/professional-trading-keyboards/tradingview-trade-management-tools-2026-guide" target="_blank" rel="noopener">Trade management tools</a> that interoperate with institutional platform feeds can further reduce operational friction for ops teams managing multi-asset portfolios.</p>
 <hr>
 <h2 id="what-fee-components-should-you-demand-in-writing" tabindex="-1">What fee components should you demand in writing?</h2>
@@ -253,7 +253,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Three procurement mistakes appear repeatedly in institutional gold programs, and each one is avoidable.</p>
 <p>The first is accepting unallocated bookkeeping because the vendor’s documentation never explicitly says “unallocated.” Providers sometimes use language like “gold account” or “metal balance” without specifying title. The fix is simple: require the custody agreement to state “allocated, segregated, client-titled” in writing before any capital moves.</p>
 <p>The second mistake is treating audit and insurance as afterthoughts. Teams often request these documents after the mandate is signed, which removes negotiating leverage. Galamigold presents its audit information and Loan Note terms during onboarding, not after. It does not provide custody or insurance, so those documents should come from your custodian.</p>
-<p>The third is underestimating integration complexity. A gold position that cannot be reconciled nightly against your portfolio accounting system creates manual work, audit risk, and valuation delays. Galamigold addresses this by providing bar-level identifiers and reconciliation-ready reporting outputs that map to standard portfolio accounting workflows, consistent with the <a href="https://galamigold.net/post/gold-trading-standards-institutional-investors-2026" target="_blank" rel="noopener">institutional trading standards</a> the firm publishes for client reference.</p>
+<p>The third is underestimating integration complexity. A gold position that cannot be reconciled nightly against your portfolio accounting system creates manual work, audit risk, and valuation delays. Galamigold addresses this by providing bar-level identifiers and reconciliation-ready reporting outputs that map to standard portfolio accounting workflows, consistent with the <a href="/role-of-global-standards-in-gold-trade">institutional trading standards</a> the firm publishes for client reference.</p>
 <hr>
 <h2 id="galamigolds-institutional-offering-how-to-start-diligence" tabindex="-1">Galamigold’s institutional offering: how to start diligence</h2>
 <p>Galamigold provides allocated, segregated physical gold trading with transparent pricing, third-party custody, and reporting outputs built for institutional portfolio integration. For U.S. wealth managers, family offices, and financial institutions that need a physical gold program that holds up to fiduciary scrutiny, Galamigold is the concrete alternative to generic bullion dealers that cannot produce an audit report on request.</p>
@@ -273,10 +273,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </ul>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/trading-gold-vs-other-metals-institutional-insights" target="_blank" rel="noopener">Trading gold vs. other metals: insights for investors</a></li>
-<li><a href="https://galamigold.net/post/why-gold-trading-platform-matters" target="_blank" rel="noopener">Why Gold Trading Platforms Matter for Investors</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-platforms-institutional-investors-2026" target="_blank" rel="noopener">Gold trading platforms guide for institutional investors 2026</a></li>
-<li><a href="https://galamigold.net/post/lamiegold-com-alternatives-6" target="_blank" rel="noopener">Top 6 LamieGold.com Alternatives 2026</a></li>
+<li><a href="/gold-market-dynamics-explained">Gold Market Dynamics Explained: What Investors Need to Know</a></li>
+<li><a href="/what-is-non-bank-gold-trading-a-2026-investor-guide">What Is Non-Bank Gold Trading? A 2026 Investor Guide</a></li>
+<li><a href="/gold-trading-solutions-for-wealth-managers">Gold Trading Solutions for Wealth Managers: Custody &amp; Execution</a></li>
+<li><a href="/news">Gold market news and analysis</a></li>
 </ul>
 
   <div class="article-cta">

@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="physical-gold-capital-management-guide-for-institutions" tabindex="-1">Physical Gold Capital Management Guide for Institutions</h1>
+  <div class="article-title" id="physical-gold-capital-management-guide-for-institutions" tabindex="-1">Physical Gold Capital Management Guide for Institutions</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1785792702799_Stacked-gold-bars-in-secure-vault.jpeg" alt="Stacked gold bars in secure vault"></p>
 <p>For most institutional allocators, the right starting point is a small strategic sleeve in allocated physical bullion, held with a segregated, insured custodian that provides audited proof-of-reserves. That combination gives you genuine title to metal, clear audit trails, and the insurance properties gold actually delivers without overweighting a volatile asset.</p>
 <p><strong>Before you execute, confirm three things:</strong></p>
@@ -178,7 +178,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li><em>Gold ETFs:</em> Liquid, exchange-traded, low operational burden. No direct title to metal; fund structure adds a layer of counterparty exposure.</li>
 <li><em>Futures/forwards:</em> Efficient for hedging and tactical exposure. Roll costs accumulate; physical delivery at expiry requires separate custody arrangements.</li>
 </ul>
-<p>Converting pooled/unallocated to allocated physical typically takes one to three London business days, subject to custodian allocation cutoffs. <a href="https://www.sec.gov/Archives/edgar/data/1858258/000179420222000088/ex16102.htm" rel="nofollow noopener noreferrer" target="_blank">Custody agreements</a> commonly require identification of whole bars, and custodians may select specific bars for withdrawal, which can create minor weight adjustments at delivery. Budget for that friction when modeling liquidity timelines. For a broader look at <a href="https://galamigold.net/post/top-gold-asset-examples-portfolio-diversification" target="_blank" rel="noopener">gold asset exposure options</a>, the tradeoffs across formats are worth reviewing before finalizing your mandate.</p>
+<p>Converting pooled/unallocated to allocated physical typically takes one to three London business days, subject to custodian allocation cutoffs. <a href="https://www.sec.gov/Archives/edgar/data/1858258/000179420222000088/ex16102.htm" rel="nofollow noopener noreferrer" target="_blank">Custody agreements</a> commonly require identification of whole bars, and custodians may select specific bars for withdrawal, which can create minor weight adjustments at delivery. Budget for that friction when modeling liquidity timelines. For a broader look at <a href="/gold-asset-examples-diversification">gold asset exposure options</a>, the tradeoffs across formats are worth reviewing before finalizing your mandate.</p>
 <h2 id="how-should-you-structure-custody-and-execution-for-us-institutional-gold" tabindex="-1">How should you structure custody and execution for US institutional gold?</h2>
 <p>Segregated allocated custody is the baseline for any institution that needs auditable title. Book-entry unallocated accounts are acceptable for short-term settlement float, but long-term holdings should be allocated and titled.</p>
 <p>LBMA Good Delivery bars are the recognized standard: minimum 350 troy ounces, maximum 430 troy ounces, minimum 99.5% fineness. Custody agreements tied to LBMA member custodians define allocation procedures, withdrawal timelines, and the mechanics of moving between unallocated and allocated accounts.</p>
@@ -227,7 +227,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li>Documented chain-of-custody logs for every bar movement</li>
 <li>Proof-of-reserves reporting on a schedule you specify in the custody agreement</li>
 </ol>
-<p>Market practice, confirmed by institutional audit expectations, requires <a href="https://galamigold.net/post/gold-investment-strategy-guide-safer-portfolio-growth" target="_blank" rel="noopener">audited custody, proof-of-reserves reporting, and frequent reconciliations</a> as baseline trust signals.</p>
+<p>Market practice, confirmed by institutional audit expectations, requires <a href="/gold-as-an-asset-class-risk-diversification-and-strategy">audited custody, proof-of-reserves reporting, and frequent reconciliations</a> as baseline trust signals.</p>
 <h2 id="how-do-you-size-rebalance-and-govern-a-gold-allocation-inside-a-fiduciary-framework" tabindex="-1">How do you size, rebalance, and govern a gold allocation inside a fiduciary framework?</h2>
 <p>Size the gold sleeve at roughly half the volatility budget you would assign to an equivalent equity position. Given gold’s realized volatility at approximately twice that of US government bonds, a 2–5% allocation typically contributes a volatility footprint similar to a 4–8% equity position. That math should drive your IPS language.</p>
 <p><strong>Rebalancing and liquidity rules:</strong></p>
@@ -250,7 +250,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li>Review SEC custody rule developments annually; the SEC’s proposed safeguarding rule explicitly contemplates physical assets and would require qualified-custodian-level protections for advisers holding physical metals on behalf of clients</li>
 </ul>
 <p><strong>Pro Tip:</strong> <em>Set settlement cutoff rules in your custody agreement that account for London and New York time zone differences. A trade executed at 3:00 PM ET may miss the London allocation cutoff, pushing physical delivery to the next business day. That one-day slip can affect your cash and margin planning if you have not modeled it.</em></p>
-<p>For more on <a href="https://galamigold.net/post/gold-portfolio-risk-management-2026" target="_blank" rel="noopener">gold portfolio risk management</a> and rebalancing frameworks, Galamigold’s institutional guidance covers current sizing approaches in detail.</p>
+<p>For more on <a href="/gold-hedging-strategies-institutional-portfolio-stability">gold portfolio risk management</a> and rebalancing frameworks, Galamigold’s institutional guidance covers current sizing approaches in detail.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1785793175391_How-do-you-size-rebalance-and-govern-a-gold-allocation-inside-a-fiduciary-framework-overview-diagram.jpeg" alt="How do you size, rebalance, and govern a gold allocation inside a fiduciary framework? — overview diagram"></p>
 <h2 id="what-are-the-us-tax-and-regulatory-rules-that-affect-institutional-gold-holdings" tabindex="-1">What are the US tax and regulatory rules that affect institutional gold holdings?</h2>
 <p>The most material US tax point for institutional entities holding physical gold is classification. The IRS treats physical gold as a collectible, which affects long-term capital gains tax treatment for certain entity types. Institutions should confirm their specific tax treatment with counsel before structuring a mandate.</p>
@@ -396,10 +396,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </blockquote>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/institutional-gold-investing-considerations" target="_blank" rel="noopener">Institutional Gold Investing: Key Risks and Best Practices</a></li>
-<li><a href="https://galamigold.net/post/what-is-institutional-gold-trading-complete-guide" target="_blank" rel="noopener">What is institutional gold trading: a complete guide</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026" target="_blank" rel="noopener">Gold trading step by step: institutional guide 2026</a></li>
-<li><a href="https://galamigold.net/post/physical-gold-trading-guide-institutional-investors" target="_blank" rel="noopener">Physical gold trading guide for institutional investors</a></li>
+<li><a href="/benefits-physical-gold-institutional-investors">Top benefits of physical gold for institutional investors</a></li>
+<li><a href="/institutional-gold-trading-benefits">Top institutional gold trading benefits for portfolio growth</a></li>
+<li><a href="/step-by-step-gold-transaction-process-2026-guide">Step by Step Gold Transaction Process: 2026 Guide</a></li>
+<li><a href="/what-is-bulk-gold-trading-investors-2026-guide">What Is Bulk Gold Trading: Investor's 2026 Guide</a></li>
 </ul>
 
   <div class="article-cta">

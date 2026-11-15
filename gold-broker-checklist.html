@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="institutional-gold-broker-checklist-vetting-guide" tabindex="-1">Institutional Gold Broker Checklist: 2026 Vetting Guide</h1>
+  <div class="article-title" id="institutional-gold-broker-checklist-vetting-guide" tabindex="-1">Institutional Gold Broker Checklist: 2026 Vetting Guide</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1785697289190_Compliance-officer-reviewing-gold-broker-documents.jpeg" alt="Compliance officer reviewing gold broker documents"></p>
 <hr>
 <blockquote>
@@ -152,7 +152,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <h3 id="counterparty-and-balance-sheet-strength" tabindex="-1">Counterparty and balance-sheet strength</h3>
 <p>Request audited financial statements, any regulator filings, and credit lines supporting custody obligations. Vault operators and logistics firms that file audited financials provide more verifiable counterparty information than those that do not. Confirm counterparty exposure limits and custodial agreement terms.</p>
 <h3 id="compliance-and-controls" tabindex="-1">Compliance and controls</h3>
-<p>Request AML/KYC policy documentation, OFAC and sanctions screening procedures, SAR reporting policy, and remediation workflows. For more on U.S. <a href="https://galamigold.net/post/gold-trading-regulations-2026-aml-penalties-highlight-risks" target="_blank" rel="noopener">AML obligations in gold trading</a>, the regulatory stakes are significant. Sample compliance policy excerpts are a reasonable ask during RFP.</p>
+<p>Request AML/KYC policy documentation, OFAC and sanctions screening procedures, SAR reporting policy, and remediation workflows. For more on U.S. <a href="/role-of-aml-in-gold-trade">AML obligations in gold trading</a>, the regulatory stakes are significant. Sample compliance policy excerpts are a reasonable ask during RFP.</p>
 <h3 id="operational-documentation" tabindex="-1">Operational documentation</h3>
 <p>Request a sample sale and purchase agreement or brokerage agreement, the settlement and delivery SLA, chain-of-custody paperwork, and dispute resolution clauses. These documents reveal how the broker actually operates, not just how they describe themselves.</p>
 <h3 id="fees-and-costs" tabindex="-1">Fees and costs</h3>
@@ -312,7 +312,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <h2 id="how-this-checklist-was-compiled" tabindex="-1">How this checklist was compiled</h2>
 <p>This checklist draws on several source types: World Gold Council central bank surveys covering reserve management and Good Delivery bar preferences, UL 608 vault security standards, Lloyd’s of London underwriting practices for precious metals storage, LBMA Good Delivery rules, and industry audit norms for tri-party vault oversight.</p>
 <p>The framework translates those standards into specific document requests and operational tests that institutional due diligence teams can assign and track. Good Delivery provenance and clear documentation are not just trust signals — they are the foundation of resale value and audit defensibility.</p>
-<p>Galamigold’s institutional trading resources, including its <a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026" target="_blank" rel="noopener">gold broker evaluation framework</a> and <a href="https://galamigold.net/post/gold-trading-platforms-institutional-investors-2026" target="_blank" rel="noopener">platform selection guide</a>, informed the operational and compliance sections of this checklist.</p>
+<p>Galamigold’s institutional trading resources, including its <a href="/due-diligence-steps-for-gold-trading">gold broker evaluation framework</a> and <a href="/gold-trading-solutions-for-wealth-managers">platform selection guide</a>, informed the operational and compliance sections of this checklist.</p>
 <hr>
 <h2 id="key-takeaways" tabindex="-1">Key Takeaways</h2>
 <p>An institutional gold broker checklist passes or fails on five criteria: allocated custody with serial-number proof, per-occurrence insurance from a named underwriter, independent third-party audits, transparent trade tape, and a written settlement SLA.</p>
@@ -360,8 +360,8 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <ul>
 <li><a href="https://galamigold.com/news" target="_blank" rel="noopener">Gold Market News &amp; Analysis | Galami Gold Blog</a></li>
 <li><a href="https://galamigold.com/gold-broker-roles-2026" target="_blank" rel="noopener">Gold Broker Roles: Institutional Trading Edge in 2026 | Galami Gold</a></li>
-<li><a href="https://galamigold.net/post/institutional-gold-investing-considerations" target="_blank" rel="noopener">Institutional Gold Investing: Key Risks and Best Practices</a></li>
-<li><a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026" target="_blank" rel="noopener">Essential tips for evaluating gold traders in 2026</a></li>
+<li><a href="/capital-management-guide">Physical Gold Capital Management Guide for Institutions</a></li>
+<li><a href="/due-diligence-steps-for-gold-trading">Due Diligence Steps for Gold Trading: A Compliance Guide</a></li>
 </ul>
 
   <div class="article-cta">

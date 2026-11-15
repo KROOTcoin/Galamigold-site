@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="important-gold-trading-metrics-2026-investor-guide" tabindex="-1">Important Gold Trading Metrics: 2026 Investor Guide</h1>
+  <div class="article-title" id="important-gold-trading-metrics-2026-investor-guide" tabindex="-1">Important Gold Trading Metrics: 2026 Investor Guide</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1780034797662_Investor-analyzing-gold-trading-metrics.jpeg" alt="Investor analyzing gold trading metrics"></p>
 <hr>
 <blockquote>
@@ -98,7 +98,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1780034871508_Desk-with-gold-liquidity-analysis-notes.jpeg" alt="Desk with gold liquidity analysis notes"></p>
 <p>Market liquidity in gold is defined as the ease with which positions can be entered or exited without materially moving the price. It is measured primarily through daily trading volumes across OTC and exchange venues. High liquidity produces tight bid-ask spreads and reliable price discovery, which directly affects execution quality for both institutional and retail participants.</p>
 <p><a href="https://www.gold.org/goldhub/research/market-primer/gold-market-primer-market-size-and-structure" rel="nofollow noopener noreferrer" target="_blank">Global gold trading volume</a> averaged approximately US$361 billion per day in 2025, split roughly equally between OTC markets in London and on-exchange trading. That scale places gold among the most liquid financial assets in the world, ahead of most sovereign bond markets outside U.S. Treasuries. The practical implication: even large institutional orders rarely face meaningful slippage under normal conditions.</p>
-<p>The split between venues matters more than the headline number. London’s OTC market and exchange venues like COMEX and the Shanghai Futures Exchange each serve different participant profiles and time zones. Understanding <a href="https://galamigold.net/post/what-is-otc-gold-trading-guide-institutional-investors" target="_blank" rel="noopener">OTC gold trading</a> is critical because relying solely on exchange data misses roughly half the market’s actual activity.</p>
+<p>The split between venues matters more than the headline number. London’s OTC market and exchange venues like COMEX and the Shanghai Futures Exchange each serve different participant profiles and time zones. Understanding <a href="/otc-gold-trading-guide">OTC gold trading</a> is critical because relying solely on exchange data misses roughly half the market’s actual activity.</p>
 <p>In December 2025, <a href="https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/01" rel="nofollow noopener noreferrer" target="_blank">daily volumes surged to US$410bn</a> with OTC activity rising 16% month-on-month while derivatives activity fell 16%. That divergence signals a shift in how participants were expressing their gold exposure, with more bilateral OTC transactions replacing listed derivatives. Tracking these venue-level shifts month-to-month gives you an early warning system for changing volatility regimes.</p>
 <p><strong>Pro Tip:</strong> <em>Watch the OTC-to-exchange volume ratio monthly. When OTC share rises sharply relative to exchange volume, it often precedes a volatility event as large institutional players move off-screen.</em></p>
 <table>
@@ -196,7 +196,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </tr>
 </tbody>
 </table>
-<p>For a deeper look at how these metrics interact with <a href="https://galamigold.net/post/key-factors-gold-trading-institutional-investors-2026" target="_blank" rel="noopener">institutional trading factors</a>, the interplay between supply constraints and investment demand is particularly relevant in 2026’s elevated price environment.</p>
+<p>For a deeper look at how these metrics interact with <a href="/2026-gold-trading-trends-institutional-investors">institutional trading factors</a>, the interplay between supply constraints and investment demand is particularly relevant in 2026’s elevated price environment.</p>
 <h2 id="key-takeaways" tabindex="-1">Key takeaways</h2>
 <p>Effective gold market analysis requires triangulating liquidity, open interest, ETF flows, central bank activity, and supply-demand data rather than relying on any single indicator.</p>
 <table>
@@ -240,7 +240,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </blockquote>
 <h2 id="how-galamigold-supports-physical-gold-trading" tabindex="-1">How Galamigold supports physical gold trading</h2>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775463411351_galamigold.jpg" alt="https://galamigold.com"></p>
-<p>Galamigold operates as a physical gold trading platform built on disciplined execution, supply chain transparency, and capital efficiency. The metrics covered in this article are exactly what Galamigold monitors to manage risk and identify opportunities across established gold supply chains. For investors and institutional partners seeking direct access to physical gold with the analytical rigor these markets demand, Galamigold’s <a href="https://galamigold.com" rel="nofollow noopener noreferrer" target="_blank">gold trading program</a> provides a structured entry point. The platform’s focus on trust and process integrity means your capital is deployed against real supply chains, not paper positions. Explore Galamigold’s <a href="https://galamigold.net/gold-market-insights" target="_blank" rel="noopener">market insights</a> for ongoing data-driven analysis of the metrics that drive gold performance.</p>
+<p>Galamigold operates as a physical gold trading platform built on disciplined execution, supply chain transparency, and capital efficiency. The metrics covered in this article are exactly what Galamigold monitors to manage risk and identify opportunities across established gold supply chains. For investors and institutional partners seeking direct access to physical gold with the analytical rigor these markets demand, Galamigold’s <a href="https://galamigold.com" rel="nofollow noopener noreferrer" target="_blank">gold trading program</a> provides a structured entry point. The platform’s focus on trust and process integrity means your capital is deployed against real supply chains, not paper positions. Explore Galamigold’s <a href="/insights">market insights</a> for ongoing data-driven analysis of the metrics that drive gold performance.</p>
 <h2 id="faq" tabindex="-1">FAQ</h2>
 <h3 id="what-are-the-most-important-gold-trading-metrics" tabindex="-1">What are the most important gold trading metrics?</h3>
 <p>The most important gold trading KPIs are market liquidity (daily trading volumes), open interest, ETF flows and holdings in tonnes, central bank reserve purchases, and supply-demand balance. Each metric captures a different dimension of gold market behavior and should be analyzed together rather than in isolation.</p>
@@ -254,10 +254,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Tonnage measures the physical quantity of gold demanded, while USD value reflects both quantity and price. In Q1 2026, total demand rose just 2% in tonnes but 74% in USD terms. When these two figures diverge sharply, price appreciation is the primary driver, not a genuine increase in physical buying activity.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/gold-trading-terminology-institutional-guide-2026" target="_blank" rel="noopener">Gold trading terminology: institutional guide 2026</a></li>
-<li><a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026" target="_blank" rel="noopener">Essential tips for evaluating gold traders in 2026</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-strategies-optimize-risk-returns-2026" target="_blank" rel="noopener">Gold trading strategies: optimize risk and returns in 2026</a></li>
-<li><a href="https://galamigold.net/post/key-factors-gold-trading-institutional-investors-2026" target="_blank" rel="noopener">Key factors in gold trading for institutional investors 2026</a></li>
+<li><a href="/iso-4217-xau-explained">ISO 4217 XAU Explained: What the Gold Code Means</a></li>
+<li><a href="/gold-broker-checklist">Institutional Gold Broker Checklist: 2026 Vetting Guide</a></li>
+<li><a href="/gold-trading-risk-management-strategies-institutions">Gold trading risk management: strategies for institutions</a></li>
+<li><a href="/2026-gold-trading-trends-institutional-investors">2026 Gold Trading Trends: Key Insights for Institutions</a></li>
 </ul>
 
   <div class="article-cta">

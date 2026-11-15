@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="why-monitor-gold-transfers-a-2026-compliance-guide" tabindex="-1">Why Monitor Gold Transfers: A 2026 Compliance Guide</h1>
+  <div class="article-title" id="why-monitor-gold-transfers-a-2026-compliance-guide" tabindex="-1">Why Monitor Gold Transfers: A 2026 Compliance Guide</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1784133752898_Compliance-officer-reviewing-gold-transaction-records.jpeg" alt="Compliance officer reviewing gold transaction records"></p>
 <hr>
 <blockquote>
@@ -97,7 +97,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <h2 id="why-monitor-gold-transfers-the-core-case-for-oversight" tabindex="-1">Why monitor gold transfers: the core case for oversight</h2>
 <p>Gold transfer monitoring is the industry term for what regulators call transaction monitoring within the DPMS sector. It covers every stage of a gold transaction: origination, payment, shipment, and settlement. The goal is to flag activity that deviates from established behavioral norms before it causes financial or legal harm.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1784133756159_Team-discussing-gold-transfer-risk-analysis.jpeg" alt="Team discussing gold transfer risk analysis"></p>
-<p>The gold market’s opacity creates systemic vulnerabilities that force bullion banks and traders to treat <a href="https://galamigold.net/post/understanding-the-operational-mechanics-of-physical-gold-trading-and-its-key-components" target="_blank" rel="noopener">supply chain due diligence</a> as a core compliance function, not an administrative afterthought. Unlike equities or bonds, physical gold changes hands through a mix of air freight, sea cargo, and land transport. Each channel carries distinct risk profiles that monitoring must address simultaneously.</p>
+<p>The gold market’s opacity creates systemic vulnerabilities that force bullion banks and traders to treat <a href="/step-by-step-gold-transaction-process-2026-guide">supply chain due diligence</a> as a core compliance function, not an administrative afterthought. Unlike equities or bonds, physical gold changes hands through a mix of air freight, sea cargo, and land transport. Each channel carries distinct risk profiles that monitoring must address simultaneously.</p>
 <p>Unmonitored transfers create three categories of exposure. First, they allow illicit actors to exploit gold’s portability and density to move value across borders undetected. Second, they leave counterparties without documented proof of delivery or payment conditions. Third, they put firms in direct violation of AML reporting obligations, which carry escalating financial penalties.</p>
 <h2 id="what-risks-does-monitoring-gold-transfers-mitigate" tabindex="-1">What risks does monitoring gold transfers mitigate?</h2>
 <p>The scale of illicit gold movement is not theoretical. Between april and october 2025, <a href="https://www.thehindubusinessline.com/news/dri-customs-officers-to-intensify-vigil-on-gold-smuggling-post-import-duty-hike/article70973383.ece" rel="nofollow noopener noreferrer" target="_blank">260 kg of smuggled gold</a> valued at over $30 million was seized in a single enforcement window. That figure represents only intercepted shipments. The undetected volume is structurally larger.</p>
@@ -111,7 +111,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li><strong>Fraud through document manipulation.</strong> Forged assay certificates, weight notes, and shipping documents are common in international gold trade. Monitoring systems that cross-reference documentation against transaction data catch mismatches early.</li>
 <li><strong>Reputational and regulatory penalties.</strong> Firms that fail to file Suspicious Transaction Reports (STRs) face fines, license revocation, and exclusion from correspondent banking relationships.</li>
 </ul>
-<p><strong>Pro Tip:</strong> <em>Review your firm’s <a href="https://galamigold.net/post/examples-gold-investment-risks-institutions-2026" target="_blank" rel="noopener">gold investment risk examples</a> annually to ensure your monitoring scenarios reflect current fraud typologies, not last year’s threat landscape.</em></p>
+<p><strong>Pro Tip:</strong> <em>Review your firm’s <a href="/operational-risk-in-gold-trading-what-you-must-know">gold investment risk examples</a> annually to ensure your monitoring scenarios reflect current fraud typologies, not last year’s threat landscape.</em></p>
 <h2 id="how-do-regulatory-frameworks-drive-the-need-for-gold-transfer-monitoring" tabindex="-1">How do regulatory frameworks drive the need for gold transfer monitoring?</h2>
 <p>Regulators in the UAE, India, and other major gold trading jurisdictions have moved beyond voluntary guidance. They now mandate specific monitoring behaviors for any entity classified as a DPMS obliged entity.</p>
 <p>The UAE’s AML framework for DPMS requires firms to:</p>
@@ -178,7 +178,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </tbody>
 </table>
 <p>Monitoring also distinguishes genuine demand from suspicious behavior. A sudden spike in physical delivery requests from a counterparty with no prior delivery history looks different from the same spike from an established refinery responding to a known supply contract. That distinction requires behavioral context, which only systematic monitoring provides.</p>
-<p>Transparent monitoring builds pricing confidence between counterparties. When both sides of a transaction can reference documented delivery milestones, payment conditions, and compliance clearances, pricing negotiations move faster and disputes decrease. Galamigold’s approach to <a href="https://galamigold.net/post/how-to-build-trust-in-gold-trading-institutions" target="_blank" rel="noopener">building trust in gold trading</a> reflects this principle directly: transparency in transaction oversight is a competitive advantage, not just a compliance cost.</p>
+<p>Transparent monitoring builds pricing confidence between counterparties. When both sides of a transaction can reference documented delivery milestones, payment conditions, and compliance clearances, pricing negotiations move faster and disputes decrease. Galamigold’s approach to <a href="/trust-matters-gold-trading">building trust in gold trading</a> reflects this principle directly: transparency in transaction oversight is a competitive advantage, not just a compliance cost.</p>
 <h2 id="galamigolds-perspective-on-the-future-of-gold-transfer-oversight" tabindex="-1">Galamigold’s perspective on the future of gold transfer oversight</h2>
 <p>The monitoring challenge I see most often is not a technology gap. It is a conceptual one. Firms apply banking logic to gold trade and then wonder why their compliance teams are buried in false positives while actual suspicious transactions slip through. Gold is not a wire transfer. It has weight, provenance, and physical delivery complexity that banking models were never designed to handle.</p>
 <p>The firms that get monitoring right treat it as an intelligence function, not a checkbox. They build behavioral baselines specific to their customer mix. They weight risk indicators rather than trigger alerts on single data points. They combine automated detection with experienced human review because document manipulation, the most common fraud vector I encounter, requires a trained eye to catch.</p>
@@ -237,10 +237,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </table>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/gold-trading-regulations-2026-aml-penalties-highlight-risks" target="_blank" rel="noopener">Gold trading regulations 2026: 75% AML penalties highlight risks</a></li>
-<li><a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026" target="_blank" rel="noopener">Essential tips for evaluating gold traders in 2026</a></li>
-<li><a href="https://galamigold.net/post/optimize-gold-transactions-institutional-investors" target="_blank" rel="noopener">How to optimize gold transactions for institutional investors</a></li>
-<li><a href="https://galamigold.net/post/risk-management-gold-trading" target="_blank" rel="noopener">Risk Management in Gold Trading: Smart Strategies for 2026</a></li>
+<li><a href="/role-of-aml-in-gold-trade">The Role of AML in Gold Trade for Institutional Investors</a></li>
+<li><a href="/gold-broker-checklist">Institutional Gold Broker Checklist: 2026 Vetting Guide</a></li>
+<li><a href="/gold-trade-settlement-explained-for-investors-and-traders">Gold Trade Settlement Explained for Investors and Traders</a></li>
+<li><a href="/gold-trading-risk-management-strategies-institutions">Gold trading risk management: strategies for institutions</a></li>
 </ul>
 
   <div class="article-cta">

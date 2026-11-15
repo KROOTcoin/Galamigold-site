@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="how-to-ensure-transparency-in-institutional-gold-trading" tabindex="-1">How to Ensure Transparency in Institutional Gold Trading</h1>
+  <div class="article-title" id="how-to-ensure-transparency-in-institutional-gold-trading" tabindex="-1">How to Ensure Transparency in Institutional Gold Trading</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1786340170552_Hands-inspecting-gold-bar-serial-number-in-vault.jpeg" alt="Hands inspecting gold bar serial number in vault"></p>
 <p>To ensure transparency in physical gold trading, institutions must require five things in every custody and trading agreement: timestamped electronic execution records, bar-level allocated custody with serial numbers and refiner marks, daily reconciliations with documented remediation SLAs, independent third-party audit access, and a fully disclosed pricing methodology tied to a published reference such as the LBMA Gold Price (PM).</p>
 <p>Paste this into your next RFP executive summary:</p>
@@ -250,7 +250,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </ul>
 <hr>
 <h2 id="what-internal-controls-and-governance-evidence-should-providers-supply" tabindex="-1">What internal controls and governance evidence should providers supply?</h2>
-<p>Require evidence of segregation of duties, tested internal controls, and documented management responsibilities before signing any agreement. The <a href="https://galamigold.net/post/gold-trading-standards-institutional-investors-2026" target="_blank" rel="noopener">gold trading standards for institutional investors</a> framework gives a practical baseline for what that evidence package should contain.</p>
+<p>Require evidence of segregation of duties, tested internal controls, and documented management responsibilities before signing any agreement. The <a href="/role-of-global-standards-in-gold-trade">gold trading standards for institutional investors</a> framework gives a practical baseline for what that evidence package should contain.</p>
 <p><strong>Controls evidence to request:</strong></p>
 <ul>
 <li>Management responsibility statement signed by a named officer</li>
@@ -273,7 +273,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li>Audit and controls: SOC/ISAE report, internal control evidence, auditor access (20%)</li>
 <li>Pricing methodology: reference source, snapshot time, published history (15%)</li>
 </ol>
-<p>Score each item 0–3 (0 = not provided, 1 = partial, 2 = documented, 3 = independently verified). For a full evaluation framework, the <a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026" target="_blank" rel="noopener">essential tips for evaluating gold traders</a> guide covers RFP scoring in detail.</p>
+<p>Score each item 0–3 (0 = not provided, 1 = partial, 2 = documented, 3 = independently verified). For a full evaluation framework, the <a href="/gold-broker-checklist">essential tips for evaluating gold traders</a> guide covers RFP scoring in detail.</p>
 <p><strong>Red flags that should trigger immediate disqualification:</strong></p>
 <ul>
 <li>Refusal to provide bar-level serial number lists</li>
@@ -298,7 +298,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <blockquote>
 <p><strong>Galami Gold’s operating principle:</strong> Every transparency artifact — execution tape, SWIFT advice, bar list, inspection note — is generated as a byproduct of normal operations, not assembled retrospectively for audit season. That distinction is what makes the audit trail credible.</p>
 </blockquote>
-<p>For the full step-by-step institutional workflow, the <a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026" target="_blank" rel="noopener">gold trading step-by-step guide</a> maps each stage to its corresponding transparency output.</p>
+<p>For the full step-by-step institutional workflow, the <a href="/step-by-step-gold-transaction-process-2026-guide">gold trading step-by-step guide</a> maps each stage to its corresponding transparency output.</p>
 <hr>
 <h2 id="red-flags-institutional-buyers-should-watch-for" tabindex="-1">Red flags institutional buyers should watch for</h2>
 <p>Beyond the disqualification thresholds in the scoring matrix, watch for these patterns during due diligence:</p>
@@ -351,7 +351,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <hr>
 <h2 id="why-transparency-in-gold-trading-matters-more-now-than-most-institutions-realize" tabindex="-1">Why transparency in gold trading matters more now than most institutions realize</h2>
 <p>The HQLA conversation is the real driver. The FMSB is direct: without sustained, publicly available pre-trade and post-trade price data, gold cannot make a credible case for high-quality liquid asset recognition under Basel III frameworks. That is not a distant regulatory concern. It is the structural reason why the transparency controls in this article matter beyond compliance hygiene.</p>
-<p>Institutions that build audit-ready operations now, with allocated custody, electronic execution tapes, and independent audit trails, will be positioned to demonstrate gold’s liquidity and price transparency to regulators when the HQLA question is formally revisited. Those that rely on bilateral voice trades and PDF custody statements will not. The <a href="https://galamigold.net/post/partner-gold-traders-risk-management-transparency" target="_blank" rel="noopener">operational risk and transparency practices</a> that distinguish credible providers from the rest are visible in the documentation they produce routinely, not the documentation they assemble under pressure.</p>
+<p>Institutions that build audit-ready operations now, with allocated custody, electronic execution tapes, and independent audit trails, will be positioned to demonstrate gold’s liquidity and price transparency to regulators when the HQLA question is formally revisited. Those that rely on bilateral voice trades and PDF custody statements will not. The <a href="/how-to-select-gold-partners-institutional-guide-2026">operational risk and transparency practices</a> that distinguish credible providers from the rest are visible in the documentation they produce routinely, not the documentation they assemble under pressure.</p>
 <hr>
 <h2 id="galamigolds-institutional-transparency-program" tabindex="-1">Galamigold’s institutional transparency program</h2>
 <p>Galamigold delivers the full transparency stack for U.S. institutional mandates: electronic execution records with UTC timestamps, allocated bar-level custody with serial number documentation, daily reconciliations, SWIFT execution advices, and annual independent audit access. Sample custody reports, RFP language templates, and an onboarding checklist are available on request.</p>
@@ -368,10 +368,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>This article is general information, not a substitute for advice from a qualified financial advisor. Consult a qualified financial professional about your own circumstances before acting on anything here.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/what-is-institutional-gold-trading-complete-guide" target="_blank" rel="noopener">What is institutional gold trading: a complete guide</a></li>
-<li><a href="https://galamigold.net/post/optimize-gold-transactions-institutional-investors" target="_blank" rel="noopener">How to optimize gold transactions for institutional investors</a></li>
-<li><a href="https://galamigold.net/post/partner-gold-traders-risk-management-transparency" target="_blank" rel="noopener">Partner with gold traders: risk management &amp; transparency</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026" target="_blank" rel="noopener">Gold trading step by step: institutional guide 2026</a></li>
+<li><a href="/institutional-gold-trading-benefits">Top institutional gold trading benefits for portfolio growth</a></li>
+<li><a href="/gold-trade-settlement-explained-for-investors-and-traders">Gold Trade Settlement Explained for Investors and Traders</a></li>
+<li><a href="/how-to-select-gold-partners-institutional-guide-2026">How to Select Gold Partners: Institutional Guide 2026</a></li>
+<li><a href="/step-by-step-gold-transaction-process-2026-guide">Step by Step Gold Transaction Process: 2026 Guide</a></li>
 </ul>
 
   <div class="article-cta">

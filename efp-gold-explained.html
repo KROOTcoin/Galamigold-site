@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="efp-gold-explained-what-traders-and-allocators-need" tabindex="-1">EFP Gold Explained: What Traders and Allocators Need</h1>
+  <div class="article-title" id="efp-gold-explained-what-traders-and-allocators-need" tabindex="-1">EFP Gold Explained: What Traders and Allocators Need</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1786671210623_Gloved-hand-weighing-gold-bar-on-scale.jpeg" alt="Gloved hand weighing gold bar on scale"></p>
 <p>An Exchange for Physical (EFP) in gold is a privately negotiated deal that swaps a COMEX futures position for an equivalent position in physical gold, or the reverse, without ever hitting the open market. Three facts matter before anything else. First, the <a href="https://www.lbma.org.uk/publications/spotlight-on-silver-investment-2021/chapter-4-futures-trading" rel="nofollow noopener noreferrer" target="_blank">LBMA</a> governs the London physical and spot side of the trade, while <a href="https://www.cmegroup.com/education/courses/market-regulation/efrp/what-is-an-efrp" rel="nofollow noopener noreferrer" target="_blank">CME Group</a> and COMEX run the futures leg and set the registration rules. Second, the negotiated price never becomes public. Third, the trade volume does get reported to the exchange, which means analysts can see that EFP activity happened without ever knowing what price the two sides agreed on.</p>
 <p>For a trader or allocator, that combination is the entire point. You get a large transaction executed off the tape, with the size still folded into official exchange statistics for surveillance purposes. That structure supports a short list of outcomes traders actually care about:</p>
@@ -296,7 +296,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <h2 id="how-galami-gold-supports-institutional-efp-execution" tabindex="-1">How Galami Gold Supports Institutional EFP Execution</h2>
 <p>Institutions running EFP-type strategies need more than a counterparty willing to negotiate. They need verified custody, clean documentation on bar specifications, and a logistics partner who understands why a 400 ounce London bar can’t simply show up at a COMEX depository overnight. Galamigold works across established gold supply chains with an emphasis on transparent pricing and disciplined execution, the same operational rigor that separates a smooth EFP from a delayed one.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775463411351_galamigold.jpg" alt="Galamigold"></p>
-<p>For clients weighing a physical-to-futures switch, an inventory rebalance across locations, or a straightforward allocation into audited physical gold, Galamigold’s <a href="https://galamigold.com" target="_blank" rel="noopener">institutional-grade execution platform</a> is built around the custody and logistics discipline those transactions demand. Review the firm’s risk disclosure and reach out through the <a href="https://galamigold.net" target="_blank" rel="noopener">Galamigold</a> site to start a conversation about your allocation or execution needs.</p>
+<p>For clients weighing a physical-to-futures switch, an inventory rebalance across locations, or a straightforward allocation into audited physical gold, Galamigold’s <a href="https://galamigold.com" target="_blank" rel="noopener">institutional-grade execution platform</a> is built around the custody and logistics discipline those transactions demand. Review the firm’s risk disclosure and reach out through the <a href="/contact">Galamigold</a> site to start a conversation about your allocation or execution needs.</p>
 <h2 id="where-to-verify-efp-rules-and-market-data" tabindex="-1">Where to Verify EFP Rules and Market Data</h2>
 <ul>
 <li><strong>CME Group’s EFRP education pages</strong> cover the exact registration requirements and rules governing EFPs and EFS trades before you execute one.</li>
@@ -329,9 +329,9 @@ Not automatically, but a persistently wide EFP alongside falling trading volume 
 <p><em>This article provides general market information and does not constitute investment, legal, or trading advice. Confirm current exchange registration rules and delivery requirements directly with CME Group or the LBMA, or consult a qualified financial professional, before executing an EFP or any related transaction.</em></p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/gold-investment-terminology-explained-for-institutional-investors" target="_blank" rel="noopener">Gold investment terminology explained for institutional investors</a></li>
+<li><a href="/what-is-bullion">Bullion Explained: A Practical Guide for U.S. Investors</a></li>
 <li><a href="https://galamigold.com/otc-gold-trading-guide" target="_blank" rel="noopener">What is OTC Gold Trading: A Guide for Institutional Investors | Galami Gold</a></li>
-<li><a href="https://galamigold.net/post/optimize-gold-transactions-institutional-investors" target="_blank" rel="noopener">How to optimize gold transactions for institutional investors</a></li>
+<li><a href="/gold-trade-settlement-explained-for-investors-and-traders">Gold Trade Settlement Explained for Investors and Traders</a></li>
 <li><a href="https://galamigold.com/institutional-gold-trading-benefits" target="_blank" rel="noopener">Top Institutional Gold Trading Benefits | Galami Gold</a></li>
 </ul>
 

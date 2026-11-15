@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="bullion-explained-a-practical-guide-for-us-investors" tabindex="-1">Bullion Explained: A Practical Guide for U.S. Investors</h1>
+  <div class="article-title" id="bullion-explained-a-practical-guide-for-us-investors" tabindex="-1">Bullion Explained: A Practical Guide for U.S. Investors</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1786405332487_Close-up-of-gold-and-silver-bullion-bars.jpeg" alt="Close-up of gold and silver bullion bars"></p>
 <p><a href="https://en.wikipedia.org/wiki/Bullion" rel="nofollow noopener noreferrer" target="_blank">Bullion</a> is physical precious metal — gold, silver, platinum, or palladium — refined to investment-grade purity and held in bars, ingots, or coins primarily for its metal content rather than its face value or collectibility. For U.S. investors, it functions as a tangible, counterparty-free asset that can hedge against inflation and currency risk, though you pay a premium over spot price to acquire it and earn no yield while holding it.</p>
 <p>A few quick facts to orient you:</p>
@@ -280,7 +280,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <h2 id="how-to-buy-store-and-sell-bullion-in-the-united-states" tabindex="-1">How to buy, store, and sell bullion in the United States</h2>
 <h3 id="buying-checklist" tabindex="-1">Buying checklist</h3>
 <ol>
-<li><strong>Verify dealer reputation.</strong> Look for membership in the Industry Council for Tangible Assets (ICTA) or the American Numismatic Association (ANA), verified customer reviews, and a published buyback policy. Review <a href="https://galamigold.net/post/mastering-the-art-of-physical-gold-buying-gold-buying-strategies" target="_blank" rel="noopener">gold buying strategies</a> before committing to a dealer.</li>
+<li><strong>Verify dealer reputation.</strong> Look for membership in the Industry Council for Tangible Assets (ICTA) or the American Numismatic Association (ANA), verified customer reviews, and a published buyback policy. Review <a href="/types-of-physical-gold-products-2026-investor-guide">gold buying strategies</a> before committing to a dealer.</li>
 <li><strong>Compare premiums across at least three dealers.</strong> Use a live spot price feed as your baseline.</li>
 <li><strong>Confirm payment, shipping, and insurance terms.</strong> Reputable dealers ship fully insured; never accept uninsured delivery on a high-value order.</li>
 <li><strong>Check buyback terms in writing</strong> before you buy, not after.</li>
@@ -288,7 +288,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </ol>
 <h3 id="storage-options" tabindex="-1">Storage options</h3>
 <p><strong>Home storage</strong> gives you immediate access and no ongoing fees, but requires a quality safe (bolted to the structure, fire-rated), a homeowner’s or renter’s insurance rider specifically covering precious metals, and discretion about who knows what you hold.</p>
-<p><strong>Third-party allocated vaults and insured depositories</strong> (such as Brink’s, Delaware Depository, or Loomis) hold your metal in your name, segregated from other clients’ holdings. This is the standard for IRA-held bullion and for larger institutional positions. For a deeper look at institutional custody practices, <a href="https://galamigold.net/post/physical-gold-trading-guide-institutional-investors" target="_blank" rel="noopener">Galamigold’s physical gold trading guide</a> covers the key considerations.</p>
+<p><strong>Third-party allocated vaults and insured depositories</strong> (such as Brink’s, Delaware Depository, or Loomis) hold your metal in your name, segregated from other clients’ holdings. This is the standard for IRA-held bullion and for larger institutional positions. For a deeper look at institutional custody practices, <a href="/what-is-bulk-gold-trading-investors-2026-guide">Galamigold’s physical gold trading guide</a> covers the key considerations.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1786405332462_Allocated-bullion-vault-with-storage-boxes.jpeg" alt="Allocated bullion vault with storage boxes"></p>
 <p><strong>Unallocated storage</strong> means the vault holds a pool of metal and owes you a quantity, not specific bars. It is cheaper but reintroduces counterparty risk — the opposite of why many investors hold physical metal in the first place.</p>
 <h3 id="selling-routes" tabindex="-1">Selling routes</h3>
@@ -298,7 +298,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li><strong>Private sale:</strong> Highest potential price but slowest and requires the buyer to trust your authentication or pay for independent testing.</li>
 </ul>
 <h3 id="us-tax-summary" tabindex="-1">U.S. tax summary</h3>
-<p>The IRS classifies physical precious metals as <strong>collectibles</strong>. Short-term gains are taxed as ordinary income. State sales tax on bullion purchases varies by state; many states exempt investment-grade bullion, but rules differ. Consult a qualified tax professional for your specific situation — IRS guidance on collectibles is the authoritative starting point, and <a href="https://galamigold.net/post/gold-trading-regulations-2026-aml-penalties-highlight-risks" target="_blank" rel="noopener">gold trading compliance considerations</a> are worth reviewing for larger transactions.</p>
+<p>The IRS classifies physical precious metals as <strong>collectibles</strong>. Short-term gains are taxed as ordinary income. State sales tax on bullion purchases varies by state; many states exempt investment-grade bullion, but rules differ. Consult a qualified tax professional for your specific situation — IRS guidance on collectibles is the authoritative starting point, and <a href="/role-of-aml-in-gold-trade">gold trading compliance considerations</a> are worth reviewing for larger transactions.</p>
 <p><strong>Pro Tip:</strong> <em>Keep meticulous purchase records — date, price paid, dealer, and product description. The IRS requires you to report gains, and your cost basis documentation is your only protection against overpaying on taxes when you sell.</em></p>
 <hr>
 <h2 id="how-to-spot-counterfeits-and-common-bullion-scams" tabindex="-1">How to spot counterfeits and common bullion scams</h2>
@@ -325,12 +325,12 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <h2 id="galamis-perspective-on-bullion-as-a-portfolio-asset" tabindex="-1">Galami’s perspective on bullion as a portfolio asset</h2>
 <p>Physical bullion occupies a specific and often misunderstood role in serious portfolio construction. The conversation around gold tends to swing between two extremes: either it is treated as a crisis-only panic buy, or dismissed as a yield-free relic. Both framings miss the point.</p>
 <p>What bullion actually offers is structural independence from the financial system’s counterparty web. Every stock, bond, ETF, and bank deposit involves a chain of obligations. Physical metal held in allocated custody does not. That property is not exciting in a bull market, but it is exactly what you want when the chain breaks.</p>
-<p>At Galamigold, the approach to physical gold allocation centers on disciplined execution and custody transparency. The question is not whether to hold bullion, but how to size it, source it from verified supply chains, and hold it in a structure that preserves its counterparty-free character. A position held in unallocated storage or through a paper proxy is not the same instrument, regardless of what the price ticker says. Investors who understand that distinction make better decisions about when physical metal earns its place in a portfolio and when a paper exposure is sufficient for the goal at hand. For institutional-scale context on <a href="https://galamigold.net/gold-market-insights" target="_blank" rel="noopener">global bullion market dynamics</a>, the data reinforces that physical allocation remains a core tool for sophisticated capital management.</p>
+<p>At Galamigold, the approach to physical gold allocation centers on disciplined execution and custody transparency. The question is not whether to hold bullion, but how to size it, source it from verified supply chains, and hold it in a structure that preserves its counterparty-free character. A position held in unallocated storage or through a paper proxy is not the same instrument, regardless of what the price ticker says. Investors who understand that distinction make better decisions about when physical metal earns its place in a portfolio and when a paper exposure is sufficient for the goal at hand. For institutional-scale context on <a href="/insights">global bullion market dynamics</a>, the data reinforces that physical allocation remains a core tool for sophisticated capital management.</p>
 <hr>
 <h2 id="ready-to-allocate-physical-gold-with-institutional-grade-execution" tabindex="-1">Ready to allocate physical gold with institutional-grade execution?</h2>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775463411351_galamigold.jpg" alt="Galamigold"></p>
 <p>Galamigold works with institutional investors, wealth managers, and high-net-worth clients who want physical gold integrated into their portfolios with full transparency on pricing, custody, and supply chain provenance. If you are evaluating a physical gold allocation or looking to optimize an existing position, the team at Galamigold brings the execution discipline and custody infrastructure the asset class demands.</p>
-<p><a href="https://galamigold.net" target="_blank" rel="noopener">Explore Galamigold’s physical gold trading programs</a> or review the risk disclosure before initiating any allocation.</p>
+<p><a href="/">Explore Galamigold’s physical gold trading programs</a> or review the risk disclosure before initiating any allocation.</p>
 <hr>
 <h2 id="sources" tabindex="-1">Sources</h2>
 <ul>
@@ -340,10 +340,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>This article is general information, not a substitute for advice from a qualified financial advisor. Consult a qualified financial professional about your own circumstances before acting on anything here.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/securely-buying-online-gold-bullion-canada-a-comprehensive-guide" target="_blank" rel="noopener">Securely Buying Online Gold Bullion Canada: A Comprehensive Guide</a></li>
-<li><a href="https://galamigold.net/post/trading-gold-vs-other-metals-institutional-insights" target="_blank" rel="noopener">Trading gold vs. other metals: insights for investors</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026" target="_blank" rel="noopener">Gold trading step by step: institutional guide 2026</a></li>
-<li><a href="https://galamigold.net/post/mastering-the-art-of-physical-gold-buying-gold-buying-strategies" target="_blank" rel="noopener">Mastering the Art of Physical Gold Buying: Gold Buying Strategies</a></li>
+<li><a href="/types-of-physical-gold-products-2026-investor-guide">Types of Physical Gold Products: 2026 Investor Guide</a></li>
+<li><a href="/gold-market-dynamics-explained">Gold Market Dynamics Explained: What Investors Need to Know</a></li>
+<li><a href="/step-by-step-gold-transaction-process-2026-guide">Step by Step Gold Transaction Process: 2026 Guide</a></li>
+<li><a href="/gold-premium-over-spot">Gold Premium Over Spot: What New Buyers Must Know</a></li>
 </ul>
 
   <div class="article-cta">

@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="gold-trading-risk-management-strategies-for-institutions" tabindex="-1">Gold trading risk management: strategies for institutions</h1>
+  <div class="article-title" id="gold-trading-risk-management-strategies-for-institutions" tabindex="-1">Gold trading risk management: strategies for institutions</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1776318205137_Portfolio-manager-reviewing-gold-risk-charts.jpeg" alt="Portfolio manager reviewing gold risk charts"></p>
 <hr>
 <blockquote>
@@ -183,9 +183,9 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </table>
 <p>Research consistently shows that adding gold improves risk-adjusted returns and reduces overall portfolio volatility, specifically because of that low correlation to equities and bonds.</p>
 <blockquote>
-<p><strong>Important distinction:</strong> Gold functions as a reliable <a href="https://galamigold.net/post/gold-as-a-safe-haven-asset-class">safe-haven asset</a> during acute crises, but its behavior reverts after peaks. Research confirms gold is a <a href="https://quantpedia.com/understanding-gold-hedge-diversifier-or-overpriced-insurance/" rel="nofollow noopener noreferrer" target="_blank">reliable hedge and diversifier</a> over full cycles, yet an unreliable short-term inflation hedge due to equity-like volatility in certain regimes.</p>
+<p><strong>Important distinction:</strong> Gold functions as a reliable <a href="/why-gold-is-a-safe-haven-asset-the-investors-guide">safe-haven asset</a> during acute crises, but its behavior reverts after peaks. Research confirms gold is a <a href="https://quantpedia.com/understanding-gold-hedge-diversifier-or-overpriced-insurance/" rel="nofollow noopener noreferrer" target="_blank">reliable hedge and diversifier</a> over full cycles, yet an unreliable short-term inflation hedge due to equity-like volatility in certain regimes.</p>
 </blockquote>
-<p>The practical takeaway: do not build your gold thesis around inflation protection alone. Build it around correlation benefits and crisis optionality. That framing changes how you size positions and how you <a href="https://galamigold.net/post/manage-risk-gold-investment">manage risk with gold</a> across different market regimes.</p>
+<p>The practical takeaway: do not build your gold thesis around inflation protection alone. Build it around correlation benefits and crisis optionality. That framing changes how you size positions and how you <a href="/operational-risk-in-gold-trading-what-you-must-know">manage risk with gold</a> across different market regimes.</p>
 <h2 id="setting-risk-parameters-and-gold-allocation-levels" tabindex="-1">Setting risk parameters and gold allocation levels</h2>
 <p>Knowing gold’s risk merits is one thing. Translating that into a defensible allocation policy that survives board scrutiny is another challenge entirely.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1776318207632_Committee-discussing-gold-allocation-policies.jpeg" alt="Committee discussing gold allocation policies"></p>
@@ -233,7 +233,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li>What are our liquidity requirements over a 30, 90, and 365-day horizon?</li>
 <li>How will we measure whether the allocation is achieving its stated objective?</li>
 </ol>
-<p>Pro Tip: Build dynamic rebalancing into your policy from day one. Static allocations set annually underperform policies that rebalance on macro triggers. Review your <a href="https://galamigold.net/post/risk-management-gold-trading">risk management strategies</a> and link rebalancing rules to observable data points, not calendar dates. This approach also makes <a href="https://galamigold.net/post/gold-portfolio-risk-management-2026">portfolio risk management</a> far more defensible to stakeholders.</p>
+<p>Pro Tip: Build dynamic rebalancing into your policy from day one. Static allocations set annually underperform policies that rebalance on macro triggers. Review your <a href="/operational-risk-in-gold-trading-what-you-must-know">risk management strategies</a> and link rebalancing rules to observable data points, not calendar dates. This approach also makes <a href="/gold-hedging-strategies-institutional-portfolio-stability">portfolio risk management</a> far more defensible to stakeholders.</p>
 <h2 id="selecting-instruments-physical-gold-etfs-and-derivatives" tabindex="-1">Selecting instruments: Physical gold, ETFs, and derivatives</h2>
 <p>With allocation targets defined, the implementation decision is where many institutions make costly errors. Each instrument carries a distinct risk and operational profile.</p>
 <table>
@@ -286,7 +286,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li><strong>Match instrument to time horizon.</strong> Physical gold suits multi-year strategic allocations. Futures suit tactical hedges with defined expiry.</li>
 <li><strong>Stress-test liquidity</strong> at each instrument level under a scenario where you need to liquidate 50 percent of the position within 48 hours.</li>
 </ol>
-<p>Pro Tip: Use options as tail-risk insurance rather than a primary exposure vehicle. A modest allocation to out-of-the-money gold call options can provide asymmetric upside during acute crises without the drag of carrying a large physical or futures position. Pair this with your broader <a href="https://galamigold.net/post/gold-trading-strategies-optimize-risk-returns-2026">gold trading strategies</a> to <a href="https://galamigold.net/post/how-to-optimize-investment-strategies-gold">optimize investment strategies</a> across different volatility regimes.</p>
+<p>Pro Tip: Use options as tail-risk insurance rather than a primary exposure vehicle. A modest allocation to out-of-the-money gold call options can provide asymmetric upside during acute crises without the drag of carrying a large physical or futures position. Pair this with your broader <a href="/gold-hedging-strategies-institutional-portfolio-stability">gold trading strategies</a> to <a href="/what-is-gold-asset-structuring">optimize investment strategies</a> across different volatility regimes.</p>
 <h2 id="implementing-and-monitoring-dynamic-risk-controls" tabindex="-1">Implementing and monitoring dynamic risk controls</h2>
 <p>You have set your allocation, chosen your instruments, and documented your policy. The real test is whether your controls hold up when markets move against you.</p>
 <p>A disciplined monitoring process follows these steps:</p>
@@ -307,18 +307,18 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </ul>
 <p>Research confirms that 5 to 10 percent allocations enhance Sharpe ratios during stress periods, but over-reliance is a real risk since gold is expected to generate zero real return over the very long term.</p>
 <blockquote>
-<p><strong>Warning:</strong> The most common institutional errors are over-allocation during peak sentiment, treating gold as a static hedge that never needs review, and ignoring mean reversion cycles after extended rallies. These mistakes compound each other. Review <a href="https://galamigold.net/post/6-key-tips-for-gold-traders-to-grow-portfolio-success">key tips for gold traders</a> to build habits that prevent these patterns from taking root in your program.</p>
+<p><strong>Warning:</strong> The most common institutional errors are over-allocation during peak sentiment, treating gold as a static hedge that never needs review, and ignoring mean reversion cycles after extended rallies. These mistakes compound each other. Review <a href="/what-is-disciplined-execution">key tips for gold traders</a> to build habits that prevent these patterns from taking root in your program.</p>
 </blockquote>
 <h2 id="our-perspective-rethinking-golds-role-in-institutional-risk-management" tabindex="-1">Our perspective: Rethinking gold’s role in institutional risk management</h2>
 <p>After working through concrete allocation steps and instrument selection, the harder conversation is about what gold cannot do. Most institutions that struggle with gold do so because they built their thesis on a single narrative, usually inflation protection, and then held that assumption static through multiple market regimes.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1776318251432_Infographic-showing-gold-risk-management-strategies.jpeg" alt="Infographic showing gold risk management strategies"></p>
 <p>Gold is a reliable hedge and diversifier over full cycles, but it is mean-reverting after peaks and genuinely unreliable as a short-term inflation hedge. That is not a flaw. It is simply the asset’s nature. The error is expecting it to behave otherwise.</p>
-<p>The institutions that use gold most effectively treat it as a dynamic tool, not a permanent conviction. They revisit sizing when macro conditions shift. They acknowledge when gold has already priced in the risk they were trying to hedge. They build <a href="https://galamigold.net/post/gold-investment-strategy-guide-safer-portfolio-growth">safer portfolio strategies</a> by combining gold with other uncorrelated assets rather than relying on gold alone.</p>
+<p>The institutions that use gold most effectively treat it as a dynamic tool, not a permanent conviction. They revisit sizing when macro conditions shift. They acknowledge when gold has already priced in the risk they were trying to hedge. They build <a href="/gold-as-an-asset-class-risk-diversification-and-strategy">safer portfolio strategies</a> by combining gold with other uncorrelated assets rather than relying on gold alone.</p>
 <p>The uncomfortable truth is that discipline in gold risk management is rarer than the asset itself. Generic models applied without customization consistently underperform adaptive, evidence-based frameworks. Ongoing re-evaluation is not optional. It is the entire job.</p>
 <h2 id="take-your-gold-risk-management-further-with-galami-gold" tabindex="-1">Take your gold risk management further with Galami Gold</h2>
 <p>Translating a rigorous gold risk management framework into actual portfolio results requires more than a policy document. It requires a partner with operational depth in physical gold markets and a commitment to transparent execution.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775463411351_galamigold.jpg" alt="https://galamigold.com"></p>
-<p>Galami Gold works with institutional investors and corporate entities to structure gold allocations that align with specific risk mandates, reporting requirements, and capital deployment objectives. From reviewing your <a href="https://galamigold.com/risk" rel="nofollow noopener noreferrer" target="_blank">risk disclosure for gold investment</a> to accessing <a href="https://galamigold.com" rel="nofollow noopener noreferrer" target="_blank">physical gold trading solutions</a> built for institutional scale, Galami brings the operational rigor your program demands. Explore <a href="https://galamigold.net">invest in gold programs</a> designed for sophisticated allocators who require both discipline and transparency at every stage of execution.</p>
+<p>Galami Gold works with institutional investors and corporate entities to structure gold allocations that align with specific risk mandates, reporting requirements, and capital deployment objectives. From reviewing your <a href="https://galamigold.com/risk" rel="nofollow noopener noreferrer" target="_blank">risk disclosure for gold investment</a> to accessing <a href="https://galamigold.com" rel="nofollow noopener noreferrer" target="_blank">physical gold trading solutions</a> built for institutional scale, Galami brings the operational rigor your program demands. Explore <a href="/">invest in gold programs</a> designed for sophisticated allocators who require both discipline and transparency at every stage of execution.</p>
 <h2 id="frequently-asked-questions" tabindex="-1">Frequently asked questions</h2>
 <h3 id="what-is-the-optimal-gold-allocation-for-institutional-portfolios" tabindex="-1">What is the optimal gold allocation for institutional portfolios?</h3>
 <p>A 2 to 20 percent allocation is standard practice, with 5 to 10 percent delivering the strongest risk-adjusted return improvements for most institutional mandates.</p>
@@ -330,10 +330,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Continuous monitoring is essential, with formal rebalancing triggered by CPI surprises or drawdowns rather than fixed calendar schedules, ensuring your allocation stays aligned with actual market conditions.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/manage-risk-gold-investment">Why Manage Risk in Gold Investment Strategies</a></li>
-<li><a href="https://galamigold.net/post/risk-management-gold-trading">Risk Management in Gold Trading: Smart Strategies for 2026</a></li>
-<li><a href="https://galamigold.net/post/institutional-gold-investing-considerations">Institutional Gold Investing: Key Risks and Best Practices</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-strategies-optimize-risk-returns-2026">Gold trading strategies: optimize risk and returns in 2026</a></li>
+<li><a href="/operational-risk-in-gold-trading-what-you-must-know">Operational Risk in Gold Trading: What You Must Know</a></li>
+<li><a href="/red-flags-in-gold-trading-investor-warning-guide">Red Flags in Gold Trading: Investor Warning Guide</a></li>
+<li><a href="/capital-management-guide">Physical Gold Capital Management Guide for Institutions</a></li>
+<li><a href="/gold-hedging-strategies-institutional-portfolio-stability">Gold hedging explained: strategies for institutional portfolio stability</a></li>
 </ul>
 
   <div class="article-cta">

@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="due-diligence-steps-for-gold-trading-a-compliance-guide" tabindex="-1">Due Diligence Steps for Gold Trading: A Compliance Guide</h1>
+  <div class="article-title" id="due-diligence-steps-for-gold-trading-a-compliance-guide" tabindex="-1">Due Diligence Steps for Gold Trading: A Compliance Guide</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1784574431476_Compliance-officer-reviewing-gold-trading-documents.jpeg" alt="Compliance officer reviewing gold trading documents"></p>
 <h2 id="what-are-the-core-due-diligence-steps-for-gold-trading-compliance" tabindex="-1">What are the core due diligence steps for gold trading compliance?</h2>
 <p>Gold trading due diligence is a systematic, risk-based process. Done right, it protects your organization from conflict gold, fraud, regulatory penalties, and supply chain liability. Done poorly, it exposes you to all three at once.</p>
@@ -206,7 +206,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <hr>
 <h2 id="5-ensuring-legal-and-regulatory-compliance-for-us-gold-traders" tabindex="-1">5. Ensuring legal and regulatory compliance for U.S. gold traders</h2>
 <p>The U.S. legal environment for gold trading sits at the intersection of several overlapping frameworks. Anti-Money Laundering (AML) and Countering the Financing of Terrorism (CFT) regulations apply broadly to precious metals dealers under the Bank Secrecy Act. The Financial Crimes Enforcement Network (FinCEN) requires dealers to file Suspicious Activity Reports (SARs) when transactions exhibit red flags, and Customer Due Diligence (CDD) rules mandate identity verification for counterparties above defined thresholds.</p>
-<p><a href="https://galamigold.net/post/gold-trading-regulations-2026-aml-penalties-highlight-risks" target="_blank" rel="noopener">AML/KYC regulatory compliance</a> carries real financial consequences for U.S. traders who fall short. Penalties for AML violations in the precious metals sector have grown substantially in recent enforcement cycles, and regulators have shown willingness to pursue individual liability, not just corporate fines.</p>
+<p><a href="/role-of-aml-in-gold-trade">AML/KYC regulatory compliance</a> carries real financial consequences for U.S. traders who fall short. Penalties for AML violations in the precious metals sector have grown substantially in recent enforcement cycles, and regulators have shown willingness to pursue individual liability, not just corporate fines.</p>
 <p>Critical legal compliance requirements for U.S.-based gold traders include:</p>
 <ul>
 <li><strong>Customer Due Diligence (CDD):</strong> Verify the identity of all counterparties, including beneficial owners of legal entities, before executing transactions above applicable thresholds.</li>
@@ -218,7 +218,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </ul>
 <p><strong>Pro Tip:</strong> <em>Never treat an advance fee request as a negotiating point. Any counterparty demanding payment of a “compliance fee,” “export clearance fee,” or “government processing fee” before gold changes hands is running an <a href="https://2021-2025.state.gov/africa-gold-advisory/" rel="nofollow noopener noreferrer" target="_blank">advance fee fraud</a>. Legitimate gold exporters do not require buyers to pay compliance or clearance fees upfront. Disengage immediately and report the contact to the relevant financial crime authority.</em></p>
 <p>Legal advisors with specific experience in precious metals transactions are worth the cost. A contract drafted by a generalist attorney who has never seen a gold sale agreement is a liability, not a protection. Clauses around inspection rights, assay dispute resolution, and force majeure in cross-border shipments require sector-specific knowledge.</p>
-<p>For a deeper look at <a href="https://galamigold.net/post/gold-trading-standards-institutional-investors-2026" target="_blank" rel="noopener">gold trading standards</a> as they apply to institutional participants in 2026, the compliance landscape has shifted meaningfully, particularly around beneficial ownership disclosure and cross-border reporting thresholds.</p>
+<p>For a deeper look at <a href="/role-of-global-standards-in-gold-trade">gold trading standards</a> as they apply to institutional participants in 2026, the compliance landscape has shifted meaningfully, particularly around beneficial ownership disclosure and cross-border reporting thresholds.</p>
 <hr>
 <h2 id="6-verifying-gold-supply-legitimacy-documentation-and-traceability" tabindex="-1">6. Verifying gold supply legitimacy: documentation and traceability</h2>
 <p>Document verification is the most concrete, testable part of any gold trading due diligence checklist. It is also where fraud most often surfaces, because forged documents are the primary tool of advance fee schemes and conflict gold laundering operations.</p>
@@ -229,7 +229,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p><strong>Certificates of origin:</strong> These must be issued by the relevant government authority in the country of production, not by the seller or an intermediary. For gold sourced from artisanal mining regions, chain-of-custody documentation tracing the gold from mine site to point of export is required under OECD-aligned standards.</p>
 <p><strong>Chain of custody documentation:</strong> Every handoff in the supply chain, from mine to refinery to storage to export, should be documented with signed records. Gaps in the chain of custody are a compliance failure even when the gold itself is legitimate.</p>
 <p><strong>Payment routing verification:</strong> Confirm that payment instructions direct funds to a bank account in the name of the selling entity, in a jurisdiction consistent with the transaction. Payment directed to a private account in an unrelated third country is a documented fraud mechanism, not an administrative quirk.</p>
-<p>For traders evaluating <a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026" target="_blank" rel="noopener">gold trading counterparties</a>, a structured verification checklist applied consistently across all new suppliers is the most reliable way to catch document irregularities before they become financial losses.</p>
+<p>For traders evaluating <a href="/gold-broker-checklist">gold trading counterparties</a>, a structured verification checklist applied consistently across all new suppliers is the most reliable way to catch document irregularities before they become financial losses.</p>
 <hr>
 <h2 id="7-tools-and-technologies-that-improve-supply-chain-transparency" tabindex="-1">7. Tools and technologies that improve supply chain transparency</h2>
 <p>Technology has changed what is possible in gold supply chain verification, though it has not eliminated the need for human judgment. The most effective programs combine digital tools with experienced analysts who know what to look for.</p>
@@ -252,7 +252,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li><strong>Disengage cleanly when warranted:</strong> If the finding indicates fraud, cease all communication with the counterparty and any associated brokers. Retain all documents and communications for potential law enforcement referral.</li>
 </ol>
 <p>The U.S. State Department’s Africa Gold Advisory documents the most common fraud patterns in detail, including advance fee schemes, forged document packages, and broker chain manipulation. Recognizing these patterns early is the difference between a compliance finding and a financial loss.</p>
-<p><a href="https://galamigold.net/post/risk-management-gold-trading" target="_blank" rel="noopener">Risk management frameworks</a> that include pre-defined non-compliance response procedures are significantly easier to execute under pressure than ones that require improvised judgment at the moment a problem surfaces.</p>
+<p><a href="/gold-trading-risk-management-strategies-institutions">Risk management frameworks</a> that include pre-defined non-compliance response procedures are significantly easier to execute under pressure than ones that require improvised judgment at the moment a problem surfaces.</p>
 <hr>
 <h2 id="9-internal-training-and-capacity-building-for-due-diligence-teams" tabindex="-1">9. Internal training and capacity building for due diligence teams</h2>
 <p>A due diligence program is only as good as the people running it. Training is not a one-time event at onboarding; it is an ongoing function that keeps your team current with evolving fraud tactics, regulatory changes, and best practices.</p>
@@ -271,7 +271,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>A due diligence system that was adequate two years ago may not be adequate today. Supply chain risks evolve, fraud tactics adapt, and regulatory requirements change. Periodic review of the system itself, separate from transaction-level monitoring, is what keeps the program current.</p>
 <p>Annual system reviews should assess whether the risk categories in your assessment framework still reflect actual market conditions, whether your supplier verification procedures have kept pace with changes in issuing authority formats and systems, and whether your escalation protocols have been tested and found to work as designed. If the annual third-party audit identifies gaps, those findings should feed directly into a documented improvement plan with assigned owners and deadlines.</p>
 <p>Continuous improvement also means learning from near-misses. When a red flag is caught and a transaction is halted, the post-mortem should ask how the risk got as far as it did and what earlier in the process could have caught it. These lessons are more valuable than any policy document because they are grounded in your actual supply chain, not a generic framework.</p>
-<p><a href="https://galamigold.net/post/partner-gold-traders-risk-management-transparency" target="_blank" rel="noopener">Building transparent partnerships</a> within gold supply chains is itself a continuous improvement mechanism. Suppliers who understand your due diligence requirements and have invested in meeting them are lower-risk counterparties over time. The relationship itself becomes a compliance asset.</p>
+<p><a href="/how-to-select-gold-partners-institutional-guide-2026">Building transparent partnerships</a> within gold supply chains is itself a continuous improvement mechanism. Suppliers who understand your due diligence requirements and have invested in meeting them are lower-risk counterparties over time. The relationship itself becomes a compliance asset.</p>
 <p>For traders working across multiple supply chain jurisdictions, a centralized review calendar that tracks audit cycles, reporting deadlines, license renewal dates, and training schedules prevents the kind of administrative gaps that regulators find most concerning. Compliance failures are rarely dramatic; they are usually the result of something routine that nobody was tracking.</p>
 <hr>
 <h2 id="11-galamigolds-approach-to-due-diligence-in-gold-trading" tabindex="-1">11. Galamigold’s approach to due diligence in gold trading</h2>
@@ -318,10 +318,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </table>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/gold-trading-regulations-2026-aml-penalties-highlight-risks" target="_blank" rel="noopener">Gold trading regulations 2026: 75% AML penalties highlight risks</a></li>
-<li><a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026" target="_blank" rel="noopener">Essential tips for evaluating gold traders in 2026</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026" target="_blank" rel="noopener">Gold trading step by step: institutional guide 2026</a></li>
-<li><a href="https://galamigold.net/post/build-trust-gold-trading-platforms-2026-investors" target="_blank" rel="noopener">Build trust in gold trading platforms for 2026 investors</a></li>
+<li><a href="/role-of-aml-in-gold-trade">The Role of AML in Gold Trade for Institutional Investors</a></li>
+<li><a href="/gold-broker-checklist">Institutional Gold Broker Checklist: 2026 Vetting Guide</a></li>
+<li><a href="/step-by-step-gold-transaction-process-2026-guide">Step by Step Gold Transaction Process: 2026 Guide</a></li>
+<li><a href="/how-to-ensure-transparency">How to Ensure Transparency in Institutional Gold Trading</a></li>
 </ul>
 
   <div class="article-cta">

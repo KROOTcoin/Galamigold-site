@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="risk-management-checklist-for-institutional-gold-investors" tabindex="-1">Risk Management Checklist for Institutional Gold Investors</h1>
+  <div class="article-title" id="risk-management-checklist-for-institutional-gold-investors" tabindex="-1">Risk Management Checklist for Institutional Gold Investors</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1785528937220_Man-reviewing-gold-risk-management-checklist-at-desk.jpeg" alt="Man reviewing gold risk management checklist at desk"></p>
 <hr>
 <blockquote>
@@ -371,7 +371,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>The conventional view treats a risk checklist as a compliance artifact: fill it out, file it, move on. That framing gets institutions into trouble with physical gold specifically, because the asset class punishes documentation gaps in ways that financial instruments do not. A missed insurance sublimit or an unverified carrier accreditation does not show up as a mark-to-market loss until the claim is denied or the shipment disappears.</p>
 <p>What the checklist actually does, when built correctly, is force every assumption about custody, counterparty quality, and insurance coverage into the open before a trade settles. The pre-mortem question (“if this position fails in 12 months, what caused it?”) is not a theoretical exercise. It is the fastest way to find the assumption nobody has challenged yet. In physical gold, that assumption is usually about insurance coverage or settlement mechanics, not price.</p>
 <p>COSO ERM makes the broader point: risk management creates, preserves, and realizes value when it is embedded in strategy-setting, not treated as a post-trade audit. A checklist that surfaces a $10M insurance sublimit gap before a $20M shipment departs is not overhead. It is the work.</p>
-<p>The institutions that treat the checklist as a floor, and build scenario playbooks and quantitative loss models on top of it, are the ones that can <a href="https://galamigold.net/post/risk-management-gold-trading" target="_blank" rel="noopener">manage gold trading risk</a> through a market dislocation without improvising. That gap between prepared and unprepared is where institutional credibility is won or lost.</p>
+<p>The institutions that treat the checklist as a floor, and build scenario playbooks and quantitative loss models on top of it, are the ones that can <a href="/gold-trading-risk-management-strategies-institutions">manage gold trading risk</a> through a market dislocation without improvising. That gap between prepared and unprepared is where institutional credibility is won or lost.</p>
 <hr>
 <h2 id="galamigolds-institutional-gold-risk-framework-in-practice" tabindex="-1">Galamigold’s institutional gold risk framework in practice</h2>
 <p>Physical gold risk management requires more than a filled-out spreadsheet. It requires custody arrangements that hold up under audit, settlement channels with documented DVP protocols, and chain-of-custody records that satisfy both regulators and insurers.</p>
@@ -396,15 +396,15 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p><strong><a href="https://csrc.nist.gov/pubs/sp/800/30/r1/final" rel="nofollow noopener noreferrer" target="_blank">NIST SP 800-30 Rev. 1, Guide for Conducting Risk Assessments (CSRC)</a></strong> — Federal-grade risk assessment methodology covering three-tier hierarchy and senior-leader reporting. Useful reference for institutions with regulatory reporting obligations.</p>
 </li>
 <li>
-<p><strong><a href="https://galamigold.net/post/institutional-gold-investing-considerations" target="_blank" rel="noopener">Institutional Gold Investing: Key Risks and Best Practices (Galamigold)</a></strong> — In-depth background on institutional gold risk considerations and checklist adaptation for physical-asset portfolios.</p>
+<p><strong><a href="/capital-management-guide">Institutional Gold Investing: Key Risks and Best Practices (Galamigold)</a></strong> — In-depth background on institutional gold risk considerations and checklist adaptation for physical-asset portfolios.</p>
 </li>
 </ul>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/institutional-gold-investing-considerations" target="_blank" rel="noopener">Institutional Gold Investing: Key Risks and Best Practices</a></li>
-<li><a href="https://galamigold.net/post/manage-risk-gold-investment" target="_blank" rel="noopener">Why Manage Risk in Gold Investment Strategies</a></li>
-<li><a href="https://galamigold.net/post/examples-gold-investment-risks-institutions-2026" target="_blank" rel="noopener">Examples of gold investment risks for institutions 2026</a></li>
-<li><a href="https://galamigold.net/post/gold-safeguarding-60-diversification-cuts-risk-2026" target="_blank" rel="noopener">Gold Safeguarding: 60% Diversification Cuts Risk in 2026</a></li>
+<li><a href="/capital-management-guide">Physical Gold Capital Management Guide for Institutions</a></li>
+<li><a href="/gold-trading-risk-management-strategies-institutions">Gold trading risk management: strategies for institutions</a></li>
+<li><a href="/operational-risk-in-gold-trading-what-you-must-know">Operational Risk in Gold Trading: What You Must Know</a></li>
+<li><a href="/gold-portfolio-diversification">Why gold secures portfolio diversification and reduces risk</a></li>
 </ul>
 
   <div class="article-cta">

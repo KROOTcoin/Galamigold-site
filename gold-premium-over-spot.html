@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="gold-premium-over-spot-what-new-buyers-must-know" tabindex="-1">Gold Premium Over Spot: What New Buyers Must Know</h1>
+  <div class="article-title" id="gold-premium-over-spot-what-new-buyers-must-know" tabindex="-1">Gold Premium Over Spot: What New Buyers Must Know</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1786248551468_Hand-weighing-gold-coin-in-secure-vault.jpeg" alt="Hand weighing gold coin in secure vault"></p>
 <p>The premium over spot is the extra amount you pay to turn a quoted market price into an actual coin or bar you can hold. Spot price plus premium equals the price you pay. That gap is the single most important number for any physical-gold buyer to understand before placing an order.</p>
 <p>Here is the practical bottom line before anything else:</p>
@@ -235,7 +235,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Typical buyback spreads run 1–3% below spot, so the exact break-even depends on the product and the dealer.</p>
 <p>Sovereign coins like the Eagle, Buffalo, and Maple Leaf tend to have tighter buyback spreads than generic rounds because any dealer recognizes them instantly. That tighter spread reduces your effective round-trip cost even if the purchase premium is slightly higher.</p>
 <p><strong>Pro Tip:</strong> <em>For long-term holders, a higher purchase premium on a sovereign coin often costs less over time than a low-premium generic round with a wide buyback spread. Run the full round-trip math, not just the buy side.</em></p>
-<p>Physical bullion makes most sense for investors with a multi-year horizon who want direct ownership. Short-term traders face a steep premium-and-spread hurdle that gold ETFs, with their lower friction costs, do not carry. Matching your product to your <a href="https://galamigold.net/post/how-to-invest-in-gold-for-portfolio-diversification-2026" target="_blank" rel="noopener">portfolio allocation strategy</a> matters as much as picking the right dealer.</p>
+<p>Physical bullion makes most sense for investors with a multi-year horizon who want direct ownership. Short-term traders face a steep premium-and-spread hurdle that gold ETFs, with their lower friction costs, do not carry. Matching your product to your <a href="/gold-as-an-asset-class-risk-diversification-and-strategy">portfolio allocation strategy</a> matters as much as picking the right dealer.</p>
 <h2 id="how-to-minimize-the-premium-you-pay" tabindex="-1">How to minimize the premium you pay</h2>
 <ul>
 <li><strong>Compare percentage premium, not headline price.</strong> Pull the spot price at the same moment you check dealer quotes, compute the percentage for each, and rank dealers by that number.</li>
@@ -256,7 +256,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li><strong>Do you provide assay certificates or refinery documentation for branded bars?</strong> For purchases above a few ounces, this is non-negotiable.</li>
 <li><strong>What is your return window?</strong> Reputable dealers offer at least a short inspection period.</li>
 </ul>
-<p>For a full dealer evaluation framework, <a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026" target="_blank" rel="noopener">Galamigold’s guide to evaluating gold traders</a> covers the credibility signals worth checking.</p>
+<p>For a full dealer evaluation framework, <a href="/gold-broker-checklist">Galamigold’s guide to evaluating gold traders</a> covers the credibility signals worth checking.</p>
 <h2 id="why-premiums-move-the-institutional-supply-chain-view" tabindex="-1">Why premiums move: the institutional supply-chain view</h2>
 <p>Retail premiums are not arbitrary. They are the visible price of converting a traded contract into a physical, deliverable object. Institutional trading desks watch three operational signals: LBMA and COMEX delivery notices (which reveal how much metal is actually available for physical settlement), refinery throughput capacity, and insured-shipping availability.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1786248570735_Worker-pouring-molten-gold-into-mold.jpeg" alt="Worker pouring molten gold into mold"></p>
@@ -265,7 +265,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <h2 id="galamigolds-perspective-on-premium-custody-and-long-term-cost" tabindex="-1">Galamigold’s perspective on premium, custody, and long-term cost</h2>
 <p>The instinct to chase the lowest possible premium is understandable, but it can be the wrong optimization. Here is the tradeoff that often gets missed: a slightly higher premium from a dealer with verified chain-of-custody, documented assay, and institutional-grade secure settlement can cost less over the full holding period than a rock-bottom premium from a source with opaque provenance and a wide buyback spread.</p>
 <p>Physical precious metals have no central title registry. <a href="https://www.keytlaw.com/transfer-gold-silver-to-trust/" rel="nofollow noopener noreferrer" target="_blank">Secure custody and clear documentation</a> matter enormously for long-term ownership, estate planning, and any eventual gold title transfer. When metal changes hands through an allocated transfer rather than a physical delivery, the documentation trail is what protects the buyer. Paying a modest premium for that infrastructure is not a cost; it is risk management.</p>
-<p>For institutional allocations, Galamigold generally favors 1 oz and kilo bars for efficiency, and sovereign coins like the American Gold Eagle or Canadian Gold Maple Leaf where liquidity and universal recognition are priorities. The choice depends on the allocation’s purpose. For deeper analysis of how premiums fit within a broader <a href="https://galamigold.net/post/gold-portfolio-risk-management-2026" target="_blank" rel="noopener">gold portfolio risk management</a> framework, Galamigold’s market insights cover the institutional perspective in detail.</p>
+<p>For institutional allocations, Galamigold generally favors 1 oz and kilo bars for efficiency, and sovereign coins like the American Gold Eagle or Canadian Gold Maple Leaf where liquidity and universal recognition are priorities. The choice depends on the allocation’s purpose. For deeper analysis of how premiums fit within a broader <a href="/gold-hedging-strategies-institutional-portfolio-stability">gold portfolio risk management</a> framework, Galamigold’s market insights cover the institutional perspective in detail.</p>
 <h2 id="galamigold-physical-gold-trading-with-transparent-pricing" tabindex="-1">Galamigold: physical gold trading with transparent pricing</h2>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775463411351_galamigold.jpg" alt="Galamigold"></p>
 <p>Most new gold buyers spend hours comparing dealer websites without a clear framework for what they are actually comparing. Galamigold offers institutional-grade physical gold trading built around the one thing that matters most: transparent, documented pricing from verified supply chains. Every transaction comes with clear premium disclosure, assay documentation, and secure custody options, so you know exactly what you are paying and why.</p>
@@ -282,10 +282,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>This article is general information, not a substitute for advice from a qualified financial advisor. Consult a qualified financial professional about your own circumstances before acting on anything here.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/trading-gold-vs-other-metals-institutional-insights" target="_blank" rel="noopener">Trading gold vs. other metals: insights for investors</a></li>
-<li><a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026" target="_blank" rel="noopener">Essential tips for evaluating gold traders in 2026</a></li>
-<li><a href="https://galamigold.net/post/understanding-the-key-differences-between-buying-physical-gold-and-gold-trading-operations" target="_blank" rel="noopener">Understanding the Key Differences Between Buying Physical Gold and Gold Trading Operations</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-terminology-institutional-guide-2026" target="_blank" rel="noopener">Gold trading terminology: institutional guide 2026</a></li>
+<li><a href="/gold-market-dynamics-explained">Gold Market Dynamics Explained: What Investors Need to Know</a></li>
+<li><a href="/gold-broker-checklist">Institutional Gold Broker Checklist: 2026 Vetting Guide</a></li>
+<li><a href="/advantages-of-wholesale-gold-trading-for-investors">Advantages of Wholesale Gold Trading for Investors</a></li>
+<li><a href="/iso-4217-xau-explained">ISO 4217 XAU Explained: What the Gold Code Means</a></li>
 </ul>
 
   <div class="article-cta">

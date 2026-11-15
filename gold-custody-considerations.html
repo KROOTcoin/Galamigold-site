@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="gold-custody-considerations-a-fiduciarys-practical-guide" tabindex="-1">Gold Custody Considerations: A Fiduciary’s Practical Guide</h1>
+  <div class="article-title" id="gold-custody-considerations-a-fiduciarys-practical-guide" tabindex="-1">Gold Custody Considerations: A Fiduciary’s Practical Guide</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1785088887835_Fiduciary-reviewing-gold-custody-checklist.jpeg" alt="Fiduciary reviewing gold custody checklist"></p>
 <hr>
 <blockquote>
@@ -257,12 +257,12 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li>No U.S.-qualified legal counsel familiar with the jurisdiction</li>
 <li>Inability to provide chain-of-custody documentation in English</li>
 </ul>
-<p>Practical steps: before committing to any offshore arrangement, have U.S. tax counsel confirm the reporting obligations, obtain a written legal opinion on repatriation rights under the vault’s local law, and verify that the depository’s audit history is available and independently verified. For <a href="https://galamigold.net/post/examples-gold-investment-risks-institutions-2026" target="_blank" rel="noopener">gold investment risks</a> specific to institutional accounts, the jurisdictional layer is one of the highest-consequence variables.</p>
+<p>Practical steps: before committing to any offshore arrangement, have U.S. tax counsel confirm the reporting obligations, obtain a written legal opinion on repatriation rights under the vault’s local law, and verify that the depository’s audit history is available and independently verified. For <a href="/operational-risk-in-gold-trading-what-you-must-know">gold investment risks</a> specific to institutional accounts, the jurisdictional layer is one of the highest-consequence variables.</p>
 <hr>
 <h2 id="how-much-does-custody-cost-and-when-does-it-stop-making-sense" tabindex="-1">How much does custody cost, and when does it stop making sense?</h2>
 <p>Custody costs include setup fees, handling charges, minimum account fees, transaction costs, and delivery charges, which can materially affect net returns, especially for small accounts.</p>
 <p>To illustrate, smaller accounts often face higher relative custody expenses that may exceed returns from lower-cost gold investment options, while larger accounts benefit from economies of scale that make direct custody more cost-effective. Fiduciaries should carefully evaluate custody costs relative to account size and investment goals.</p>
-<p>Fiduciaries managing smaller accounts should consider whether <a href="https://galamigold.net/post/gold-portfolio-risk-management-2026" target="_blank" rel="noopener">pooled gold exposure</a> or an ETF structure better serves the client’s cost and liquidity needs before committing to direct custody. The governance obligation is to match the custody structure to the account’s economics, not to default to the most complex option.</p>
+<p>Fiduciaries managing smaller accounts should consider whether <a href="/gold-hedging-strategies-institutional-portfolio-stability">pooled gold exposure</a> or an ETF structure better serves the client’s cost and liquidity needs before committing to direct custody. The governance obligation is to match the custody structure to the account’s economics, not to default to the most complex option.</p>
 <hr>
 <h2 id="how-do-you-evaluate-and-select-a-custodian-a-fiduciary-checklist" tabindex="-1">How do you evaluate and select a custodian? A fiduciary checklist</h2>
 <p>Use a documented RFP process and a 10-point fiduciary checklist. Every item should be verified with written evidence, not verbal assurance.</p>
@@ -279,7 +279,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li><strong>Counterparty exposures:</strong> Ask whether the custodian sub-custodies to a third party and, if so, who bears the counterparty risk.</li>
 <li><strong>Operational SLAs:</strong> Require documented service-level agreements for statement delivery, audit completion, and discrepancy resolution.</li>
 </ul>
-<p>For <a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026" target="_blank" rel="noopener">evaluating gold traders and custodians</a>, the same due-diligence framework applies: document every response, require evidence rather than representations, and treat any refusal to provide documentation as a disqualifying red flag.</p>
+<p>For <a href="/gold-broker-checklist">evaluating gold traders and custodians</a>, the same due-diligence framework applies: document every response, require evidence rather than representations, and treat any refusal to provide documentation as a disqualifying red flag.</p>
 <p><strong>Questions to ask on provider calls:</strong></p>
 <ol>
 <li>Who conducts your physical audits, and can I receive a copy of the most recent report?</li>
@@ -366,7 +366,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <blockquote>
 <p><strong>The governance principle Galami Gold applies:</strong> Every custody arrangement should be independently verifiable by the fiduciary without relying on the custodian’s own representations. If a fiduciary cannot confirm title, location, and insurance from third-party documents alone, the custody structure has a gap.</p>
 </blockquote>
-<p>Governance at the fiduciary level means designating a named officer to sign off on each quarterly reconciliation, establishing a written escalation procedure for discrepancies, and scheduling an independent third-party verification at least once every two years. Galami Gold supports clients through this process, from initial <a href="https://galamigold.net/post/gold-trading-standards-institutional-investors-2026" target="_blank" rel="noopener">gold trading standards</a> review to ongoing audit coordination.</p>
+<p>Governance at the fiduciary level means designating a named officer to sign off on each quarterly reconciliation, establishing a written escalation procedure for discrepancies, and scheduling an independent third-party verification at least once every two years. Galami Gold supports clients through this process, from initial <a href="/role-of-global-standards-in-gold-trade">gold trading standards</a> review to ongoing audit coordination.</p>
 <hr>
 <h2 id="what-are-the-tax-implications-of-holding-physical-gold-in-custody" tabindex="-1">What are the tax implications of holding physical gold in custody?</h2>
 <p>Physical gold held in custody is classified by the IRS as a collectible, which carries a maximum long-term capital gains rate of 28% rather than the standard 20% rate that applies to most other long-term capital assets. That 8-percentage-point difference is material for high-net-worth investors and fiduciaries managing taxable accounts.</p>
@@ -428,17 +428,17 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li><strong>IRS-approved depository references:</strong> A working list of depositories referenced in IRA guidance, including Delaware Depository, Brink’s Global Services, and International Depository Services (IDS). Use as a starting point, then verify each depository’s current licensing status independently.</li>
 <li><strong>Depository custody agreements:</strong> Request the standard-form custody agreement from any depository under consideration before signing. Review for audit provisions, insurance warranties, withdrawal procedures, and liability caps.</li>
 <li><strong>Custody account compliance frameworks:</strong> Bank-focused guidance on KYC, AML, and custody agreement mechanics that translates directly to gold custody onboarding.</li>
-<li><strong><a href="https://galamigold.net" target="_blank" rel="noopener">Galamigold institutional resources</a>:</strong> Educational content, due-diligence checklists, and custody implementation guidance for institutional clients and wealth managers.</li>
+<li><strong><a href="/">Galamigold institutional resources</a>:</strong> Educational content, due-diligence checklists, and custody implementation guidance for institutional clients and wealth managers.</li>
 </ul>
 <blockquote>
 <p><strong>What to look for in each source:</strong> Confirm that the document is current (IRS publications are updated periodically), that the depository’s licensing is active in its state of operation, and that any insurance certificate you receive is dated within the last 12 months. Outdated documents are not evidence of current compliance.</p>
 </blockquote>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/trust-in-gold-investments-2026-portfolio-guide" target="_blank" rel="noopener">Trust in gold investments: A 2026 portfolio guide</a></li>
-<li><a href="https://galamigold.net/post/trust-in-gold-investment" target="_blank" rel="noopener">Role of Trust in Gold Investment Strategies</a></li>
-<li><a href="https://galamigold.net/post/gold-safeguarding-60-diversification-cuts-risk-2026" target="_blank" rel="noopener">Gold Safeguarding: 60% Diversification Cuts Risk in 2026</a></li>
-<li><a href="https://galamigold.net/post/institutional-gold-investing-considerations" target="_blank" rel="noopener">Institutional Gold Investing: Key Risks and Best Practices</a></li>
+<li><a href="/trust-matters-gold-trading">Why trust matters in gold trading: Safeguarding institutional investments</a></li>
+<li><a href="/how-to-ensure-transparency">How to Ensure Transparency in Institutional Gold Trading</a></li>
+<li><a href="/gold-portfolio-diversification">Why gold secures portfolio diversification and reduces risk</a></li>
+<li><a href="/capital-management-guide">Physical Gold Capital Management Guide for Institutions</a></li>
 </ul>
 
   <div class="article-cta">
