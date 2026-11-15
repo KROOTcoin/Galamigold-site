@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="cftc-position-limits-gold-the-6000-contract-rule" tabindex="-1">CFTC Position Limits Gold: The 6,000-Contract Rule</h1>
+  <div class="article-title" id="cftc-position-limits-gold-the-6000-contract-rule" tabindex="-1">CFTC Position Limits Gold: The 6,000-Contract Rule</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1786759693478_Gold-bars-stacked-in-institutional-trading-vault.jpeg" alt="Gold bars stacked in institutional trading vault"></p>
 <p>The federal spot-month speculative position limit for COMEX Gold (GC) futures is set as a firm limit during the spot month period. This limit applies only during the spot month, the trading window right before a contract’s delivery period, and functions as a hard cap rather than a soft accountability threshold. Once a desk’s net position in COMEX Gold reaches the spot-month limit, further position build-up is prohibited unless a recognized exemption applies.</p>
 <p>This limit came out of the <a href="https://www.cftc.gov/IndustryOversight/MarketSurveillance/SpeculativeLimits/index.htm" rel="nofollow noopener noreferrer" target="_blank">CFTC’s 2020 Final Rule</a>, and it represented 13.1% of estimated deliverable supply when the Commission calculated it. For institutional trading desks, the operational consequence is straightforward: before you build or roll a large gold position anywhere near spot month, someone on your compliance team needs to check three things.</p>
@@ -209,7 +209,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li>Review deliverable-supply notices and rule amendment filings whenever COMEX updates its tables.</li>
 <li>Confirm bona fide hedge documentation is current, not just filed once at position inception.</li>
 </ul>
-<p>For a broader look at how regulatory risk plays out across the gold trading industry, including penalty exposure tied to anti-money-laundering compliance, see <a href="https://galamigold.net/post/gold-trading-regulations-2026-aml-penalties-highlight-risks" target="_blank" rel="noopener">Galamigold’s overview of gold trading regulations</a>.</p>
+<p>For a broader look at how regulatory risk plays out across the gold trading industry, including penalty exposure tied to anti-money-laundering compliance, see <a href="/role-of-aml-in-gold-trade">Galamigold’s overview of gold trading regulations</a>.</p>
 <h2 id="operational-checklist-for-institutional-participants" tabindex="-1">Operational Checklist for Institutional Participants</h2>
 <p>Turning the regulatory text into a working desk process comes down to a handful of repeatable habits. Here is a sequence institutional compliance teams can adopt without rebuilding their entire risk stack from scratch.</p>
 <ol>
@@ -226,7 +226,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Anyone who has actually run gold exposure through a spot-month transition knows the regulatory text describes the destination, not the daily work of getting there. In practice, desks manage this by staggering roll schedules well ahead of the spot-month date rather than rolling the entire position in one block, which reduces both market impact and the odds of a last-minute limit breach if a counterparty delays.</p>
 <p>Coordination between custody, operations, and trading matters more than most compliance manuals suggest. A hedge that looks perfectly documented on paper falls apart under scrutiny if the physical inventory records sitting with custody do not match the quantities and dates claimed in the hedge rationale. The strongest desks treat this as a three-way handoff: trading books the position, operations confirms the physical link, and custody signs off on the inventory record, all before the hedge designation goes into the compliance log.</p>
 <p>The most common pitfalls are unglamorous. Documentation gaps show up not because firms lack a policy, but because the policy is not enforced consistently when volume is high. Aggregated OTC exposure is the other recurring trap: a swap desk and a futures desk can each be well within limits individually while the combined, aggregated position is dangerously close to the 6,000-contract ceiling, and nobody notices until a reconciliation exercise catches it. Institutional traders tend to favor exchange-cleared futures for large gold hedges precisely because centralized clearing reduces counterparty risk compared with bilateral OTC arrangements, but that preference only pays off if the aggregation math behind it is tracked correctly.</p>
-<p>Firms building out institutional gold allocation strategies from scratch may find it useful to review <a href="https://galamigold.net/post/institutional-gold-trading-benefits-portfolio-growth" target="_blank" rel="noopener">Galamigold’s breakdown of institutional gold trading benefits</a> alongside their own regulatory playbook, and compliance teams standardizing internal terminology can cross-check definitions against <a href="https://galamigold.net/post/gold-investment-terminology-explained-for-institutional-investors" target="_blank" rel="noopener">Galamigold’s gold investment terminology guide</a> to make sure legal and trading desks are using the same language for spot month, deliverable supply, and contract equivalents.</p>
+<p>Firms building out institutional gold allocation strategies from scratch may find it useful to review <a href="/institutional-gold-trading-benefits">Galamigold’s breakdown of institutional gold trading benefits</a> alongside their own regulatory playbook, and compliance teams standardizing internal terminology can cross-check definitions against <a href="/what-is-bullion">Galamigold’s gold investment terminology guide</a> to make sure legal and trading desks are using the same language for spot month, deliverable supply, and contract equivalents.</p>
 <p>Galamigold works with institutional partners and wealth managers who need physical gold execution built around exactly this kind of disciplined, documentation-first approach. If your desk is evaluating how physical gold allocation fits alongside your regulated futures exposure, <a href="https://galamigold.com/institutional-gold-trading-benefits" target="_blank" rel="noopener">Galamigold’s institutional gold trading services</a> outline how transparent pricing and secure custody support a compliance-first strategy, and the firm’s risk disclosure page is worth reviewing before any capital commitment. Teams looking to formalize real-time monitoring across trading and compliance functions may also want to review Skypher’s guide to real-time GRC compliance monitoring for practical integration patterns that extend beyond gold-specific position tracking.</p>
 <h2 id="sources" tabindex="-1">Sources</h2>
 <p>Compliance teams verifying figures independently should go straight to primary sources rather than secondhand summaries, since exchange tables and rule text get updated in ways that a two-year-old memo will not reflect.</p>
@@ -238,10 +238,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>This article is general information, not a substitute for advice from a qualified financial advisor. Consult a qualified financial professional about your own circumstances before acting on anything here.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/gold-trading-regulations-2026-aml-penalties-highlight-risks" target="_blank" rel="noopener">Gold trading regulations 2026: 75% AML penalties highlight risks</a></li>
+<li><a href="/role-of-aml-in-gold-trade">The Role of AML in Gold Trade for Institutional Investors</a></li>
 <li><a href="https://galamigold.com/news" target="_blank" rel="noopener">Gold Market News &amp; Analysis | Galami Gold Blog</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-strategies-optimize-risk-returns-2026" target="_blank" rel="noopener">Gold trading strategies: optimize risk and returns in 2026</a></li>
-<li><a href="https://galamigold.net/post/risk-management-gold-trading" target="_blank" rel="noopener">Risk Management in Gold Trading: Smart Strategies for 2026</a></li>
+<li><a href="/gold-trading-risk-management-strategies-institutions">Gold trading risk management: strategies for institutions</a></li>
+<li><a href="/operational-risk-in-gold-trading-what-you-must-know">Operational Risk in Gold Trading: What You Must Know</a></li>
 </ul>
 
   <div class="article-cta">

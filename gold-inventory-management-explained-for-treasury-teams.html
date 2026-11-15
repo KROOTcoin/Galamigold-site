@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="gold-inventory-management-explained-for-treasury-teams" tabindex="-1">Gold Inventory Management Explained for Treasury Teams</h1>
+  <div class="article-title" id="gold-inventory-management-explained-for-treasury-teams" tabindex="-1">Gold Inventory Management Explained for Treasury Teams</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1782112257815_Treasury-analyst-reviewing-gold-inventory-documents.jpeg" alt="Treasury analyst reviewing gold inventory documents"></p>
 <hr>
 <blockquote>
@@ -208,7 +208,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Memo and consignment stock represent a second major risk. Memo and consignment inventory often causes discrepancies if left off formal books, and each piece must have a unique ID tracked in the centralized system. Gold on memo sits physically off-site but remains your financial liability. If it is not in your inventory system, it is invisible to your auditors and your risk models.</p>
 <p><a href="https://goldiramarkets.com/gold-ira/precious-metals-inventory-tracking/" rel="nofollow noopener noreferrer" target="_blank">Reliance on spreadsheets</a> or manual inventory tracking is insufficient for growing gold portfolios, risking audit difficulties and loss due to error. Spreadsheets break under the weight of multi-location portfolios, multiple karat grades, and daily price fluctuations. A single formula error can misstate your gold position by a material amount.</p>
 <p><strong>Pro Tip:</strong> <em>Assign unique IDs to every item before it enters your system, including pieces sent for repair or on consignment. Comprehensive gold inventory management requires assigning unique IDs to all items in-house, on memo, or in repair to maintain total transparency.</em></p>
-<p>Poor system integration creates a fourth failure point. When your inventory platform does not connect to your trading desk or compliance database, data must be re-entered manually. Manual re-entry introduces errors and creates time gaps that regulators and internal auditors flag as control weaknesses. Treasury teams managing <a href="https://galamigold.net/post/examples-gold-investment-risks-institutions-2026" target="_blank" rel="noopener">gold investment risks</a> at institutional scale cannot afford disconnected systems.</p>
+<p>Poor system integration creates a fourth failure point. When your inventory platform does not connect to your trading desk or compliance database, data must be re-entered manually. Manual re-entry introduces errors and creates time gaps that regulators and internal auditors flag as control weaknesses. Treasury teams managing <a href="/operational-risk-in-gold-trading-what-you-must-know">gold investment risks</a> at institutional scale cannot afford disconnected systems.</p>
 <h2 id="key-takeaways" tabindex="-1">Key Takeaways</h2>
 <p>Effective gold inventory management requires fine-weight accounting, tiered audit schedules, specialized software, and unique item identification to protect asset value and meet compliance standards.</p>
 <table>
@@ -243,7 +243,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </table>
 <h2 id="galamigolds-perspective-on-precision-inventory-in-volatile-markets" tabindex="-1">Galamigold’s perspective on precision inventory in volatile markets</h2>
 <p>The gold market does not wait for end-of-day reconciliation. I have seen treasury teams lose track of material positions simply because their inventory system updated overnight while the market moved intraday. That gap between physical reality and recorded position is where losses hide.</p>
-<p>The teams that manage gold well share one trait: they treat inventory data as a live financial instrument, not a static ledger. They run daily counts not because regulations require it, but because they know a 24-hour blind spot in a volatile market is a risk they cannot price. When you integrate your inventory platform with your <a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026" target="_blank" rel="noopener">gold trading workflow</a>, you stop reacting to discrepancies and start preventing them.</p>
+<p>The teams that manage gold well share one trait: they treat inventory data as a live financial instrument, not a static ledger. They run daily counts not because regulations require it, but because they know a 24-hour blind spot in a volatile market is a risk they cannot price. When you integrate your inventory platform with your <a href="/step-by-step-gold-transaction-process-2026-guide">gold trading workflow</a>, you stop reacting to discrepancies and start preventing them.</p>
 <p>Early implementation of specialized inventory systems is critical to managing market fluctuations, simplifying tax reporting, and preventing untraceable asset accumulation. I agree completely. The treasury teams that delay specialized systems until their portfolio grows large enough always pay a remediation cost that exceeds what the system would have cost from day one. Precision inventory is not a back-office function. It is a front-line risk control that directly supports capital deployment decisions.</p>
 <blockquote>
 <p><em>— Galami</em></p>
@@ -265,10 +265,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>A gold inventory platform should connect to your accounting system, compliance and origin databases, and your bullion trading platform. Disconnected systems require manual data re-entry, which creates control gaps and audit exposure.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/gold-investment-terminology-explained-for-institutional-investors" target="_blank" rel="noopener">Gold investment terminology explained for institutional investors</a></li>
-<li><a href="https://galamigold.net/post/optimize-gold-transactions-institutional-investors" target="_blank" rel="noopener">How to optimize gold transactions for institutional investors</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026" target="_blank" rel="noopener">Gold trading step by step: institutional guide 2026</a></li>
-<li><a href="https://galamigold.net/post/capital-deployment-gold-trading-beat-benchmarks-2026" target="_blank" rel="noopener">Capital Deployment in Gold Trading: 70% Beat Benchmarks 2026</a></li>
+<li><a href="/what-is-bullion">Bullion Explained: A Practical Guide for U.S. Investors</a></li>
+<li><a href="/gold-trade-settlement-explained-for-investors-and-traders">Gold Trade Settlement Explained for Investors and Traders</a></li>
+<li><a href="/step-by-step-gold-transaction-process-2026-guide">Step by Step Gold Transaction Process: 2026 Guide</a></li>
+<li><a href="/capital-deployment-guide-to-gold-for-institutional-investors">Capital Deployment Guide to Gold for Institutional Investors</a></li>
 </ul>
 
   <div class="article-cta">

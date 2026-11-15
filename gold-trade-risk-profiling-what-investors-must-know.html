@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="gold-trade-risk-profiling-what-investors-must-know" tabindex="-1">Gold Trade Risk Profiling: What Investors Must Know</h1>
+  <div class="article-title" id="gold-trade-risk-profiling-what-investors-must-know" tabindex="-1">Gold Trade Risk Profiling: What Investors Must Know</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1780882845000_Financial-analyst-reviewing-gold-trade-risk-documents.jpeg" alt="Financial analyst reviewing gold trade risk documents"></p>
 <hr>
 <blockquote>
@@ -113,7 +113,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li><em>Gold mining stocks</em> (such as Newmont Corporation or Barrick Gold): equity market correlation, operational risk, and management execution risk</li>
 </ul>
 <p><strong>Execution and liquidity risk</strong> is often underestimated. Spread, commission, slippage, and financing fees materially reduce realized returns. A position with a theoretical 2:1 risk-to-reward ratio can shrink to approximately 1.7:1 after friction costs are applied. This is not a rounding error. It changes whether a strategy is profitable over 100 trades.</p>
-<p><strong>Counterparty and operational risk</strong> includes broker insolvency, custody failures, fraud in physical gold supply chains, and platform outages during high-volatility periods. Reviewing <a href="https://galamigold.net/post/partner-gold-traders-risk-management-transparency" target="_blank" rel="noopener">counterparty risk and transparency</a> protocols before selecting a trading partner is a basic due diligence requirement.</p>
+<p><strong>Counterparty and operational risk</strong> includes broker insolvency, custody failures, fraud in physical gold supply chains, and platform outages during high-volatility periods. Reviewing <a href="/how-to-select-gold-partners-institutional-guide-2026">counterparty risk and transparency</a> protocols before selecting a trading partner is a basic due diligence requirement.</p>
 <p><strong>Behavioral risk</strong> closes the loop. Overtrading, chasing losses after a drawdown, and ignoring pre-set stop-loss levels are significant contributors to avoidable losses. No risk framework survives contact with an undisciplined trader.</p>
 <p><strong>Pro Tip:</strong> <em>Build a one-page risk profile checklist for each trade that scores all six categories before entry. If any category scores above your tolerance threshold, reduce size or pass on the trade entirely.</em></p>
 <h2 id="how-does-position-sizing-and-leverage-control-gold-trade-risk" tabindex="-1">How does position sizing and leverage control gold trade risk?</h2>
@@ -179,7 +179,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </tr>
 </tbody>
 </table>
-<p>Physical gold eliminates leverage and counterparty risk from a broker, but introduces <a href="https://galamigold.net/post/understanding-the-operational-mechanics-of-physical-gold-trading-and-its-key-components" target="_blank" rel="noopener">operational risks specific to physical trading</a> such as authentication, storage, and chain-of-custody integrity. Gold ETFs like GLD simplify access but add a layer of fund structure risk and annual fees that compound over time. Futures on the CME COMEX exchange offer the deepest liquidity and tightest spreads but require active margin management and carry rollover costs at contract expiration.</p>
+<p>Physical gold eliminates leverage and counterparty risk from a broker, but introduces <a href="/step-by-step-gold-transaction-process-2026-guide">operational risks specific to physical trading</a> such as authentication, storage, and chain-of-custody integrity. Gold ETFs like GLD simplify access but add a layer of fund structure risk and annual fees that compound over time. Futures on the CME COMEX exchange offer the deepest liquidity and tightest spreads but require active margin management and carry rollover costs at contract expiration.</p>
 <p>CFDs are the highest-risk instrument for most retail investors because they combine maximum leverage with broker counterparty exposure and overnight financing charges that erode positions held for more than a few days. Mining stocks such as Barrick Gold or Newmont add equity market beta to the gold exposure, meaning they can fall even when gold prices rise if the broader equity market sells off.</p>
 <p><strong>Pro Tip:</strong> <em>If your risk profile requires capital preservation as the primary objective, physical gold or a physically-backed ETF eliminates leverage risk entirely. Reserve CFDs and futures for capital you can afford to lose in full.</em></p>
 <h2 id="how-does-event-driven-volatility-reshape-gold-risk-profiling" tabindex="-1">How does event-driven volatility reshape gold risk profiling?</h2>
@@ -233,13 +233,13 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Most investors who lose money in gold are not wrong about the direction of the market. They are wrong about the size of the position they are holding when the market moves against them. That is a risk profiling failure, not a forecasting failure.</p>
 <p>The insight that changed how I think about gold investment risk management is this: the risk profile of a trade is set at entry, not during the trade. Once you are in a position, every decision you make is contaminated by the emotional reality of having money at risk. The only clean risk decisions happen before the trade is placed.</p>
 <p>I have also found that most traders underestimate instrument risk. They focus on price and ignore the fact that a CFD on gold and a COMEX futures contract on gold are fundamentally different risk objects. The overnight financing cost on a CFD held for two weeks can turn a winning directional call into a losing trade. That is not bad luck. That is a failure to profile the instrument correctly before entry.</p>
-<p>The gold market rewards preparation and punishes improvisation. Traders who build a complete risk profile before every trade, adjust that profile for the volatility regime they are entering, and review their behavioral compliance monthly will outperform those who rely on instinct. The <a href="https://galamigold.net/post/risk-management-gold-trading" target="_blank" rel="noopener">risk management frameworks</a> that survive across market cycles are not the most sophisticated ones. They are the ones that are actually followed.</p>
+<p>The gold market rewards preparation and punishes improvisation. Traders who build a complete risk profile before every trade, adjust that profile for the volatility regime they are entering, and review their behavioral compliance monthly will outperform those who rely on instinct. The <a href="/gold-trading-risk-management-strategies-institutions">risk management frameworks</a> that survive across market cycles are not the most sophisticated ones. They are the ones that are actually followed.</p>
 <blockquote>
 <p><em>— Galami</em></p>
 </blockquote>
 <h2 id="explore-galamigolds-physical-gold-trading-program" tabindex="-1">Explore Galamigold’s physical gold trading program</h2>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775463411351_galamigold.jpg" alt="https://galamigold.com"></p>
-<p>Galamigold operates a physical gold trading program built on the same multi-layer risk profiling principles covered in this article. Every position in Galamigold’s program is executed against audited supply chains with full transparency on costs, counterparty exposure, and risk controls. For investors who want gold exposure without the execution and behavioral risks of self-directed trading, Galamigold’s <a href="https://galamigold.com" rel="nofollow noopener noreferrer" target="_blank">physical gold investment program</a> provides a structured alternative with documented risk disclosure protocols. Explore how Galamigold applies disciplined <a href="https://galamigold.net/post/manage-risk-gold-investment" target="_blank" rel="noopener">gold risk management strategies</a> to protect and deploy capital efficiently in the precious metals market.</p>
+<p>Galamigold operates a physical gold trading program built on the same multi-layer risk profiling principles covered in this article. Every position in Galamigold’s program is executed against audited supply chains with full transparency on costs, counterparty exposure, and risk controls. For investors who want gold exposure without the execution and behavioral risks of self-directed trading, Galamigold’s <a href="https://galamigold.com" rel="nofollow noopener noreferrer" target="_blank">physical gold investment program</a> provides a structured alternative with documented risk disclosure protocols. Explore how Galamigold applies disciplined <a href="/gold-trading-risk-management-strategies-institutions">gold risk management strategies</a> to protect and deploy capital efficiently in the precious metals market.</p>
 <h2 id="faq" tabindex="-1">FAQ</h2>
 <h3 id="what-is-gold-trade-risk-profiling" tabindex="-1">What is gold trade risk profiling?</h3>
 <p>Gold trade risk profiling is the structured process of identifying and measuring all risk factors that affect a gold trade’s outcome, including price volatility, leverage, instrument type, execution costs, counterparty exposure, and trader behavior. It goes beyond directional price forecasting to produce a complete risk-adjusted view of each position.</p>
@@ -253,10 +253,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Behavioral risk, including overtrading, chasing losses, and ignoring stop-loss levels, is a primary cause of avoidable losses in gold trading. Monthly performance reviews that separate rule-compliant trades from rule-violated trades quantify the exact dollar cost of behavioral failures and create accountability for improvement.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/risk-management-gold-trading" target="_blank" rel="noopener">Risk Management in Gold Trading: Smart Strategies for 2026</a></li>
-<li><a href="https://galamigold.net/post/manage-risk-gold-investment" target="_blank" rel="noopener">Why Manage Risk in Gold Investment Strategies</a></li>
-<li><a href="https://galamigold.net/post/examples-gold-investment-risks-institutions-2026" target="_blank" rel="noopener">Examples of gold investment risks for institutions 2026</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-strategies-optimize-risk-returns-2026" target="_blank" rel="noopener">Gold trading strategies: optimize risk and returns in 2026</a></li>
+<li><a href="/gold-trading-risk-management-strategies-institutions">Gold trading risk management: strategies for institutions</a></li>
+<li><a href="/operational-risk-in-gold-trading-what-you-must-know">Operational Risk in Gold Trading: What You Must Know</a></li>
+<li><a href="/red-flags-in-gold-trading-investor-warning-guide">Red Flags in Gold Trading: Investor Warning Guide</a></li>
+<li><a href="/gold-hedging-strategies-institutional-portfolio-stability">Gold hedging explained: strategies for institutional portfolio stability</a></li>
 </ul>
 
   <div class="article-cta">

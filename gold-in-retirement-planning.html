@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="gold-in-retirement-planning-an-institutional-guide" tabindex="-1">Gold in Retirement Planning: An Institutional Guide</h1>
+  <div class="article-title" id="gold-in-retirement-planning-an-institutional-guide" tabindex="-1">Gold in Retirement Planning: An Institutional Guide</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1784956437861_Financial-advisor-reviewing-gold-bars-and-portfolio-reports.jpeg" alt="Financial advisor reviewing gold bars and portfolio reports"></p>
 <hr>
 <blockquote>
@@ -121,7 +121,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <blockquote>
 <p><strong>Allocation context:</strong> A <a href="https://www.cbsnews.com/news/how-much-gold-should-you-own-in-retirement-rules-of-thumb-for-investors-over-50/" rel="nofollow noopener noreferrer" target="_blank">5%–10% guideline</a> is the most widely cited range for retirees and institutional retirement plans; some advisor notes extend this to 15% when liquidity conditions allow. The key constraint is that gold produces no income, so every percentage point allocated to it must be offset by sufficient income-generating assets elsewhere in the plan.</p>
 </blockquote>
-<p>The practical implication: coordinate the gold sleeve with the income plan. If the plan needs 4% annual distributions, the non-income allocation to gold must stay within a band that the income-generating assets can fully support. For deeper context on <a href="https://galamigold.net/post/gold-portfolio-risk-management-2026" target="_blank" rel="noopener">gold’s stabilizing role</a> in institutional portfolios, Galamigold’s 2026 risk management framework provides model scenarios.</p>
+<p>The practical implication: coordinate the gold sleeve with the income plan. If the plan needs 4% annual distributions, the non-income allocation to gold must stay within a band that the income-generating assets can fully support. For deeper context on <a href="/gold-hedging-strategies-institutional-portfolio-stability">gold’s stabilizing role</a> in institutional portfolios, Galamigold’s 2026 risk management framework provides model scenarios.</p>
 <h2 id="when-is-physical-gold-appropriate-and-when-is-it-not" tabindex="-1">When is physical gold appropriate — and when is it not?</h2>
 <p>Physical gold is inappropriate when capital will be needed within 12 months. Advisers are direct on this point: price volatility and selling frictions make gold a poor short-term holding for any retirement plan with near-term distribution obligations. For medium-to-long horizons, paired with adequate liquidity buffers, it fits well.</p>
 <p>A practical liquidity checklist before committing capital:</p>
@@ -168,7 +168,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </tbody>
 </table>
 <p>Rebalancing rules should be event-based and tolerance-band-driven. A ±2% drift from the target band triggers a review; a ±3% drift triggers a trade. Calendar rebalancing alone is insufficient for gold because price moves can be sharp and asymmetric. Separate the portfolio into two buckets: income generation (bonds, dividend equities, real assets with cash flow) and capital preservation (physical gold, cash). Keep the capital-preservation bucket below the percentage that would impair distributions if gold prices fell 30%.</p>
-<p>For implementation notes and sample policy language, Galamigold’s guide on <a href="https://galamigold.net/post/gold-investment-strategies-5-10-physical-gold-allocation" target="_blank" rel="noopener">5%–10% physical gold allocation</a> covers the mechanics in detail.</p>
+<p>For implementation notes and sample policy language, Galamigold’s guide on <a href="/why-gold-attracts-high-net-worth-investors-18-allocation">5%–10% physical gold allocation</a> covers the mechanics in detail.</p>
 <h2 id="how-should-you-structure-custody-and-storage-for-retirement-holdings" tabindex="-1">How should you structure custody and storage for retirement holdings?</h2>
 <p>Choose allocated, audited custody by default. For fiduciary retirement holdings, unallocated accounts introduce counterparty risk that is inconsistent with ERISA and DOL prudent-investor standards.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1784956438932_Hands-inspecting-allocated-gold-bars-in-secure-vault.jpeg" alt="Hands inspecting allocated gold bars in secure vault"></p>
@@ -302,11 +302,11 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <blockquote>
 <p><strong>Red flags that disqualify a partner immediately:</strong> non-segregated inventory (“pooled” accounts with no bar-level title), opaque or variable pricing with no published methodology, high forced-sell penalties that effectively lock capital, and inability to produce third-party audit reports on request. Any one of these is sufficient reason to walk away.</p>
 </blockquote>
-<p>For a step-by-step institutional acquisition process, Galamigold’s guide on <a href="https://galamigold.net/post/how-to-invest-in-gold-for-portfolio-diversification-2026" target="_blank" rel="noopener">how to invest in gold</a> covers the onboarding workflow from pilot trade to full mandate.</p>
+<p>For a step-by-step institutional acquisition process, Galamigold’s guide on <a href="/gold-as-an-asset-class-risk-diversification-and-strategy">how to invest in gold</a> covers the onboarding workflow from pilot trade to full mandate.</p>
 <h2 id="galamigold-institutional-gold-execution-built-for-retirement-portfolios" tabindex="-1">Galamigold: institutional gold execution built for retirement portfolios</h2>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775463411351_galamigold.jpg" alt="Galamigold"></p>
 <p>Fiduciaries who have worked through the allocation, custody, and estate mechanics above need a trading partner who can meet the operational standard — not just sell gold. Galamigold provides institutional-grade physical gold execution with allocated custody options, audited provenance certificates, and transparent pricing records designed for retirement plan compliance. The platform operates across well-established supply chains, with third-party vault partnerships and full chain-of-custody documentation available for every transaction.</p>
-<p>For plan administrators and wealth managers ready to move from policy to execution, the practical next step is an institutional onboarding conversation. Galamigold’s team can walk through a pilot trade structure, review custody addendum language, and confirm depository arrangements before any capital is committed. Start the conversation at <a href="https://galamigold.com" target="_blank" rel="noopener">Galamigold’s institutional trading platform</a> or review the full program details at <a href="https://galamigold.net" target="_blank" rel="noopener">galamigold.net</a>.</p>
+<p>For plan administrators and wealth managers ready to move from policy to execution, the practical next step is an institutional onboarding conversation. Galamigold’s team can walk through a pilot trade structure, review custody addendum language, and confirm depository arrangements before any capital is committed. Start the conversation at <a href="https://galamigold.com" target="_blank" rel="noopener">Galamigold’s institutional trading platform</a> or review the full program details at <a href="/">galamigold.com</a>.</p>
 <h2 id="key-takeaways" tabindex="-1">Key Takeaways</h2>
 <p>Physical gold belongs in institutional retirement portfolios when custody is allocated and audited, liquidity buffers cover at least 12 months of distributions, and estate documentation is complete.</p>
 <table>
@@ -357,10 +357,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </ul>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/institutional-gold-investing-considerations" target="_blank" rel="noopener">Institutional Gold Investing: Key Risks and Best Practices</a></li>
-<li><a href="https://galamigold.net/post/gold-investment-strategy-guide-safer-portfolio-growth" target="_blank" rel="noopener">Gold Investment Strategy Guide for Safer Portfolio Growth</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026" target="_blank" rel="noopener">Gold trading step by step: institutional guide 2026</a></li>
-<li><a href="https://galamigold.net/post/what-is-institutional-gold-trading-complete-guide" target="_blank" rel="noopener">What is institutional gold trading: a complete guide</a></li>
+<li><a href="/capital-management-guide">Physical Gold Capital Management Guide for Institutions</a></li>
+<li><a href="/gold-as-an-asset-class-risk-diversification-and-strategy">Gold as an asset class: Risk, diversification, and strategy</a></li>
+<li><a href="/step-by-step-gold-transaction-process-2026-guide">Step by Step Gold Transaction Process: 2026 Guide</a></li>
+<li><a href="/institutional-gold-trading-benefits">Top institutional gold trading benefits for portfolio growth</a></li>
 </ul>
 
   <div class="article-cta">

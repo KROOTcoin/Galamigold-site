@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="gold-procurement-process-a-guide-for-investors" tabindex="-1">Gold Procurement Process: A Guide for Investors</h1>
+  <div class="article-title" id="gold-procurement-process-a-guide-for-investors" tabindex="-1">Gold Procurement Process: A Guide for Investors</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1782206121559_Investor-reviewing-gold-purchase-documents-at-desk.jpeg" alt="Investor reviewing gold purchase documents at desk"></p>
 <hr>
 <blockquote>
@@ -131,7 +131,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <blockquote>
 <p>“Supply chain integrity and LBMA compliance are not optional for institutional-grade gold. They determine whether your gold is tradable on global markets or stranded in a compliance gray zone.”</p>
 </blockquote>
-<p>Galamigold’s <a href="https://galamigold.net/post/gold-trading-standards-institutional-investors-2026" target="_blank" rel="noopener">gold trading standards</a> framework reflects this requirement directly, treating documentation as a core asset rather than administrative overhead.</p>
+<p>Galamigold’s <a href="/role-of-global-standards-in-gold-trade">gold trading standards</a> framework reflects this requirement directly, treating documentation as a core asset rather than administrative overhead.</p>
 <h2 id="what-are-the-biggest-risks-in-gold-procurement-and-how-do-you-mitigate-them" tabindex="-1">What are the biggest risks in gold procurement and how do you mitigate them?</h2>
 <p>Gold procurement carries four categories of risk that financial professionals must actively manage.</p>
 <p><strong>Fraud risk</strong> is the most immediate threat. Replica bars, false inventory claims, and fraudulent dealer identities are documented problems in the physical gold market. <a href="https://www.consumeraffairs.com/finance/gold-dealers/" rel="nofollow noopener noreferrer" target="_blank">Checking the CFTC RED List</a> before any purchase is a non-negotiable step. The RED List identifies blacklisted dealers who charge for nonexistent inventory. Skipping this check has cost institutional buyers significant capital.</p>
@@ -145,7 +145,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p><strong>Pricing and premium risk</strong> affects returns directly. Spot price volatility is well understood, but premium variability is less discussed. <a href="https://money.com/best-online-gold-dealers/" rel="nofollow noopener noreferrer" target="_blank">Comparing dealer premiums, shipping costs, insurance fees, and buyback policies</a> before committing to a purchase reduces hidden cost exposure and improves total return calculations.</p>
 <p><strong>Counterparty risk</strong> applies to both the seller and the logistics provider. Using dealers with verifiable accreditation and a documented track record is the primary control. For logistics, only firms specializing in precious metals transport with allocated insurance policies meet the standard.</p>
 <p><strong>Pro Tip:</strong> <em>Run every prospective dealer through the CFTC RED List and request references from at least two institutional clients before executing a first trade. The due diligence cost is trivial compared to the fraud exposure it eliminates.</em></p>
-<p>Galamigold’s approach to <a href="https://galamigold.net/post/risk-management-gold-trading" target="_blank" rel="noopener">risk management in gold trading</a> addresses each of these categories with defined controls at every procurement stage.</p>
+<p>Galamigold’s approach to <a href="/gold-trading-risk-management-strategies-institutions">risk management in gold trading</a> addresses each of these categories with defined controls at every procurement stage.</p>
 <h2 id="how-does-gold-procurement-connect-to-portfolio-allocation-and-trading-strategy" tabindex="-1">How does gold procurement connect to portfolio allocation and trading strategy?</h2>
 <p>Physical gold procurement decisions do not exist in isolation. They feed directly into allocation targets, cost basis, and liquidity planning.</p>
 <p>Financial advisors recommend allocating 5% to 10% of investment portfolios to precious metals including gold for long-term volatility hedging. That allocation target determines the procurement volume, which in turn affects the bar size you buy, the storage solution you need, and the logistics cost you absorb. A 5% allocation in a $10 million portfolio means $500,000 in physical gold, a scale that justifies direct refinery sourcing and allocated vault storage.</p>
@@ -185,7 +185,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </tbody>
 </table>
 <p>Gold ETFs carry low fees and offer fractional exposure starting around $10, but they provide no physical possession. For investors whose mandate requires direct asset ownership, physical procurement is the only path. For tactical traders seeking gold exposure without custody obligations, ETFs serve the purpose at lower operational cost.</p>
-<p>Procurement timing also matters. Buying physical gold during periods of low spot price volatility and compressed dealer premiums reduces total acquisition cost. The <a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026" target="_blank" rel="noopener">institutional gold trading guide</a> from Galamigold covers execution timing in detail for large-scale buyers.</p>
+<p>Procurement timing also matters. Buying physical gold during periods of low spot price volatility and compressed dealer premiums reduces total acquisition cost. The <a href="/step-by-step-gold-transaction-process-2026-guide">institutional gold trading guide</a> from Galamigold covers execution timing in detail for large-scale buyers.</p>
 <h2 id="key-takeaways" tabindex="-1">Key Takeaways</h2>
 <p>Effective gold procurement requires verified sourcing, compliant logistics, and documentation discipline at every stage, not just at the point of purchase.</p>
 <table>
@@ -243,10 +243,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Financial advisors recommend allocating 5% to 10% of an investment portfolio to precious metals including gold for long-term volatility hedging. The exact allocation depends on the investor’s mandate, liquidity requirements, and risk tolerance.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026" target="_blank" rel="noopener">Gold trading step by step: institutional guide 2026</a></li>
-<li><a href="https://galamigold.net/post/optimize-gold-transactions-institutional-investors" target="_blank" rel="noopener">How to optimize gold transactions for institutional investors</a></li>
-<li><a href="https://galamigold.net/post/gold-investment-strategy-guide-safer-portfolio-growth" target="_blank" rel="noopener">Gold Investment Strategy Guide for Safer Portfolio Growth</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-terminology-institutional-guide-2026" target="_blank" rel="noopener">Gold trading terminology: institutional guide 2026</a></li>
+<li><a href="/step-by-step-gold-transaction-process-2026-guide">Step by Step Gold Transaction Process: 2026 Guide</a></li>
+<li><a href="/gold-trade-settlement-explained-for-investors-and-traders">Gold Trade Settlement Explained for Investors and Traders</a></li>
+<li><a href="/gold-as-an-asset-class-risk-diversification-and-strategy">Gold as an asset class: Risk, diversification, and strategy</a></li>
+<li><a href="/iso-4217-xau-explained">ISO 4217 XAU Explained: What the Gold Code Means</a></li>
 </ul>
 
   <div class="article-cta">

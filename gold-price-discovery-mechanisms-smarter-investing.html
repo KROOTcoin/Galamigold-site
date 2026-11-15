@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="gold-price-discovery-explained-mechanisms-for-smarter-investing" tabindex="-1">Gold Price Discovery Explained: Mechanisms for Smarter Investing</h1>
+  <div class="article-title" id="gold-price-discovery-explained-mechanisms-for-smarter-investing" tabindex="-1">Gold Price Discovery Explained: Mechanisms for Smarter Investing</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1776409455085_Commodities-trader-reviewing-gold-prices-at-desk.jpeg" alt="Commodities trader reviewing gold prices at desk"></p>
 <hr>
 <blockquote>
@@ -137,7 +137,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p><a href="https://m.economictimes.com/news/international/us/who-sets-gold-prices-how-markets-central-banks-and-traders-determine-golds-value/articleshow/127801157.cms" rel="nofollow noopener noreferrer" target="_blank">Gold price discovery</a> is the process by which the market determines the fair value of gold through the interaction of buyers and sellers across global venues. It isn’t a calculation. It’s a negotiation that never stops, running 24 hours a day across time zones, with different venues leading at different hours.</p>
 <p>Three core markets anchor the global system. The <strong>London Bullion Market Association (LBMA)</strong> sets the twice-daily benchmark, the LBMA Gold Price, which feeds into ETF valuations, central bank reserves, and physical contracts worldwide. <strong>COMEX</strong>, operated by CME Group in New York, dominates futures volume and drives short-term price volatility. And <strong>Shanghai Gold Exchange (SGE)</strong> serves China’s enormous physical demand base, connecting Asian buyers to global pricing.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1776411314539_Infographic-showing-gold-price-discovery-mechanisms.jpeg" alt="Infographic showing gold price discovery mechanisms"></p>
-<p>Beyond these three, over-the-counter (OTC) networks in Zurich and Shanghai provide around-the-clock liquidity. These hubs absorb flows between benchmark sessions and keep pricing continuous, though their direct influence on global price direction is secondary to LBMA and COMEX. You can explore the <a href="https://galamigold.net/gold-market-insights">gold market insights</a> data to see how these flows interact across venues in real time.</p>
+<p>Beyond these three, over-the-counter (OTC) networks in Zurich and Shanghai provide around-the-clock liquidity. These hubs absorb flows between benchmark sessions and keep pricing continuous, though their direct influence on global price direction is secondary to LBMA and COMEX. You can explore the <a href="/insights">gold market insights</a> data to see how these flows interact across venues in real time.</p>
 <p><strong>Major participants across these venues include:</strong></p>
 <ul>
 <li>Central banks (buying reserves, hedging, or rebalancing)</li>
@@ -190,7 +190,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <blockquote>
 <p>“The distinction between paper and physical price discovery matters more than most models admit. COMEX sets the marginal price through futures volume; LBMA validates it through physical settlement. When these diverge, the arbitrage window is the real signal.” — Gold market structure analysis</p>
 </blockquote>
-<p>For institutional traders, understanding <a href="https://galamigold.net/post/gold-trading-standards-institutional-investors-2026">gold trading standards</a> across these venues directly affects execution quality and settlement risk. Similarly, if your exposure includes OTC bilateral contracts, the mechanics of <a href="https://galamigold.net/post/what-is-otc-gold-trading-guide-institutional-investors">OTC gold trading</a> differ fundamentally from exchange-cleared futures.</p>
+<p>For institutional traders, understanding <a href="/role-of-global-standards-in-gold-trade">gold trading standards</a> across these venues directly affects execution quality and settlement risk. Similarly, if your exposure includes OTC bilateral contracts, the mechanics of <a href="/otc-gold-trading-guide">OTC gold trading</a> differ fundamentally from exchange-cleared futures.</p>
 <p><strong>How price signals coordinate across regions (sequence):</strong></p>
 <ol>
 <li>Tokyo and Hong Kong open, absorbing late New York closes and overnight OTC moves</li>
@@ -214,7 +214,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li>Regional supply constraints, especially when U.S. premiums diverge from London spot</li>
 <li>ETF creation and redemption cycles adding or removing physical demand</li>
 </ul>
-<p>Understanding the <a href="https://galamigold.net/post/physical-gold-trading-guide-institutional-investors">physical gold trading</a> process helps clarify why these events affect settlement chains so differently from futures-only exposure. The <a href="https://galamigold.net/post/understanding-the-operational-mechanics-of-physical-gold-trading-and-its-key-components">physical trading mechanics</a> behind large deliveries involve refinery capacity, shipping routes, and vault logistics that futures pricing simply doesn’t capture.</p>
+<p>Understanding the <a href="/what-is-bulk-gold-trading-investors-2026-guide">physical gold trading</a> process helps clarify why these events affect settlement chains so differently from futures-only exposure. The <a href="/step-by-step-gold-transaction-process-2026-guide">physical trading mechanics</a> behind large deliveries involve refinery capacity, shipping routes, and vault logistics that futures pricing simply doesn’t capture.</p>
 <p>Pro Tip: When spot and front-month futures diverge by more than the typical carry cost, treat it as a structural signal, not noise. That spread often reflects actual delivery stress or regional supply imbalance, and positioning ahead of the convergence can generate asymmetric returns.</p>
 <h2 id="practical-strategies-for-leveraging-gold-price-discovery-signals" tabindex="-1">Practical strategies for leveraging gold price discovery signals</h2>
 <p>With a firm grasp of market structure and volatility drivers, you can now convert this knowledge into real trading and allocation advantages. Price discovery signals are only useful if you have a system for reading them in real time and acting before they fully resolve.</p>
@@ -236,7 +236,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 </ul>
 <p>The LBMA benchmark vs. COMEX volatility discovery contrast is critical here. LBMA provides the stable reference point for ETFs and physical contracts. COMEX drives near-term price action based on macro triggers. Treating them as interchangeable leads to poor entry timing and settlement risk.</p>
 <p>Pro Tip: Avoid significant new gold allocations in the five trading days immediately before major COMEX delivery dates. Volatility tends to spike as leveraged shorts are forced to either deliver or roll, creating temporary price distortions that fade once delivery pressure resolves.</p>
-<p>Building <a href="https://galamigold.net/post/how-to-build-trust-in-gold-trading-institutions">trust in gold trading</a> with counterparties starts with demonstrating this kind of structural awareness. Counterparties can tell the difference between clients who understand market mechanics and those who don’t, and it affects the terms you receive. Matching these signals with <a href="https://galamigold.net/post/gold-trading-strategies-optimize-risk-returns-2026">gold trading strategies</a> built around risk-adjusted returns puts institutional portfolios in a stronger position throughout the cycle.</p>
+<p>Building <a href="/trust-matters-gold-trading">trust in gold trading</a> with counterparties starts with demonstrating this kind of structural awareness. Counterparties can tell the difference between clients who understand market mechanics and those who don’t, and it affects the terms you receive. Matching these signals with <a href="/gold-trading-risk-management-strategies-institutions">gold trading strategies</a> built around risk-adjusted returns puts institutional portfolios in a stronger position throughout the cycle.</p>
 <h2 id="why-mastering-gold-price-discovery-is-the-institutional-edge" tabindex="-1">Why mastering gold price discovery is the institutional edge</h2>
 <p>As we move from practice to strategy, it’s worth considering what most in the industry overlook about gold price discovery, and why that gap is expensive.</p>
 <p>Most institutions understand gold at the macro level. They buy on dollar weakness, sell on risk-on sentiment, and benchmark against the LBMA fix. That’s necessary but not sufficient. The real differentiator is microstructure awareness: knowing when a benchmark is lagging delivery reality, when a SGE premium signals real demand rather than seasonality, or when COMEX open interest is building a squeeze rather than a trend.</p>
@@ -257,10 +257,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Focus on LBMA benchmark moves, COMEX open interest and speculative positioning, paper-to-physical ratios, and ETF flows. LBMA benchmarks drive settlement and ETF valuations, while COMEX signals near-term volatility from macro data events.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/gold-investment-strategy-guide-safer-portfolio-growth">Gold Investment Strategy Guide for Safer Portfolio Growth</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026">Gold trading step by step: institutional guide 2026</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-strategies-optimize-risk-returns-2026">Gold trading strategies: optimize risk and returns in 2026</a></li>
-<li><a href="https://galamigold.net/post/harnessing-technology-optimize-gold-trading-strategies">Harnessing technology to optimize gold trading strategies</a></li>
+<li><a href="/gold-as-an-asset-class-risk-diversification-and-strategy">Gold as an asset class: Risk, diversification, and strategy</a></li>
+<li><a href="/step-by-step-gold-transaction-process-2026-guide">Step by Step Gold Transaction Process: 2026 Guide</a></li>
+<li><a href="/gold-trading-risk-management-strategies-institutions">Gold trading risk management: strategies for institutions</a></li>
+<li><a href="/gold-trading-solutions-for-wealth-managers">Gold Trading Solutions for Wealth Managers: Custody &amp; Execution</a></li>
 </ul>
 
   <div class="article-cta">

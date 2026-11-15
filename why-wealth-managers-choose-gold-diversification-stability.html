@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="why-wealth-managers-choose-gold-diversification-and-stability" tabindex="-1">Why wealth managers choose gold: diversification and stability</h1>
+  <div class="article-title" id="why-wealth-managers-choose-gold-diversification-and-stability" tabindex="-1">Why wealth managers choose gold: diversification and stability</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1776415458128_Wealth-manager-reviewing-gold-and-paperwork.jpeg" alt="Wealth manager reviewing gold and paperwork"></p>
 <hr>
 <blockquote>
@@ -201,7 +201,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li>In high-inflation periods, gold’s correlation to equities turned negative, amplifying its diversification benefit precisely when it was most needed.</li>
 </ul>
 <p>Pro Tip: If you observe stock-bond correlations rising above 0.3, consider increasing your <a href="https://galamigold.com/gold-portfolio-diversification" rel="nofollow noopener noreferrer" target="_blank">gold portfolio diversification</a> exposure toward the higher end of your target range. Rising correlations between traditional assets are a direct signal that gold’s diversification premium is increasing. You can track this shift using rolling 90-day correlation data on any institutional analytics platform.</p>
-<p>The 5 to 10% base allocation is not arbitrary. It reflects the point on the efficient frontier where gold’s diversification benefit is largest relative to the return drag from holding a non-yielding asset. Some strategies, particularly those managing liability-driven mandates or targeting lower volatility, benefit from <a href="https://galamigold.net/post/gold-portfolio-diversification-reduces-risk">diversification and risk reduction</a> at the higher end of that range.</p>
+<p>The 5 to 10% base allocation is not arbitrary. It reflects the point on the efficient frontier where gold’s diversification benefit is largest relative to the return drag from holding a non-yielding asset. Some strategies, particularly those managing liability-driven mandates or targeting lower volatility, benefit from <a href="/gold-portfolio-diversification">diversification and risk reduction</a> at the higher end of that range.</p>
 <h2 id="gold-as-a-safe-haven-and-inflation-hedge" tabindex="-1">Gold as a safe haven and inflation hedge</h2>
 <p>A safe haven asset holds or gains value when other assets are under stress. Gold has earned that label, but the evidence is more nuanced than the headline suggests.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1776415631209_image.jpeg" alt="Woman analyzing gold assets at home"></p>
@@ -257,9 +257,9 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li><strong>Rising real rates:</strong> The 2022 environment showed that gold can struggle when real rates rise sharply and quickly.</li>
 <li><strong>Short time horizons:</strong> The <a href="https://hal.science/hal-03925429v1/document" rel="nofollow noopener noreferrer" target="_blank">safe-haven property of gold</a> varies significantly by country and measurement period, making it unreliable as a short-term hedge.</li>
 </ol>
-<p>For a deeper look at how gold behaves across different stress environments, the analysis at <a href="https://galamigold.net/post/gold-as-a-safe-haven-asset-class">gold as a safe haven</a> covers regime-specific performance in detail. The key takeaway is that gold’s protection is most consistent over multi-year periods and across full market cycles, not quarter to quarter.</p>
+<p>For a deeper look at how gold behaves across different stress environments, the analysis at <a href="/why-gold-is-a-safe-haven-asset-the-investors-guide">gold as a safe haven</a> covers regime-specific performance in detail. The key takeaway is that gold’s protection is most consistent over multi-year periods and across full market cycles, not quarter to quarter.</p>
 <h2 id="strategic-allocation-how-much-gold-is-optimal" tabindex="-1">Strategic allocation: How much gold is optimal?</h2>
-<p>The answer depends on your portfolio’s objectives, liability structure, and the current market regime. A <a href="https://galamigold.net/post/gold-investment-strategies-5-10-physical-gold-allocation">5 to 10% gold allocation</a> is the most widely cited base, but research supports going higher under specific conditions.</p>
+<p>The answer depends on your portfolio’s objectives, liability structure, and the current market regime. A <a href="/why-gold-attracts-high-net-worth-investors-18-allocation">5 to 10% gold allocation</a> is the most widely cited base, but research supports going higher under specific conditions.</p>
 <p>The World Gold Council’s portfolio continuum research finds that allocations as high as 18 to 25% can be justified when stock-bond correlations are elevated and inflation expectations are rising. That is not a fringe view. It reflects the math of the efficient frontier when traditional diversifiers stop working.</p>
 <p>Decision criteria for adjusting your gold allocation:</p>
 <ol>
@@ -285,13 +285,13 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li><strong>High volatility relative to perception:</strong> Many investors assume gold is low-risk. Its 17.2% standard deviation is actually higher than the S&amp;P 500’s historical figure.</li>
 <li><strong>Storage and operational costs:</strong> Physical gold requires custody, insurance, and logistics that add friction for institutional holders.</li>
 </ul>
-<p>For certain portfolios, underweighting or omitting gold is entirely rational. Growth-oriented mandates with long time horizons and no inflation-linked liabilities may find that the return drag outweighs the diversification benefit. The <a href="https://galamigold.net/post/gold-portfolio-risk-management-2026">gold portfolio risk management</a> framework and <a href="https://galamigold.net/post/how-to-optimize-investment-strategies-gold">optimizing gold strategies</a> resources both address how to calibrate these tradeoffs systematically.</p>
+<p>For certain portfolios, underweighting or omitting gold is entirely rational. Growth-oriented mandates with long time horizons and no inflation-linked liabilities may find that the return drag outweighs the diversification benefit. The <a href="/gold-hedging-strategies-institutional-portfolio-stability">gold portfolio risk management</a> framework and <a href="/what-is-gold-asset-structuring">optimizing gold strategies</a> resources both address how to calibrate these tradeoffs systematically.</p>
 <p>Gold is a tool. Like any tool, its value depends entirely on whether the job at hand actually requires it.</p>
 <h2 id="where-most-gold-guidance-falls-short-our-perspective" tabindex="-1">Where most gold guidance falls short: Our perspective</h2>
 <p>Most gold allocation frameworks make one critical error: they treat the allocation decision as static. Pick a number, rebalance annually, move on. That approach ignores the single most important variable in gold’s risk-adjusted contribution, which is the current market regime.</p>
 <p>We have observed that liquidity is consistently underweighted in the gold allocation debate. Compared to private credit, infrastructure, or real estate, gold offers institutional-grade liquidity at scale. That matters enormously for portfolios managing redemption risk or liability mismatches.</p>
 <p>The other gap is regime awareness. The 5 to 10% rule was calibrated in an era of negative stock-bond correlations. When that relationship flips, as it did in 2022 and has shown signs of doing again, the math supporting higher gold allocations changes materially. Treating a regime-dependent rule as a permanent truth is a risk management failure.</p>
-<p>Every portfolio is different. The right gold allocation for a sovereign wealth fund managing multi-decade liabilities looks nothing like the right allocation for a family office with near-term distribution needs. Review <a href="https://galamigold.net/post/top-gold-asset-examples-portfolio-diversification">practical gold examples</a> to see how context-specific sizing plays out across mandate types. Gold is neither sacred nor irrelevant. It earns its place when the portfolio context demands what it uniquely provides.</p>
+<p>Every portfolio is different. The right gold allocation for a sovereign wealth fund managing multi-decade liabilities looks nothing like the right allocation for a family office with near-term distribution needs. Review <a href="/gold-asset-examples-diversification">practical gold examples</a> to see how context-specific sizing plays out across mandate types. Gold is neither sacred nor irrelevant. It earns its place when the portfolio context demands what it uniquely provides.</p>
 <h2 id="partner-with-experts-for-intelligent-gold-allocation" tabindex="-1">Partner with experts for intelligent gold allocation</h2>
 <p>Implementing a disciplined, evidence-based gold strategy requires more than a target percentage. It demands reliable sourcing, transparent execution, and risk controls that hold up under real market conditions.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775463411351_galamigold.jpg" alt="https://galamigold.com"></p>
@@ -309,10 +309,9 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Central banks are diversifying reserves away from dollar-denominated assets, responding to geopolitical risk and sanctions exposure. Central banks bought 297t in early 2025, roughly double pre-2022 levels, reflecting a structural shift in reserve management strategy.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/gold-portfolio-diversification-reduces-risk">Why gold secures portfolio diversification and reduces risk</a></li>
+<li><a href="/gold-as-an-asset-class-risk-diversification-and-strategy">Gold as an asset class: Risk, diversification, and strategy</a></li>
 <li><a href="https://galamigold.com/gold-portfolio-diversification" rel="nofollow noopener noreferrer" target="_blank">Why Gold Secures Portfolio Diversification | Galami Gold</a></li>
-<li><a href="https://galamigold.net/post/gold-as-a-safe-haven-asset-class">Gold as a safe-haven asset class</a></li>
-<li><a href="https://galamigold.net/post/why-invest-in-gold-stability">Why Invest in Gold: Stability for Global Portfolios</a></li>
+<li><a href="/why-gold-is-a-safe-haven-asset-the-investors-guide">Why gold is a safe haven asset: the investor's guide</a></li>
 </ul>
 
   <div class="article-cta">

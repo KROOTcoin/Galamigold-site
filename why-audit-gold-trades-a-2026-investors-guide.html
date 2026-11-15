@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="why-audit-gold-trades-a-2026-investors-guide" tabindex="-1">Why Audit Gold Trades: A 2026 Investor’s Guide</h1>
+  <div class="article-title" id="why-audit-gold-trades-a-2026-investors-guide" tabindex="-1">Why Audit Gold Trades: A 2026 Investor’s Guide</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1781935729559_Trader-verifying-physical-gold-bars-in-vault-office.jpeg" alt="Trader verifying physical gold bars in vault office"></p>
 <hr>
 <blockquote>
@@ -172,7 +172,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <li><strong>Escrow documentation:</strong> For cross-border trades, is there a neutral escrow record linking payment to delivery?</li>
 </ul>
 <p>Vault audit backing is stronger than financial audit backing alone for any gold-backed product. If a counterparty can only provide financial audit reports, that is a gap. Push for vault audit confirmation before committing capital.</p>
-<p>For evaluating specific counterparties, the <a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026" target="_blank" rel="noopener">tips for evaluating gold traders</a> published by Galamigold offer a practical framework for assessing trust and transparency in 2026. Understanding the <a href="https://galamigold.net/post/understanding-the-operational-mechanics-of-physical-gold-trading-and-its-key-components" target="_blank" rel="noopener">operational mechanics of physical gold trading</a> also helps traders identify where audit checkpoints should appear in a standard transaction flow.</p>
+<p>For evaluating specific counterparties, the <a href="/gold-broker-checklist">tips for evaluating gold traders</a> published by Galamigold offer a practical framework for assessing trust and transparency in 2026. Understanding the <a href="/step-by-step-gold-transaction-process-2026-guide">operational mechanics of physical gold trading</a> also helps traders identify where audit checkpoints should appear in a standard transaction flow.</p>
 <p>Escrow arrangements deserve special attention in cross-border deals. They reduce counterparty risk by holding funds until delivery conditions are confirmed, and they generate documentation that supports the overall audit trail. Traders operating across jurisdictions should treat escrow as a standard requirement, not an optional add-on.</p>
 <h2 id="key-takeaways" tabindex="-1">Key Takeaways</h2>
 <p>Gold trade audits are the primary defense against counterfeiting, conflict gold, and financial misrepresentation, and traders who rely on financial audits alone leave the most serious risks unaddressed.</p>
@@ -217,7 +217,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <h2 id="galamigolds-approach-to-audited-gold-trading" tabindex="-1">Galamigold’s approach to audited gold trading</h2>
 <p>Galamigold operates with physical gold holdings and a commitment to documented, verifiable trading processes across established supply chains.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775463411351_galamigold.jpg" alt="https://galamigold.com"></p>
-<p>Galamigold’s <a href="https://galamigold.net" target="_blank" rel="noopener">gold investment programs</a> are built around the same audit principles covered in this article: physical verification, transparent documentation, and disciplined risk management. The platform’s <a href="https://galamigold.com/risk" rel="nofollow noopener noreferrer" target="_blank">risk disclosure</a> outlines the specific safeguards in place for investors who want to understand exactly how their capital is protected. For traders who want a counterparty with a clear audit framework, Galamigold’s <a href="https://galamigold.com" rel="nofollow noopener noreferrer" target="_blank">physical gold supply operations</a> in Dubai provide a starting point for due diligence conversations.</p>
+<p>Galamigold’s <a href="/">gold investment programs</a> are built around the same audit principles covered in this article: physical verification, transparent documentation, and disciplined risk management. The platform’s <a href="https://galamigold.com/risk" rel="nofollow noopener noreferrer" target="_blank">risk disclosure</a> outlines the specific safeguards in place for investors who want to understand exactly how their capital is protected. For traders who want a counterparty with a clear audit framework, Galamigold’s <a href="https://galamigold.com" rel="nofollow noopener noreferrer" target="_blank">physical gold supply operations</a> in Dubai provide a starting point for due diligence conversations.</p>
 <h2 id="faq" tabindex="-1">FAQ</h2>
 <h3 id="what-is-a-gold-audit-trail" tabindex="-1">What is a gold audit trail?</h3>
 <p>A gold audit trail is a documented record of every transaction, custody transfer, and physical verification event in a gold asset’s history. It links extraction, refining, vaulting, and trading into a single traceable chain of custody.</p>
@@ -231,10 +231,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>Escrow arrangements hold funds in a neutral account until delivery conditions are confirmed, generating payment documentation that strengthens the overall audit trail in cross-border gold transactions.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/essential-tips-evaluating-gold-traders-2026" target="_blank" rel="noopener">Essential tips for evaluating gold traders in 2026</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-strategies-optimize-risk-returns-2026" target="_blank" rel="noopener">Gold trading strategies: optimize risk and returns in 2026</a></li>
-<li><a href="https://galamigold.net/post/trust-in-gold-investments-2026-portfolio-guide" target="_blank" rel="noopener">Trust in gold investments: A 2026 portfolio guide</a></li>
-<li><a href="https://galamigold.net/post/build-trust-gold-trading-platforms-2026-investors" target="_blank" rel="noopener">Build trust in gold trading platforms for 2026 investors</a></li>
+<li><a href="/gold-broker-checklist">Institutional Gold Broker Checklist: 2026 Vetting Guide</a></li>
+<li><a href="/gold-trading-risk-management-strategies-institutions">Gold trading risk management: strategies for institutions</a></li>
+<li><a href="/trust-matters-gold-trading">Why trust matters in gold trading: Safeguarding institutional investments</a></li>
+<li><a href="/how-to-ensure-transparency">How to Ensure Transparency in Institutional Gold Trading</a></li>
 </ul>
 
   <div class="article-cta">

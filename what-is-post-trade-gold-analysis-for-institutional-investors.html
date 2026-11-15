@@ -31,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -83,7 +83,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  <h1 id="what-is-post-trade-gold-analysis-for-institutional-investors" tabindex="-1">What Is Post-Trade Gold Analysis for Institutional Investors</h1>
+  <div class="article-title" id="what-is-post-trade-gold-analysis-for-institutional-investors" tabindex="-1">What Is Post-Trade Gold Analysis for Institutional Investors</div>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1781014578596_Financial-analyst-reviewing-post-trade-gold-reports.jpeg" alt="Financial analyst reviewing post-trade gold reports"></p>
 <hr>
 <blockquote>
@@ -193,7 +193,7 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p><strong>Dollar-risk position sizing.</strong> Gold’s average true range regularly exceeds $30 per ounce on active sessions. Sizing positions to a fixed dollar-risk amount, rather than to a standard lot, keeps portfolio volatility consistent regardless of market conditions. This practice is standard on institutional trading desks and directly reduces drawdown severity.</p>
 </li>
 <li>
-<p><strong>COT-informed timing.</strong> When managed money liquidations appear in the COT data, post-trade review of trades entered during that period will almost always show worse-than-expected fills and higher slippage. Incorporating COT signals into entry timing decisions, specifically avoiding new longs when managed money is already at extreme net-long levels, reduces this exposure. Galamigold’s approach to <a href="https://galamigold.net/post/key-factors-gold-trading-institutional-investors-2026" target="_blank" rel="noopener">key institutional factors</a> in gold trading reflects this discipline.</p>
+<p><strong>COT-informed timing.</strong> When managed money liquidations appear in the COT data, post-trade review of trades entered during that period will almost always show worse-than-expected fills and higher slippage. Incorporating COT signals into entry timing decisions, specifically avoiding new longs when managed money is already at extreme net-long levels, reduces this exposure. Galamigold’s approach to <a href="/2026-gold-trading-trends-institutional-investors">key institutional factors</a> in gold trading reflects this discipline.</p>
 </li>
 <li>
 <p><strong>Separating noise from systematic error.</strong> Post-trade review must distinguish losses caused by market noise from losses caused by repeatable trading errors. Entering positions before major macroeconomic releases, for example, is a systematic error that post-trade logs will surface quickly once the pattern is visible across multiple trades.</p>
@@ -236,14 +236,14 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <h2 id="why-post-trade-analysis-is-the-discipline-most-institutional-desks-underinvest-in" tabindex="-1">Why post-trade analysis is the discipline most institutional desks underinvest in</h2>
 <p>The most consistent observation I have made working across physical gold supply chains is that institutional desks spend far more time building entry frameworks than they spend reviewing what those frameworks actually produced. Post-trade review is treated as an administrative task rather than a strategic one, and that misclassification is expensive.</p>
 <p>The June 2026 break below the 200-day moving average is a case I keep returning to. Desks that classified that move as a fundamental macro shift adjusted their long-term positioning downward. Desks that ran a proper microstructure review recognized it as a stop-loss cascade amplified by thin liquidity, a temporary dislocation rather than a trend change. The difference in those two conclusions, made within 48 hours of the event, had material portfolio consequences.</p>
-<p>My view is that the next competitive edge in institutional gold trading will not come from better entry signals. It will come from better post-trade feedback loops that systematically improve execution quality, cost management, and behavioral discipline over time. The desks building those loops now will have a structural advantage that is genuinely difficult to replicate. Galamigold’s commitment to <a href="https://galamigold.net/post/manage-risk-gold-investment" target="_blank" rel="noopener">managing risk in gold investment</a> is grounded in exactly this kind of disciplined review process.</p>
+<p>My view is that the next competitive edge in institutional gold trading will not come from better entry signals. It will come from better post-trade feedback loops that systematically improve execution quality, cost management, and behavioral discipline over time. The desks building those loops now will have a structural advantage that is genuinely difficult to replicate. Galamigold’s commitment to <a href="/gold-trading-risk-management-strategies-institutions">managing risk in gold investment</a> is grounded in exactly this kind of disciplined review process.</p>
 <blockquote>
 <p><em>— Galami</em></p>
 </blockquote>
 <h2 id="how-galamigold-supports-institutional-gold-trading-with-disciplined-execution" tabindex="-1">How Galamigold supports institutional gold trading with disciplined execution</h2>
 <p>Galamigold operates as a physical gold trading platform built on transparency, disciplined execution, and risk management across well-established gold supply chains. For institutional investors who want to apply post-trade analysis principles to real capital deployment, Galamigold offers audited trading programs with documented processes and clear performance accountability.</p>
 <p><img src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-16724/1775463411351_galamigold.jpg" alt="https://galamigold.com"></p>
-<p>The platform targets sophisticated investors and corporate entities that treat gold as a serious asset class rather than a speculative position. If you are looking to <a href="https://galamigold.net" target="_blank" rel="noopener">invest in physical gold</a> with institutional-grade oversight, Galamigold provides the infrastructure and expertise to support that objective. Explore Galamigold’s <a href="https://galamigold.net/post/gold-trading-strategies-optimize-risk-returns-2026" target="_blank" rel="noopener">gold trading strategies</a> to see how post-trade analysis principles translate into real portfolio outcomes.</p>
+<p>The platform targets sophisticated investors and corporate entities that treat gold as a serious asset class rather than a speculative position. If you are looking to <a href="/">invest in physical gold</a> with institutional-grade oversight, Galamigold provides the infrastructure and expertise to support that objective. Explore Galamigold’s <a href="/gold-trading-risk-management-strategies-institutions">gold trading strategies</a> to see how post-trade analysis principles translate into real portfolio outcomes.</p>
 <h2 id="faq" tabindex="-1">FAQ</h2>
 <h3 id="what-is-post-trade-gold-analysis" tabindex="-1">What is post-trade gold analysis?</h3>
 <p>Post-trade gold analysis is the systematic review of completed gold trades to evaluate execution quality, timing, costs, risk exposure, and behavioral patterns. It uses data sources like CFTC COT reports and LBMA fixings to distinguish market noise from actionable insights.</p>
@@ -257,10 +257,10 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <p>A liquidity event is a rapid price change driven by stop-loss cascades, ETF flows, or futures delivery cycles rather than by economic fundamentals. Post-trade analysis classifies moves by type so that desks respond with the correct strategic adjustment rather than misreading temporary dislocations as trend changes.</p>
 <h2 id="recommended" tabindex="-1">Recommended</h2>
 <ul>
-<li><a href="https://galamigold.net/post/key-factors-gold-trading-institutional-investors-2026" target="_blank" rel="noopener">Key factors in gold trading for institutional investors 2026</a></li>
-<li><a href="https://galamigold.net/post/gold-trading-step-by-step-institutional-guide-2026" target="_blank" rel="noopener">Gold trading step by step: institutional guide 2026</a></li>
-<li><a href="https://galamigold.net/post/institutional-gold-investing-considerations" target="_blank" rel="noopener">Institutional Gold Investing: Key Risks and Best Practices</a></li>
-<li><a href="https://galamigold.net/post/optimize-gold-transactions-institutional-investors" target="_blank" rel="noopener">How to optimize gold transactions for institutional investors</a></li>
+<li><a href="/2026-gold-trading-trends-institutional-investors">2026 Gold Trading Trends: Key Insights for Institutions</a></li>
+<li><a href="/step-by-step-gold-transaction-process-2026-guide">Step by Step Gold Transaction Process: 2026 Guide</a></li>
+<li><a href="/capital-management-guide">Physical Gold Capital Management Guide for Institutions</a></li>
+<li><a href="/gold-trade-settlement-explained-for-investors-and-traders">Gold Trade Settlement Explained for Investors and Traders</a></li>
 </ul>
 
   <div class="article-cta">
