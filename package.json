@@ -3,7 +3,8 @@
   "private": true,
   "description": "Galami Gold static site and Netlify functions",
   "scripts": {
-    "assistant:index": "node scripts/build-assistant-index.js"
+    "assistant:index": "node scripts/build-assistant-index.js",
+    "check:publish": "node scripts/check-publish-template.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.6.0"
