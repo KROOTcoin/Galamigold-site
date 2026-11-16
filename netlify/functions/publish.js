@@ -53,6 +53,114 @@ async function commitToGitHub(filename, content) {
   );
 }
 
+// ── Clean BabyLoveGrowth content before it goes into the page ─────────────
+// galamigold.net was the old Wix blog and every page on it is gone, but BabyLoveGrowth content
+// still links to it. Each known old page maps to the matching galamigold.com page. This is the
+// same list as the galamigold.net rules at the top of _redirects (PR #10): keep the two in step.
+const OLD_SITE_PATHS = {
+  '/blog': '/news',
+  '/blog/tags/gold-as-a-safe-haven-asset-class': '/why-gold-is-a-safe-haven-asset-the-investors-guide',
+  '/gold-market-insights': '/insights',
+  '/home': '/',
+  '/invest-in-gold': '/',
+  '/post/6-key-tips-for-gold-traders-to-grow-portfolio-success': '/what-is-disciplined-execution',
+  '/post/adalgold-com-alternatives-5': '/news',
+  '/post/advantages-of-gold-trading-for-investors': '/advantages-of-wholesale-gold-trading-for-investors',
+  '/post/amalfi-gold-com-alternatives-7': '/news',
+  '/post/build-trust-gold-trading-platforms-2026-investors': '/how-to-ensure-transparency',
+  '/post/capital-deployment-gold-trading-beat-benchmarks-2026': '/capital-deployment-guide-to-gold-for-institutional-investors',
+  '/post/earngoldinvest-com-alternatives-7': '/news',
+  '/post/essential-tips-evaluating-gold-traders-2026': '/gold-broker-checklist',
+  '/post/examples-gold-investment-risks-institutions-2026': '/operational-risk-in-gold-trading-what-you-must-know',
+  '/post/gold-as-a-safe-haven-asset-class': '/why-gold-is-a-safe-haven-asset-the-investors-guide',
+  '/post/gold-broker-role-institutional-trading-edge-2026': '/gold-broker-roles-2026',
+  '/post/gold-investment-strategies-5-10-physical-gold-allocation': '/why-gold-attracts-high-net-worth-investors-18-allocation',
+  '/post/gold-investment-strategy-guide-safer-portfolio-growth': '/gold-as-an-asset-class-risk-diversification-and-strategy',
+  '/post/gold-investment-terminology-explained-for-institutional-investors': '/what-is-bullion',
+  '/post/gold-investment-tfsa-guide-investing-in-gold-through-a-tfsa': '/news',
+  '/post/gold-portfolio-diversification-reduces-risk': '/gold-portfolio-diversification',
+  '/post/gold-portfolio-risk-management-2026': '/gold-hedging-strategies-institutional-portfolio-stability',
+  '/post/gold-safeguarding-60-diversification-cuts-risk-2026': '/gold-portfolio-diversification',
+  '/post/gold-tfsa-investment-guide-how-to-invest-in-gold-using-a-tfsa': '/news',
+  '/post/gold-trading-platforms-institutional-investors-2026': '/gold-trading-solutions-for-wealth-managers',
+  '/post/gold-trading-regulations-2026-aml-penalties-highlight-risks': '/role-of-aml-in-gold-trade',
+  '/post/gold-trading-standards-institutional-investors-2026': '/role-of-global-standards-in-gold-trade',
+  '/post/gold-trading-step-by-step-institutional-guide-2026': '/step-by-step-gold-transaction-process-2026-guide',
+  '/post/gold-trading-strategies-optimize-risk-returns-2026': '/gold-trading-risk-management-strategies-institutions',
+  '/post/gold-trading-terminology-institutional-guide-2026': '/iso-4217-xau-explained',
+  '/post/goldenmint-net-alternatives-8': '/news',
+  '/post/goldiama-com-alternatives-8': '/news',
+  '/post/harnessing-technology-optimize-gold-trading-strategies': '/gold-trading-solutions-for-wealth-managers',
+  '/post/how-to-build-trust-in-gold-trading-institutions': '/trust-matters-gold-trading',
+  '/post/how-to-invest-in-gold-for-portfolio-diversification-2026': '/gold-as-an-asset-class-risk-diversification-and-strategy',
+  '/post/how-to-optimize-investment-strategies-gold': '/what-is-gold-asset-structuring',
+  '/post/how-to-trade-gold-strategic-portfolio-growth-2026': '/capital-deployment-guide-to-gold-for-institutional-investors',
+  '/post/how-trust-shapes-gold-trading-strategies-investors': '/trust-matters-gold-trading',
+  '/post/institutional-gold-investing-considerations': '/capital-management-guide',
+  '/post/institutional-gold-trading-benefits-portfolio-growth': '/institutional-gold-trading-benefits',
+  '/post/key-factors-gold-trading-institutional-investors-2026': '/2026-gold-trading-trends-institutional-investors',
+  '/post/lamiegold-com-alternatives-6': '/news',
+  '/post/manage-risk-gold-investment': '/gold-trading-risk-management-strategies-institutions',
+  '/post/mastering-the-art-of-physical-gold-buying-gold-buying-strategies': '/types-of-physical-gold-products-2026-investor-guide',
+  '/post/optimize-gold-transactions-institutional-investors': '/gold-trade-settlement-explained-for-investors-and-traders',
+  '/post/partner-gold-traders-risk-management-transparency': '/how-to-select-gold-partners-institutional-guide-2026',
+  '/post/physical-gold-trading-guide-institutional-investors': '/what-is-bulk-gold-trading-investors-2026-guide',
+  '/post/risk-management-gold-trading': '/gold-trading-risk-management-strategies-institutions',
+  '/post/securely-buying-online-gold-bullion-canada-a-comprehensive-guide': '/what-is-bullion',
+  '/post/top-gold-asset-examples-portfolio-diversification': '/gold-asset-examples-diversification',
+  '/post/trading-gold-vs-other-metals-institutional-insights': '/gold-market-dynamics-explained',
+  '/post/trust-in-gold-investment': '/trust-matters-gold-trading',
+  '/post/trust-in-gold-investments-2026-portfolio-guide': '/trust-matters-gold-trading',
+  '/post/types-gold-trading-choose-best-approach-2026': '/gold-asset-examples-diversification',
+  '/post/understanding-the-key-differences-between-buying-physical-gold-and-gold-trading-operations': '/advantages-of-wholesale-gold-trading-for-investors',
+  '/post/understanding-the-operational-mechanics-of-physical-gold-trading-and-its-key-components': '/step-by-step-gold-transaction-process-2026-guide',
+  '/post/what-is-institutional-gold-trading-complete-guide': '/institutional-gold-trading-benefits',
+  '/post/what-is-otc-gold-trading-guide-institutional-investors': '/otc-gold-trading-guide',
+  '/post/why-gold-matters-institutional-investors-2026': '/benefits-physical-gold-institutional-investors',
+  '/post/why-gold-trading-attracts-investors': '/why-gold-attracts-high-net-worth-investors-18-allocation',
+  '/post/why-gold-trading-platform-matters': '/what-is-non-bank-gold-trading-a-2026-investor-guide',
+  '/post/why-invest-in-gold-stability': '/why-gold-is-a-safe-haven-asset-the-investors-guide',
+  '/work-with-us': '/contact',
+};
+
+// Point links to galamigold.net (with or without www) at the matching galamigold.com page,
+// root-relative and in the same tab, as PR #9 did for the existing articles. Anything not in the
+// list goes to the homepage, like the catch-all rule in _redirects. Then, as PR #9 did, a
+// screenshot captioned with the old address gets the alt text "Galami Gold", and any other
+// mention of the old address in the text ("Website: https://galamigold.net") names galamigold.com.
+function rewriteOldSiteLinks(html) {
+  return html.replace(/<a\b[^>]*>/gi, (tag) => {
+    const m = tag.match(/\shref\s*=\s*(["'])\s*(?:https?:)?\/\/(?:www\.)?galamigold\.net(?![\w-]|\.\w)([^"'?#]*)[^"']*\1/i);
+    if (!m) return tag;
+    const oldPath = (m[2] || '').replace(/\/+$/, '').toLowerCase() || '/';
+    let target = OLD_SITE_PATHS[oldPath];
+    if (!target) {
+      if (oldPath !== '/') console.log(`Unmapped galamigold.net link sent to the homepage: ${oldPath}`);
+      target = '/';
+    }
+    return tag
+      .replace(m[0], ` href="${target}"`)
+      .replace(/\s(?:target|rel)\s*=\s*(["'])[^"']*\1/gi, '');
+  })
+    .replace(/\salt\s*=\s*(["'])\s*(?:https?:\/\/)?(?:www\.)?galamigold\.net\/?\s*\1/gi, ' alt="Galami Gold"')
+    .replace(/(?:www\.)?galamigold\.net(?![\w-]|\.\w)/gi, 'galamigold.com');
+}
+
+// The page hero holds the article's one h1. BabyLoveGrowth content starts with its own h1, so
+// every h1 in the content becomes a div.article-title, which the CSS styles exactly like the h1
+// (the same fix PR #9 made to the existing articles).
+function demoteContentHeadings(html) {
+  return html
+    .replace(/<h1\b([^>]*)>/gi, (tag, attrs) => /\sclass\s*=/i.test(attrs)
+      ? `<div${attrs.replace(/(\sclass\s*=\s*)(["'])/i, '$1$2article-title ')}>`
+      : `<div class="article-title"${attrs}>`)
+    .replace(/<\/h1\s*>/gi, '</div>');
+}
+
+function cleanContent(html) {
+  return demoteContentHeadings(rewriteOldSiteLinks(html || ''));
+}
+
 // ── Build styled article HTML ──────────────────────────────────────────────
 function buildArticlePage(article) {
   const { title, slug, metaDescription, content_html, heroImageUrl, jsonLd, faqJsonLd } = article;
@@ -96,7 +204,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .article-hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:flex-end;padding:0 5% 4rem}
 .eyebrow{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
 .eyebrow::before{content:"";display:block;width:24px;height:1px;background:var(--gold)}
-h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
+h1,.article-title{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:400;color:#fff;line-height:1.25;max-width:700px}
 .article-body{max-width:800px;margin:0 auto;padding:4rem 5%}
 .article-body h2{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--ivory);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--smoke)}
 .article-body h3{font-size:1.1rem;color:var(--ivory);margin:1.5rem 0 0.8rem}
@@ -113,6 +221,7 @@ h1{font-family:var(--ff-display);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weigh
 .article-cta h3{font-family:var(--ff-display);font-size:1.4rem;margin-bottom:1rem;color:var(--ivory);font-weight:400}
 .article-cta p{margin-bottom:1.5rem}
 .btn-primary{background:var(--gold);color:var(--obsidian);padding:0.9rem 2rem;font-family:var(--ff-body);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;font-weight:500;display:inline-block;margin-right:1rem}
+.article-body a.btn-primary{color:var(--obsidian)}
 .gold-divider{width:50px;height:1px;background:linear-gradient(to right,var(--gold),transparent);margin:1.5rem 0}
 footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--smoke);margin-top:5rem}
 .footer-bottom{border-top:1px solid var(--smoke);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:3rem}
@@ -148,13 +257,13 @@ footer{background:var(--deep);padding:4rem 5% 2.5rem;border-top:1px solid var(--
 <div class="article-body">
   <a href="/news.html" class="article-back">Back to News</a>
   <div class="gold-divider"></div>
-  ${content_html}
+  ${cleanContent(content_html)}
   <div class="article-cta">
     <div style="font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Invest with Galami Gold</div>
     <h3>Ready to invest in physical gold trade finance?</h3>
-    <p>Both the Zambia–Dubai and Sierra Leone–Dubai programs are open to qualified investors. Minimum investments from $100,000 USD or €125,000 EUR.</p>
-    <a href="/zambia.html" class="btn-primary">Zambia Program — 5% / trade</a>
-    <a href="/sierra-leone.html" class="btn-primary" style="background:transparent;border:1px solid var(--gold);color:var(--gold);">Sierra Leone Program — 2% / trade</a>
+    <p>Both the Zambia–Dubai and Sierra Leone–Dubai programs are open to qualified investors. Minimum investments from $115,000 USD or €125,000 EUR.</p>
+    <a href="/zambia.html" class="btn-primary">Zambia–Dubai Program</a>
+    <a href="/sierra-leone.html" class="btn-primary" style="background:transparent;border:1px solid var(--gold);color:var(--gold);">Sierra Leone–Dubai Program</a>
   </div>
 </div>
 <footer>
@@ -258,3 +367,7 @@ exports.handler = async function(event) {
     return { statusCode: 500, body: JSON.stringify({ error: err.message }) };
   }
 };
+
+// For scripts/check-publish-template.js
+exports.buildArticlePage = buildArticlePage;
+exports.OLD_SITE_PATHS = OLD_SITE_PATHS;
