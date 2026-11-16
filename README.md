@@ -95,6 +95,7 @@ zip -j galamigold-deploy.zip *.html *.toml *.mp4
 
 ## Blog / BabyLoveGrowth
 
+- New articles arrive through the webhook `netlify/functions/publish.js`. It builds the page and commits it to GitHub `main`; the site's normal Netlify build then publishes it. The function must never create a Netlify deploy itself: a deploy is the whole site, so one holding only the new article takes every other page offline until the next build. Check it with `npm run check:publish`.
 - BabyLoveGrowth.ai publishes articles to Wix blog at galamigold.net/blog
 - The news.html page is **static** — manually updated when new posts go live
 - To add new articles: share new Wix blog post URLs and they'll be added to news.html

@@ -1,12 +1,16 @@
-// BabyLoveGrowth → Netlify Auto-Publish
-// Receives article from BabyLoveGrowth webhook
-// Uploads directly to Netlify via their Files API (no GitHub needed)
+// BabyLoveGrowth → GitHub → Netlify auto-publish
+// Receives an article from the BabyLoveGrowth webhook, builds the page and commits it to GitHub
+// main. That commit triggers the site's normal Netlify build, which publishes the article with
+// the rest of the site, usually 10 to 20 seconds later.
+//
+// This function must not create a Netlify deploy itself. Netlify deploys are atomic: a deploy is
+// the complete site, so one made from just the new article replaces every other page, the
+// redirects and the functions until the next build lands. Before the Nov 2026 fix it did exactly
+// that: each article took galamigold.com down to a single page for about 10 seconds.
 
 const https = require('https');
 
 const WEBHOOK_SECRET  = process.env.WEBHOOK_SECRET;
-const NETLIFY_TOKEN   = process.env.NETLIFY_TOKEN;   // Netlify personal access token
-const NETLIFY_SITE_ID = process.env.NETLIFY_SITE_ID; // Your site ID
 
 // ── Helper: HTTPS request ──────────────────────────────────────────────────
 function request(method, hostname, path, headers, body) {
@@ -33,24 +37,30 @@ function request(method, hostname, path, headers, body) {
   });
 }
 
-// ── Also commit to GitHub for backup ──────────────────────────────────────
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+// ── Commit the page to GitHub main (this is what publishes it) ────────────
 const GITHUB_REPO  = 'KROOTcoin/Galamigold-site';
 
+function githubError(step, res) {
+  const detail = res.body && res.body.message ? res.body.message : `HTTP ${res.status}`;
+  return new Error(`GitHub ${step} failed (${res.status}): ${detail}`);
+}
+
+// Throws unless the commit landed, so the webhook reports a failure instead of claiming success.
 async function commitToGitHub(filename, content) {
-  if (!GITHUB_TOKEN) return;
-  const encoded = Buffer.from(content).toString('base64');
-  // Check if file exists
-  const existing = await request('GET', 'api.github.com', 
-    `/repos/${GITHUB_REPO}/contents/${filename}?ref=main`,
-    { 'Authorization': `token ${GITHUB_TOKEN}`, 'User-Agent': 'GalamiGold' }
-  );
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) throw new Error('GITHUB_TOKEN is not set, so the article could not be committed');
+  const headers = { 'Authorization': `token ${token}`, 'User-Agent': 'GalamiGold' };
+  // An existing file needs its sha to be updated (BabyLoveGrowth re-sending an article)
+  const existing = await request('GET', 'api.github.com',
+    `/repos/${GITHUB_REPO}/contents/${filename}?ref=main`, headers);
+  if (existing.status !== 200 && existing.status !== 404) throw githubError('file lookup', existing);
   const sha = existing.status === 200 ? existing.body.sha : undefined;
-  await request('PUT', 'api.github.com',
-    `/repos/${GITHUB_REPO}/contents/${filename}`,
-    { 'Authorization': `token ${GITHUB_TOKEN}`, 'User-Agent': 'GalamiGold' },
-    { message: `Auto-publish: ${filename}`, content: encoded, branch: 'main', ...(sha ? { sha } : {}) }
+  const commit = await request('PUT', 'api.github.com',
+    `/repos/${GITHUB_REPO}/contents/${filename}`, headers,
+    { message: `Auto-publish: ${filename}`, content: Buffer.from(content).toString('base64'), branch: 'main', ...(sha ? { sha } : {}) }
   );
+  if (commit.status !== 200 && commit.status !== 201) throw githubError('commit', commit);
+  return commit.body && commit.body.commit ? commit.body.commit.sha : undefined;
 }
 
 // ── Clean BabyLoveGrowth content before it goes into the page ─────────────
@@ -307,56 +317,11 @@ exports.handler = async function(event) {
     const html = buildArticlePage(article);
     const filename = `${slug}.html`;
 
-    // Step 1: Get latest deploy to find deploy ID for file upload
-    const deploysRes = await request('GET', 'api.netlify.com',
-      `/api/v1/sites/${NETLIFY_SITE_ID}/deploys?per_page=1`,
-      { 'Authorization': `Bearer ${NETLIFY_TOKEN}` }
-    );
+    // Commit to GitHub main. The site's Netlify build for that commit publishes the article.
+    // If the commit fails this throws, and the webhook gets an error (nothing is deployed).
+    const commitSha = await commitToGitHub(filename, html);
 
-    // Step 2: Commit to GitHub (backup + triggers if linked)
-    try { await commitToGitHub(filename, html); } catch(e) { console.log('GitHub backup failed:', e.message); }
-
-    // Step 3: Create a new deploy with the file
-    const deployRes = await request('POST', 'api.netlify.com',
-      `/api/v1/sites/${NETLIFY_SITE_ID}/deploys`,
-      { 'Authorization': `Bearer ${NETLIFY_TOKEN}` },
-      { files: { [`/${filename}`]: require('crypto').createHash('sha1').update(html).digest('hex') }, async: false }
-    );
-
-    if (deployRes.status !== 200 && deployRes.status !== 201) {
-      throw new Error(`Deploy create failed: ${JSON.stringify(deployRes.body)}`);
-    }
-
-    const deployId = deployRes.body.id;
-    const required = deployRes.body.required || [];
-    console.log(`Deploy ${deployId} created, required files: ${required.length}`);
-
-    // Step 4: Upload the file if required
-    if (required.length > 0) {
-      const uploadRes = await new Promise((resolve, reject) => {
-        const fileData = Buffer.from(html);
-        const req = https.request({
-          hostname: 'api.netlify.com',
-          path: `/api/v1/deploys/${deployId}/files/${filename}`,
-          method: 'PUT',
-          headers: {
-            'Authorization': `Bearer ${NETLIFY_TOKEN}`,
-            'Content-Type': 'application/octet-stream',
-            'Content-Length': fileData.length
-          }
-        }, (res) => {
-          let d = '';
-          res.on('data', c => d += c);
-          res.on('end', () => resolve({ status: res.statusCode }));
-        });
-        req.on('error', reject);
-        req.write(fileData);
-        req.end();
-      });
-      console.log(`File uploaded: ${uploadRes.status}`);
-    }
-
-    console.log(`✓ Published: ${filename}`);
+    console.log(`✓ Committed ${filename} to main${commitSha ? ` (${commitSha.slice(0, 7)})` : ''}; Netlify's build will publish it`);
     return {
       statusCode: 200,
       body: JSON.stringify({ success: true, file: filename, url: `https://galamigold.com/${slug}` })

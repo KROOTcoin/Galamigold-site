@@ -1,12 +1,15 @@
 // Checks the article template in netlify/functions/publish.js (the BabyLoveGrowth webhook that
 // publishes new articles). Builds a page from a fake article and checks for: one h1 per page,
 // no return figures, no links or mentions of the old galamigold.net site, and an old-site list
-// that matches the galamigold.net rules in _redirects.
+// that matches the galamigold.net rules in _redirects. Then runs the webhook against a fake
+// GitHub API and checks that it only commits to GitHub and never creates a Netlify deploy itself.
 // Run:  npm run check:publish        (add a file path to also save the built page there)
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 const assert = require('assert');
-const { buildArticlePage, OLD_SITE_PATHS } = require('../netlify/functions/publish.js');
+const { EventEmitter } = require('events');
+const { buildArticlePage, OLD_SITE_PATHS, handler } = require('../netlify/functions/publish.js');
 
 const root = path.join(__dirname, '..');
 let failed = 0;
@@ -99,5 +102,113 @@ check('no return figures anywhere in the template', () => {
 });
 
 if (process.argv[2]) fs.writeFileSync(process.argv[2], html);
-console.log(failed ? `\n${failed} check(s) failed` : '\nAll checks passed');
-process.exitCode = failed ? 1 : 0;
+
+// ── The webhook itself ─────────────────────────────────────────────────────
+// It must publish by committing to GitHub main and leave the deploy to that commit's Netlify
+// build. A deploy it made itself would hold only the new article, and Netlify deploys are the
+// whole site, so every other page, the redirects and the functions would vanish until the build
+// landed (that happened with each article from June to August 2026).
+
+// Replaces https.request with a fake that records each call and answers with respond(call).
+function fakeHttps(respond) {
+  const calls = [];
+  const real = https.request;
+  https.request = (opts, onResponse) => {
+    const call = { method: opts.method, host: opts.hostname, path: opts.path, body: '' };
+    calls.push(call);
+    const req = new EventEmitter();
+    req.write = (chunk) => { call.body += chunk; };
+    req.end = () => {
+      const { status, body } = respond(call);
+      const res = new EventEmitter();
+      res.statusCode = status;
+      onResponse(res);
+      res.emit('data', JSON.stringify(body || {}));
+      res.emit('end');
+    };
+    return req;
+  };
+  return { calls, restore: () => { https.request = real; } };
+}
+
+async function runWebhook(respond, token = 'test-token') {
+  const fake = fakeHttps(respond);
+  const saved = { token: process.env.GITHUB_TOKEN, log: console.log, error: console.error };
+  if (token) process.env.GITHUB_TOKEN = token; else delete process.env.GITHUB_TOKEN;
+  console.log = console.error = () => {};
+  try {
+    const res = await handler({
+      httpMethod: 'POST',
+      headers: { authorization: `Bearer ${process.env.WEBHOOK_SECRET || ''}` },
+      body: JSON.stringify(article),
+    });
+    return { res, calls: fake.calls };
+  } finally {
+    fake.restore();
+    console.log = saved.log; console.error = saved.error;
+    if (saved.token === undefined) delete process.env.GITHUB_TOKEN; else process.env.GITHUB_TOKEN = saved.token;
+  }
+}
+
+// A GitHub API that commits fine; `existing` is the response to the file lookup.
+const github = (existing = { status: 404, body: { message: 'Not Found' } }, commit = { status: 201, body: { commit: { sha: 'abc1234def' } } }) =>
+  (call) => call.method === 'GET' ? existing : commit;
+
+async function checkAsync(name, fn) {
+  try { await fn(); console.log(`ok    ${name}`); }
+  catch (e) { failed++; console.log(`FAIL  ${name}\n      ${e.message}`); }
+}
+
+(async () => {
+  const file = `${article.slug}.html`;
+
+  await checkAsync('publishes by committing the page to GitHub main, same response as before', async () => {
+    const { res, calls } = await runWebhook(github());
+    assert.strictEqual(res.statusCode, 200);
+    assert.deepStrictEqual(JSON.parse(res.body), { success: true, file, url: `https://galamigold.com/${article.slug}` });
+    const put = calls.find(c => c.method === 'PUT');
+    assert.ok(put, 'no commit was made');
+    assert.strictEqual(put.host, 'api.github.com');
+    assert.strictEqual(put.path, `/repos/KROOTcoin/Galamigold-site/contents/${file}`);
+    const sent = JSON.parse(put.body);
+    assert.strictEqual(sent.branch, 'main');
+    assert.strictEqual(sent.message, `Auto-publish: ${file}`);
+    assert.strictEqual(Buffer.from(sent.content, 'base64').toString(), html, 'committed page differs from the template output');
+  });
+
+  await checkAsync('never calls the Netlify API (no deploy of its own)', async () => {
+    const { calls } = await runWebhook(github());
+    const hosts = [...new Set(calls.map(c => c.host))];
+    assert.deepStrictEqual(hosts, ['api.github.com'], `called ${hosts.join(', ')}`);
+  });
+
+  await checkAsync('updates an article that already exists (sends its sha)', async () => {
+    const { res, calls } = await runWebhook(github({ status: 200, body: { sha: 'oldsha123' } }));
+    assert.strictEqual(res.statusCode, 200);
+    assert.strictEqual(JSON.parse(calls.find(c => c.method === 'PUT').body).sha, 'oldsha123');
+  });
+
+  await checkAsync('a failed commit returns an error and deploys nothing', async () => {
+    const { res, calls } = await runWebhook(github(undefined, { status: 409, body: { message: 'main was modified' } }));
+    assert.strictEqual(res.statusCode, 500);
+    assert.match(JSON.parse(res.body).error, /GitHub commit failed \(409\): main was modified/);
+    assert.ok(calls.every(c => c.host === 'api.github.com'), 'called something other than GitHub');
+  });
+
+  await checkAsync('a failed file lookup (bad token) returns an error before committing', async () => {
+    const { res, calls } = await runWebhook(github({ status: 401, body: { message: 'Bad credentials' } }));
+    assert.strictEqual(res.statusCode, 500);
+    assert.match(JSON.parse(res.body).error, /GitHub file lookup failed \(401\): Bad credentials/);
+    assert.ok(!calls.some(c => c.method === 'PUT'), 'committed anyway');
+  });
+
+  await checkAsync('no GITHUB_TOKEN returns an error and makes no requests', async () => {
+    const { res, calls } = await runWebhook(github(), null);
+    assert.strictEqual(res.statusCode, 500);
+    assert.match(JSON.parse(res.body).error, /GITHUB_TOKEN is not set/);
+    assert.strictEqual(calls.length, 0);
+  });
+
+  console.log(failed ? `\n${failed} check(s) failed` : '\nAll checks passed');
+  process.exitCode = failed ? 1 : 0;
+})();
